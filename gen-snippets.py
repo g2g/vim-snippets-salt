@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
 import os
@@ -14,7 +14,7 @@ class NoDefault():
     pass
 
 def get_salt_version():
-    import salt as _salt
+    import salt.version as _salt
     return _salt.__version__
 
 def list_states_modules():
