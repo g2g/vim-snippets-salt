@@ -53,8 +53,7 @@ def gen_snippet(module_name, function_name, argspec, ignore_args):
     """
     lines = []
     lines.append("snippet %s.%s" % (module_name, function_name))
-    lines.append("  %s:" % module_name)
-    lines.append("    - %s" % function_name)
+    lines.append("  %s.%s:" % (module_name, function_name))
     idx = 0
     for arg, default in argspec:
         if arg in ignore_args:
