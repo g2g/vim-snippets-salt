@@ -64,6 +64,8 @@ def gen_snippet(module_name, function_name, argspec, ignore_args):
         if isinstance(default, NoDefault):
             default = ''
         lines.append("    - %s: ${%s:%s}" % (arg, idx, default))
+    lines.append("endsnippet")
+    lines.append("")
     lines.append("")
 
     return "\n".join(lines)
