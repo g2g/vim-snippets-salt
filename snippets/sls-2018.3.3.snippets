@@ -1,0 +1,8422 @@
+snippet boto_iam_role.absent
+  boto_iam_role.absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_iam_role.present
+  boto_iam_role.present:
+    - name: ${1:None}
+    - policy_document: ${2:None}
+    - policy_document_from_pillars: ${3:None}
+    - path: ${4:None}
+    - policies: ${5:None}
+    - policies_from_pillars: ${6:None}
+    - managed_policies: ${7:True}
+    - create_instance_profile: ${8:None}
+    - region: ${9:None}
+    - key: ${10:None}
+    - keyid: ${11:None}
+    - profile: ${12:True}
+endsnippet
+
+snippet boto_ec2.eni_absent
+  boto_ec2.eni_absent:
+    - name: ${1:False}
+    - release_eip: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet boto_ec2.eni_present
+  boto_ec2.eni_present:
+    - name: ${1:None}
+    - subnet_id: ${2:None}
+    - subnet_name: ${3:None}
+    - private_ip_address: ${4:None}
+    - description: ${5:None}
+    - groups: ${6:True}
+    - source_dest_check: ${7:None}
+    - allocate_eip: ${8:None}
+    - arecords: ${9:None}
+    - region: ${10:None}
+    - key: ${11:None}
+    - keyid: ${12:None}
+endsnippet
+
+snippet boto_ec2.instance_absent
+  boto_ec2.instance_absent:
+    - name: ${1:None}
+    - instance_name: ${2:None}
+    - instance_id: ${3:False}
+    - release_eip: ${4:None}
+    - region: ${5:None}
+    - key: ${6:None}
+    - keyid: ${7:None}
+    - profile: ${8:None}
+endsnippet
+
+snippet boto_ec2.instance_present
+  boto_ec2.instance_present:
+    - name: ${1:None}
+    - instance_name: ${2:None}
+    - instance_id: ${3:None}
+    - image_id: ${4:None}
+    - image_name: ${5:None}
+    - tags: ${6:None}
+    - key_name: ${7:None}
+    - security_groups: ${8:None}
+    - user_data: ${9:None}
+    - instance_type: ${10:None}
+    - placement: ${11:None}
+    - kernel_id: ${12:None}
+    - ramdisk_id: ${13:None}
+    - vpc_id: ${14:None}
+    - vpc_name: ${15:None}
+    - monitoring_enabled: ${16:None}
+    - subnet_id: ${17:None}
+    - subnet_name: ${18:None}
+    - private_ip_address: ${19:None}
+    - block_device_map: ${20:None}
+    - disable_api_termination: ${21:None}
+    - instance_initiated_shutdown_behavior: ${22:None}
+    - placement_group: ${23:None}
+    - client_token: ${24:None}
+    - security_group_ids: ${25:None}
+    - security_group_names: ${26:None}
+    - additional_info: ${27:None}
+    - tenancy: ${28:None}
+    - instance_profile_arn: ${29:None}
+    - instance_profile_name: ${30:None}
+    - ebs_optimized: ${31:None}
+    - network_interfaces: ${32:None}
+    - network_interface_name: ${33:None}
+    - network_interface_id: ${34:None}
+    - attributes: ${35:None}
+    - target_state: ${36:None}
+    - public_ip: ${37:None}
+    - allocation_id: ${38:False}
+    - allocate_eip: ${39:None}
+    - region: ${40:None}
+    - key: ${41:None}
+    - keyid: ${42:None}
+endsnippet
+
+snippet boto_ec2.key_absent
+  boto_ec2.key_absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_ec2.key_present
+  boto_ec2.key_present:
+    - name: ${1:None}
+    - save_private: ${2:None}
+    - upload_public: ${3:None}
+    - region: ${4:None}
+    - key: ${5:None}
+    - keyid: ${6:None}
+endsnippet
+
+snippet boto_ec2.private_ips_absent
+  boto_ec2.private_ips_absent:
+    - name: ${1:None}
+    - network_interface_name: ${2:None}
+    - network_interface_id: ${3:None}
+    - private_ip_addresses: ${4:None}
+    - region: ${5:None}
+    - key: ${6:None}
+    - keyid: ${7:None}
+endsnippet
+
+snippet boto_ec2.private_ips_present
+  boto_ec2.private_ips_present:
+    - name: ${1:None}
+    - network_interface_name: ${2:None}
+    - network_interface_id: ${3:None}
+    - private_ip_addresses: ${4:False}
+    - allow_reassignment: ${5:None}
+    - region: ${6:None}
+    - key: ${7:None}
+    - keyid: ${8:None}
+endsnippet
+
+snippet boto_ec2.snapshot_created
+  boto_ec2.snapshot_created:
+    - name: ${1:True}
+    - ami_name: ${2:300}
+endsnippet
+
+snippet boto_ec2.volume_absent
+  boto_ec2.volume_absent:
+    - name: ${1:None}
+    - volume_name: ${2:None}
+    - volume_id: ${3:None}
+    - instance_name: ${4:None}
+    - instance_id: ${5:None}
+    - device: ${6:None}
+    - region: ${7:None}
+    - key: ${8:None}
+    - keyid: ${9:None}
+endsnippet
+
+snippet boto_ec2.volume_present
+  boto_ec2.volume_present:
+    - name: ${1:None}
+    - volume_name: ${2:None}
+    - volume_id: ${3:None}
+    - instance_name: ${4:None}
+    - instance_id: ${5:None}
+    - device: ${6:None}
+    - size: ${7:None}
+    - snapshot_id: ${8:None}
+    - volume_type: ${9:None}
+    - iops: ${10:False}
+    - encrypted: ${11:None}
+    - kms_key_id: ${12:None}
+    - region: ${13:None}
+    - key: ${14:None}
+    - keyid: ${15:None}
+endsnippet
+
+snippet boto_ec2.volumes_tagged
+  boto_ec2.volumes_tagged:
+    - name: ${1:False}
+    - tag_maps: ${2:None}
+    - authoritative: ${3:None}
+    - region: ${4:None}
+    - key: ${5:None}
+endsnippet
+
+snippet mssql_user.absent
+  mssql_user.absent:
+endsnippet
+
+snippet mssql_user.present
+  mssql_user.present:
+    - name: ${1:None}
+    - login: ${2:None}
+    - domain: ${3:None}
+    - database: ${4:None}
+    - roles: ${5:None}
+endsnippet
+
+snippet keystone_endpoint.absent
+  keystone_endpoint.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone_endpoint.present
+  keystone_endpoint.present:
+    - name: ${1:None}
+endsnippet
+
+snippet win_license.activate
+  win_license.activate:
+endsnippet
+
+snippet monit.monitor
+  monit.monitor:
+endsnippet
+
+snippet monit.unmonitor
+  monit.unmonitor:
+endsnippet
+
+snippet loop.until
+  loop.until:
+    - name: ${1:None}
+    - m_args: ${2:None}
+    - m_kwargs: ${3:None}
+    - condition: ${4:0}
+    - period: ${5:604800}
+endsnippet
+
+snippet mac_keychain.default_keychain
+  mac_keychain.default_keychain:
+    - name: ${1:user}
+    - domain: ${2:None}
+endsnippet
+
+snippet mac_keychain.installed
+  mac_keychain.installed:
+    - name: ${1:/Library/Keychains/System.keychain}
+endsnippet
+
+snippet mac_keychain.uninstalled
+  mac_keychain.uninstalled:
+    - name: ${1:/Library/Keychains/System.keychain}
+    - password: ${2:None}
+endsnippet
+
+snippet ddns.absent
+  ddns.absent:
+    - name: ${1:None}
+    - zone: ${2:None}
+endsnippet
+
+snippet ddns.present
+  ddns.present:
+    - name: ${1:A}
+endsnippet
+
+snippet salt_proxy.configure_proxy
+  salt_proxy.configure_proxy:
+    - name: ${1:p8000}
+    - proxyname: ${2:True}
+endsnippet
+
+snippet k8s.label_absent
+  k8s.label_absent:
+    - name: ${1:None}
+    - node: ${2:None}
+endsnippet
+
+snippet k8s.label_folder_absent
+  k8s.label_folder_absent:
+    - name: ${1:None}
+    - node: ${2:None}
+endsnippet
+
+snippet k8s.label_present
+  k8s.label_present:
+    - name: ${1:None}
+    - value: ${2:None}
+endsnippet
+
+snippet glassfish.connection_factory_absent
+  glassfish.connection_factory_absent:
+    - name: ${1:True}
+    - both: ${2:None}
+endsnippet
+
+snippet glassfish.connection_factory_present
+  glassfish.connection_factory_present:
+    - name: ${1:connection_factory}
+    - restype: ${2:''}
+    - description: ${3:True}
+    - enabled: ${4:1}
+    - min_size: ${5:250}
+    - max_size: ${6:2}
+    - resize_quantity: ${7:300}
+    - idle_timeout: ${8:60}
+    - wait_timeout: ${9:False}
+    - reconnect_on_failure: ${10:''}
+    - transaction_support: ${11:False}
+    - connection_validation: ${12:None}
+endsnippet
+
+snippet glassfish.destination_absent
+  glassfish.destination_absent:
+    - name: ${1:None}
+endsnippet
+
+snippet glassfish.destination_present
+  glassfish.destination_present:
+    - name: ${1:queue}
+    - physical: ${2:''}
+    - restype: ${3:True}
+    - description: ${4:None}
+endsnippet
+
+snippet glassfish.jdbc_datasource_absent
+  glassfish.jdbc_datasource_absent:
+    - name: ${1:True}
+    - both: ${2:None}
+endsnippet
+
+snippet glassfish.jdbc_datasource_present
+  glassfish.jdbc_datasource_present:
+    - name: ${1:''}
+    - description: ${2:True}
+    - enabled: ${3:datasource}
+    - restype: ${4:mysql}
+    - vendor: ${5:''}
+    - sql_url: ${6:''}
+    - sql_user: ${7:''}
+    - sql_password: ${8:8}
+    - min_size: ${9:32}
+    - max_size: ${10:2}
+    - resize_quantity: ${11:300}
+    - idle_timeout: ${12:60}
+    - wait_timeout: ${13:False}
+    - non_transactional: ${14:''}
+    - transaction_isolation: ${15:True}
+    - isolation_guaranteed: ${16:None}
+endsnippet
+
+snippet glassfish.system_properties_absent
+  glassfish.system_properties_absent:
+    - name: ${1:None}
+endsnippet
+
+snippet glassfish.system_properties_present
+  glassfish.system_properties_present:
+    - server: ${1:None}
+endsnippet
+
+snippet nftables.append
+  nftables.append:
+    - name: ${1:ipv4}
+endsnippet
+
+snippet nftables.chain_absent
+  nftables.chain_absent:
+    - name: ${1:filter}
+    - table: ${2:ipv4}
+endsnippet
+
+snippet nftables.chain_present
+  nftables.chain_present:
+    - name: ${1:filter}
+    - table: ${2:None}
+    - table_type: ${3:None}
+    - hook: ${4:None}
+    - priority: ${5:ipv4}
+endsnippet
+
+snippet nftables.delete
+  nftables.delete:
+    - name: ${1:ipv4}
+endsnippet
+
+snippet nftables.flush
+  nftables.flush:
+    - name: ${1:ipv4}
+endsnippet
+
+snippet nftables.insert
+  nftables.insert:
+    - name: ${1:ipv4}
+endsnippet
+
+snippet zcbuildout.installed
+  zcbuildout.installed:
+    - name: ${1:buildout.cfg}
+    - config: ${2:False}
+    - quiet: ${3:None}
+    - parts: ${4:None}
+    - user: ${5:()}
+    - env: ${6:None}
+    - buildout_ver: ${7:False}
+    - test_release: ${8:None}
+    - distribute: ${9:None}
+    - new_st: ${10:False}
+    - offline: ${11:False}
+    - newest: ${12:/bin/python2}
+    - python: ${13:False}
+    - debug: ${14:False}
+    - verbose: ${15:None}
+    - unless: ${16:None}
+    - onlyif: ${17:False}
+    - use_vt: ${18:debug}
+endsnippet
+
+snippet zone.absent
+  zone.absent:
+    - name: ${1:False}
+endsnippet
+
+snippet zone.attached
+  zone.attached:
+    - name: ${1:False}
+endsnippet
+
+snippet zone.booted
+  zone.booted:
+    - name: ${1:False}
+endsnippet
+
+snippet zone.detached
+  zone.detached:
+endsnippet
+
+snippet zone.export_
+  zone.export_:
+    - name: ${1:False}
+endsnippet
+
+snippet zone.halted
+  zone.halted:
+    - name: ${1:True}
+endsnippet
+
+snippet zone.import_
+  zone.import_:
+    - name: ${1:import}
+    - path: ${2:False}
+    - mode: ${3:None}
+endsnippet
+
+snippet zone.installed
+  zone.installed:
+    - name: ${1:False}
+    - nodataset: ${2:None}
+endsnippet
+
+snippet zone.merge_dict
+  zone.merge_dict:
+    - obj_a: ${1:smart}
+    - obj_b: ${2:yaml}
+    - strategy: ${3:False}
+endsnippet
+
+snippet zone.present
+  zone.present:
+    - name: ${1:None}
+    - brand: ${2:None}
+endsnippet
+
+snippet zone.property_absent
+  zone.property_absent:
+endsnippet
+
+snippet zone.property_present
+  zone.property_present:
+endsnippet
+
+snippet zone.resource_absent
+  zone.resource_absent:
+endsnippet
+
+snippet zone.resource_present
+  zone.resource_present:
+endsnippet
+
+snippet zone.uninstalled
+  zone.uninstalled:
+endsnippet
+
+snippet infoblox_a.absent
+  infoblox_a.absent:
+    - name: ${1:None}
+    - ipv4addr: ${2:None}
+endsnippet
+
+snippet infoblox_a.present
+  infoblox_a.present:
+    - name: ${1:None}
+    - ipv4addr: ${2:None}
+    - data: ${3:None}
+    - ensure_data: ${4:True}
+endsnippet
+
+snippet pcs.auth
+  pcs.auth:
+    - name: ${1:hacluster}
+    - nodes: ${2:hacluster}
+    - pcsuser: ${3:None}
+endsnippet
+
+snippet pcs.cib_present
+  pcs.cib_present:
+    - name: ${1:None}
+    - cibname: ${2:None}
+endsnippet
+
+snippet pcs.cib_pushed
+  pcs.cib_pushed:
+    - name: ${1:None}
+    - cibname: ${2:None}
+endsnippet
+
+snippet pcs.cluster_node_present
+  pcs.cluster_node_present:
+    - name: ${1:None}
+endsnippet
+
+snippet pcs.cluster_setup
+  pcs.cluster_setup:
+    - name: ${1:pcscluster}
+    - nodes: ${2:None}
+endsnippet
+
+snippet pcs.constraint_present
+  pcs.constraint_present:
+    - name: ${1:None}
+    - constraint_id: ${2:None}
+endsnippet
+
+snippet pcs.prop_has_value
+  pcs.prop_has_value:
+    - name: ${1:None}
+    - prop: ${2:None}
+endsnippet
+
+snippet pcs.resource_defaults_to
+  pcs.resource_defaults_to:
+    - name: ${1:None}
+    - default: ${2:None}
+endsnippet
+
+snippet pcs.resource_op_defaults_to
+  pcs.resource_op_defaults_to:
+    - name: ${1:None}
+    - op_default: ${2:None}
+endsnippet
+
+snippet pcs.resource_present
+  pcs.resource_present:
+    - name: ${1:None}
+    - resource_id: ${2:None}
+endsnippet
+
+snippet pcs.stonith_present
+  pcs.stonith_present:
+    - name: ${1:None}
+    - stonith_id: ${2:None}
+endsnippet
+
+snippet netconfig.managed
+  netconfig.managed:
+    - name: ${1:None}
+    - template_name: ${2:None}
+    - template_source: ${3:None}
+    - template_path: ${4:None}
+    - template_hash: ${5:root}
+    - template_hash_name: ${6:root}
+    - template_user: ${7:755}
+    - template_group: ${8:--------------e----}
+    - template_mode: ${9:None}
+    - template_attrs: ${10:jinja}
+    - saltenv: ${11:False}
+    - template_engine: ${12:None}
+    - skip_verify: ${13:False}
+    - defaults: ${14:True}
+    - test: ${15:False}
+    - commit: ${16:False}
+endsnippet
+
+snippet win_update.downloaded
+  win_update.downloaded:
+    - name: ${1:None}
+    - categories: ${2:None}
+    - skips: ${3:10}
+endsnippet
+
+snippet win_update.installed
+  win_update.installed:
+    - name: ${1:None}
+    - categories: ${2:None}
+    - skips: ${3:10}
+endsnippet
+
+snippet mssql_role.absent
+  mssql_role.absent:
+endsnippet
+
+snippet mssql_role.present
+  mssql_role.present:
+    - name: ${1:None}
+    - owner: ${2:None}
+endsnippet
+
+snippet timezone.system
+  timezone.system:
+    - name: ${1:True}
+endsnippet
+
+snippet msteams.post_card
+  msteams.post_card:
+    - name: ${1:None}
+    - message: ${2:None}
+    - hook_url: ${3:None}
+endsnippet
+
+snippet winrepo.genrepo
+  winrepo.genrepo:
+    - name: ${1:False}
+    - force: ${2:False}
+endsnippet
+
+snippet apache.configfile
+  apache.configfile:
+endsnippet
+
+snippet jenkins.absent
+  jenkins.absent:
+endsnippet
+
+snippet jenkins.present
+  jenkins.present:
+    - name: ${1:None}
+endsnippet
+
+snippet postgres_cluster.absent
+  postgres_cluster.absent:
+endsnippet
+
+snippet postgres_cluster.present
+  postgres_cluster.present:
+    - version: ${1:None}
+    - name: ${2:None}
+    - port: ${3:None}
+    - encoding: ${4:None}
+endsnippet
+
+snippet vbox_guest.additions_installed
+  vbox_guest.additions_installed:
+    - name: ${1:False}
+    - reboot: ${2:False}
+endsnippet
+
+snippet vbox_guest.additions_removed
+  vbox_guest.additions_removed:
+    - name: ${1:False}
+endsnippet
+
+snippet vbox_guest.grant_access_to_shared_folders_to
+  vbox_guest.grant_access_to_shared_folders_to:
+    - name: ${1:None}
+endsnippet
+
+snippet win_system.computer_desc
+  win_system.computer_desc:
+endsnippet
+
+snippet win_system.computer_description
+  win_system.computer_description:
+endsnippet
+
+snippet win_system.computer_name
+  win_system.computer_name:
+endsnippet
+
+snippet win_system.hostname
+  win_system.hostname:
+endsnippet
+
+snippet win_system.join_domain
+  win_system.join_domain:
+    - name: ${1:None}
+    - username: ${2:None}
+    - password: ${3:None}
+    - account_ou: ${4:False}
+    - account_exists: ${5:False}
+endsnippet
+
+snippet win_system.reboot
+  win_system.reboot:
+    - name: ${1:None}
+    - message: ${2:5}
+    - timeout: ${3:True}
+    - force_close: ${4:False}
+    - in_seconds: ${5:True}
+endsnippet
+
+snippet win_system.shutdown
+  win_system.shutdown:
+    - name: ${1:None}
+    - message: ${2:5}
+    - timeout: ${3:True}
+    - force_close: ${4:False}
+    - reboot: ${5:False}
+    - in_seconds: ${6:False}
+endsnippet
+
+snippet wordpress.activated
+  wordpress.activated:
+endsnippet
+
+snippet wordpress.deactivated
+  wordpress.deactivated:
+endsnippet
+
+snippet wordpress.installed
+  wordpress.installed:
+endsnippet
+
+snippet neutron_network.absent
+  neutron_network.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet neutron_network.present
+  neutron_network.present:
+    - name: ${1:None}
+endsnippet
+
+snippet lxc.absent
+  lxc.absent:
+    - name: ${1:False}
+    - stop: ${2:None}
+endsnippet
+
+snippet lxc.edited_conf
+  lxc.edited_conf:
+    - name: ${1:None}
+    - lxc_conf: ${2:None}
+endsnippet
+
+snippet lxc.frozen
+  lxc.frozen:
+    - name: ${1:True}
+    - start: ${2:None}
+endsnippet
+
+snippet lxc.present
+  lxc.present:
+    - name: ${1:None}
+    - running: ${2:None}
+    - clone_from: ${3:False}
+    - snapshot: ${4:None}
+    - profile: ${5:None}
+    - network_profile: ${6:None}
+    - template: ${7:None}
+    - options: ${8:None}
+    - image: ${9:None}
+    - config: ${10:None}
+    - fstype: ${11:None}
+    - size: ${12:None}
+    - backing: ${13:None}
+    - vgname: ${14:None}
+    - lvname: ${15:None}
+    - thinpool: ${16:None}
+endsnippet
+
+snippet lxc.running
+  lxc.running:
+    - name: ${1:False}
+    - restart: ${2:None}
+endsnippet
+
+snippet lxc.set_pass
+  lxc.set_pass:
+endsnippet
+
+snippet lxc.stopped
+  lxc.stopped:
+    - name: ${1:False}
+    - kill: ${2:None}
+endsnippet
+
+snippet rabbitmq_policy.absent
+  rabbitmq_policy.absent:
+    - name: ${1:/}
+    - vhost: ${2:None}
+endsnippet
+
+snippet rabbitmq_policy.present
+  rabbitmq_policy.present:
+    - name: ${1:0}
+    - pattern: ${2:/}
+    - definition: ${3:None}
+    - priority: ${4:None}
+endsnippet
+
+snippet serverdensity_device.monitored
+  serverdensity_device.monitored:
+    - name: ${1:None}
+    - group: ${2:True}
+    - salt_name: ${3:True}
+    - salt_params: ${4:1}
+endsnippet
+
+snippet kubernetes.configmap_absent
+  kubernetes.configmap_absent:
+    - name: ${1:default}
+endsnippet
+
+snippet kubernetes.configmap_present
+  kubernetes.configmap_present:
+    - name: ${1:default}
+    - namespace: ${2:None}
+    - data: ${3:None}
+    - source: ${4:None}
+endsnippet
+
+snippet kubernetes.deployment_absent
+  kubernetes.deployment_absent:
+    - name: ${1:default}
+endsnippet
+
+snippet kubernetes.deployment_present
+  kubernetes.deployment_present:
+    - name: ${1:default}
+    - namespace: ${2:None}
+    - metadata: ${3:None}
+    - spec: ${4:''}
+    - source: ${5:''}
+endsnippet
+
+snippet kubernetes.namespace_absent
+  kubernetes.namespace_absent:
+endsnippet
+
+snippet kubernetes.namespace_present
+  kubernetes.namespace_present:
+endsnippet
+
+snippet kubernetes.node_label_absent
+  kubernetes.node_label_absent:
+endsnippet
+
+snippet kubernetes.node_label_folder_absent
+  kubernetes.node_label_folder_absent:
+endsnippet
+
+snippet kubernetes.node_label_present
+  kubernetes.node_label_present:
+endsnippet
+
+snippet kubernetes.pod_absent
+  kubernetes.pod_absent:
+    - name: ${1:default}
+endsnippet
+
+snippet kubernetes.pod_present
+  kubernetes.pod_present:
+    - name: ${1:default}
+    - namespace: ${2:None}
+    - metadata: ${3:None}
+    - spec: ${4:''}
+    - source: ${5:''}
+endsnippet
+
+snippet kubernetes.secret_absent
+  kubernetes.secret_absent:
+    - name: ${1:default}
+endsnippet
+
+snippet kubernetes.secret_present
+  kubernetes.secret_present:
+    - name: ${1:default}
+    - namespace: ${2:None}
+    - data: ${3:None}
+    - source: ${4:None}
+endsnippet
+
+snippet kubernetes.service_absent
+  kubernetes.service_absent:
+    - name: ${1:default}
+endsnippet
+
+snippet kubernetes.service_present
+  kubernetes.service_present:
+    - name: ${1:default}
+    - namespace: ${2:None}
+    - metadata: ${3:None}
+    - spec: ${4:''}
+    - source: ${5:''}
+endsnippet
+
+snippet htpasswd.user_absent
+  htpasswd.user_absent:
+    - name: ${1:None}
+    - htpasswd_file: ${2:None}
+endsnippet
+
+snippet htpasswd.user_exists
+  htpasswd.user_exists:
+    - name: ${1:None}
+    - password: ${2:None}
+    - htpasswd_file: ${3:''}
+    - options: ${4:False}
+    - force: ${5:None}
+    - runas: ${6:False}
+endsnippet
+
+snippet x509.certificate_managed
+  x509.certificate_managed:
+    - name: ${1:90}
+    - days_remaining: ${2:None}
+    - managed_private_key: ${3:None}
+endsnippet
+
+snippet x509.crl_managed
+  x509.crl_managed:
+    - name: ${1:None}
+    - signing_private_key: ${2:None}
+    - signing_private_key_passphrase: ${3:None}
+    - signing_cert: ${4:100}
+    - revoked: ${5:''}
+    - days_valid: ${6:30}
+    - digest: ${7:False}
+endsnippet
+
+snippet x509.csr_managed
+  x509.csr_managed:
+endsnippet
+
+snippet x509.pem_managed
+  x509.pem_managed:
+    - name: ${1:False}
+endsnippet
+
+snippet x509.private_key_managed
+  x509.private_key_managed:
+    - name: ${1:2048}
+    - bits: ${2:None}
+    - passphrase: ${3:aes_128_cbc}
+    - cipher: ${4:False}
+    - new: ${5:False}
+    - overwrite: ${6:True}
+endsnippet
+
+snippet mongodb_user.absent
+  mongodb_user.absent:
+    - name: ${1:None}
+    - user: ${2:None}
+    - password: ${3:None}
+    - host: ${4:None}
+    - port: ${5:admin}
+    - database: ${6:None}
+endsnippet
+
+snippet mongodb_user.present
+  mongodb_user.present:
+    - name: ${1:admin}
+    - passwd: ${2:None}
+    - database: ${3:None}
+    - user: ${4:localhost}
+    - password: ${5:27017}
+    - host: ${6:None}
+    - port: ${7:None}
+endsnippet
+
+snippet slack.post_message
+  slack.post_message:
+    - name: ${1:None}
+    - channel: ${2:None}
+endsnippet
+
+snippet sysctl.present
+  sysctl.present:
+    - name: ${1:None}
+endsnippet
+
+snippet zabbix_host.absent
+  zabbix_host.absent:
+endsnippet
+
+snippet zabbix_host.assign_templates
+  zabbix_host.assign_templates:
+endsnippet
+
+snippet zabbix_host.deepcopy
+  zabbix_host.deepcopy:
+    - x: ${1:None}
+    - memo: ${2:[]}
+endsnippet
+
+snippet zabbix_host.dumps
+  zabbix_host.dumps:
+    - obj: ${1:False}
+    - skipkeys: ${2:True}
+    - ensure_ascii: ${3:True}
+    - check_circular: ${4:True}
+    - allow_nan: ${5:None}
+    - cls: ${6:None}
+    - indent: ${7:None}
+    - separators: ${8:utf-8}
+    - encoding: ${9:None}
+    - default: ${10:False}
+endsnippet
+
+snippet zabbix_host.loads
+  zabbix_host.loads:
+    - s: ${1:None}
+    - encoding: ${2:None}
+    - cls: ${3:None}
+    - object_hook: ${4:None}
+    - parse_float: ${5:None}
+    - parse_int: ${6:None}
+    - parse_constant: ${7:None}
+endsnippet
+
+snippet zabbix_host.present
+  zabbix_host.present:
+endsnippet
+
+snippet influxdb08_user.absent
+  influxdb08_user.absent:
+    - name: ${1:None}
+    - database: ${2:None}
+    - user: ${3:None}
+    - password: ${4:None}
+    - host: ${5:None}
+endsnippet
+
+snippet influxdb08_user.present
+  influxdb08_user.present:
+    - name: ${1:None}
+    - passwd: ${2:None}
+    - database: ${3:None}
+    - user: ${4:None}
+    - password: ${5:None}
+endsnippet
+
+snippet boto3_route53.exactly_one
+  boto3_route53.exactly_one:
+endsnippet
+
+snippet boto3_route53.hosted_zone_absent
+  boto3_route53.hosted_zone_absent:
+    - name: ${1:None}
+    - Name: ${2:False}
+    - PrivateZone: ${3:None}
+    - region: ${4:None}
+    - key: ${5:None}
+    - keyid: ${6:None}
+endsnippet
+
+snippet boto3_route53.hosted_zone_present
+  boto3_route53.hosted_zone_present:
+    - name: ${1:None}
+    - Name: ${2:False}
+    - PrivateZone: ${3:None}
+    - CallerReference: ${4:None}
+    - Comment: ${5:None}
+    - VPCs: ${6:None}
+    - region: ${7:None}
+    - key: ${8:None}
+    - keyid: ${9:None}
+endsnippet
+
+snippet boto3_route53.rr_absent
+  boto3_route53.rr_absent:
+    - name: ${1:None}
+    - HostedZoneId: ${2:None}
+    - DomainName: ${3:False}
+    - PrivateZone: ${4:None}
+    - Name: ${5:None}
+    - Type: ${6:None}
+    - SetIdentifier: ${7:None}
+    - region: ${8:None}
+    - key: ${9:None}
+    - keyid: ${10:None}
+endsnippet
+
+snippet boto3_route53.rr_present
+  boto3_route53.rr_present:
+    - name: ${1:None}
+    - HostedZoneId: ${2:None}
+    - DomainName: ${3:False}
+    - PrivateZone: ${4:None}
+    - Name: ${5:None}
+    - Type: ${6:None}
+    - SetIdentifier: ${7:None}
+    - Weight: ${8:None}
+    - Region: ${9:None}
+    - GeoLocation: ${10:None}
+    - Failover: ${11:None}
+    - TTL: ${12:None}
+    - ResourceRecords: ${13:None}
+    - AliasTarget: ${14:None}
+    - HealthCheckId: ${15:None}
+    - TrafficPolicyInstanceId: ${16:None}
+    - region: ${17:None}
+    - key: ${18:None}
+    - keyid: ${19:None}
+endsnippet
+
+snippet boto_route53.absent
+  boto_route53.absent:
+    - name: ${1:None}
+    - zone: ${2:None}
+    - record_type: ${3:None}
+    - identifier: ${4:None}
+    - region: ${5:None}
+    - key: ${6:True}
+    - keyid: ${7:False}
+    - profile: ${8:False}
+endsnippet
+
+snippet boto_route53.hosted_zone_absent
+  boto_route53.hosted_zone_absent:
+    - name: ${1:None}
+    - domain_name: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet boto_route53.hosted_zone_present
+  boto_route53.hosted_zone_present:
+    - name: ${1:None}
+    - domain_name: ${2:False}
+    - private_zone: ${3:None}
+    - caller_ref: ${4:''}
+    - comment: ${5:None}
+    - vpc_id: ${6:None}
+    - vpc_name: ${7:None}
+    - vpc_region: ${8:None}
+    - region: ${9:None}
+    - key: ${10:None}
+    - keyid: ${11:None}
+endsnippet
+
+snippet boto_route53.present
+  boto_route53.present:
+    - name: ${1:None}
+    - value: ${2:None}
+    - zone: ${3:None}
+    - record_type: ${4:None}
+    - ttl: ${5:None}
+    - identifier: ${6:None}
+    - region: ${7:True}
+    - key: ${8:False}
+    - keyid: ${9:False}
+endsnippet
+
+snippet boto_route53.rr_absent
+  boto_route53.rr_absent:
+endsnippet
+
+snippet boto_route53.rr_present
+  boto_route53.rr_present:
+endsnippet
+
+snippet influxdb_retention_policy.absent
+  influxdb_retention_policy.absent:
+endsnippet
+
+snippet influxdb_retention_policy.present
+  influxdb_retention_policy.present:
+    - name: ${1:7d}
+    - database: ${2:1}
+    - duration: ${3:False}
+endsnippet
+
+snippet influxdb_user.absent
+  influxdb_user.absent:
+endsnippet
+
+snippet influxdb_user.present
+  influxdb_user.present:
+    - name: ${1:False}
+    - password: ${2:None}
+endsnippet
+
+snippet augeas.change
+  augeas.change:
+    - name: ${1:None}
+    - context: ${2:None}
+    - changes: ${3:None}
+    - lens: ${4:None}
+endsnippet
+
+snippet smartos.config_absent
+  smartos.config_absent:
+endsnippet
+
+snippet smartos.config_present
+  smartos.config_present:
+endsnippet
+
+snippet smartos.image_absent
+  smartos.image_absent:
+endsnippet
+
+snippet smartos.image_present
+  smartos.image_present:
+endsnippet
+
+snippet smartos.image_vacuum
+  smartos.image_vacuum:
+endsnippet
+
+snippet smartos.vm_absent
+  smartos.vm_absent:
+    - name: ${1:False}
+endsnippet
+
+snippet smartos.vm_present
+  smartos.vm_present:
+    - name: ${1:None}
+endsnippet
+
+snippet smartos.vm_running
+  smartos.vm_running:
+endsnippet
+
+snippet smartos.vm_stopped
+  smartos.vm_stopped:
+endsnippet
+
+snippet win_dns_client.dns_dhcp
+  win_dns_client.dns_dhcp:
+    - name: ${1:Local Area Connection}
+endsnippet
+
+snippet win_dns_client.dns_exists
+  win_dns_client.dns_exists:
+    - name: ${1:None}
+    - servers: ${2:Local Area Connection}
+    - interface: ${3:False}
+endsnippet
+
+snippet win_dns_client.primary_suffix
+  win_dns_client.primary_suffix:
+    - name: ${1:None}
+    - suffix: ${2:False}
+endsnippet
+
+snippet gnomedesktop.desktop_interface
+  gnomedesktop.desktop_interface:
+    - name: ${1:None}
+    - user: ${2:None}
+    - automatic_mnemonics: ${3:None}
+    - buttons_have_icons: ${4:None}
+    - can_change_accels: ${5:None}
+    - clock_format: ${6:None}
+    - clock_show_date: ${7:None}
+    - clock_show_seconds: ${8:None}
+    - cursor_blink: ${9:None}
+    - cursor_blink_time: ${10:None}
+    - cursor_blink_timeout: ${11:None}
+    - cursor_size: ${12:None}
+    - cursor_theme: ${13:None}
+    - document_font_name: ${14:None}
+    - enable_animations: ${15:None}
+    - font_name: ${16:None}
+    - gtk_color_palette: ${17:None}
+    - gtk_color_scheme: ${18:None}
+    - gtk_im_module: ${19:None}
+    - gtk_im_preedit_style: ${20:None}
+    - gtk_im_status_style: ${21:None}
+    - gtk_key_theme: ${22:None}
+    - gtk_theme: ${23:None}
+    - gtk_timeout_initial: ${24:None}
+    - gtk_timeout_repeat: ${25:None}
+    - icon_theme: ${26:None}
+    - menubar_accel: ${27:None}
+    - menubar_detachable: ${28:None}
+    - menus_have_icons: ${29:None}
+    - menus_have_tearoff: ${30:None}
+    - monospace_font_name: ${31:None}
+    - show_input_method_menu: ${32:None}
+    - show_unicode_menu: ${33:None}
+    - text_scaling_factor: ${34:None}
+    - toolbar_detachable: ${35:None}
+    - toolbar_icons_size: ${36:None}
+    - toolbar_style: ${37:None}
+endsnippet
+
+snippet gnomedesktop.desktop_lockdown
+  gnomedesktop.desktop_lockdown:
+    - name: ${1:None}
+    - user: ${2:None}
+    - disable_application_handlers: ${3:None}
+    - disable_command_line: ${4:None}
+    - disable_lock_screen: ${5:None}
+    - disable_log_out: ${6:None}
+    - disable_print_setup: ${7:None}
+    - disable_printing: ${8:None}
+    - disable_save_to_disk: ${9:None}
+    - disable_user_switching: ${10:None}
+endsnippet
+
+snippet gnomedesktop.wm_preferences
+  gnomedesktop.wm_preferences:
+    - name: ${1:None}
+    - user: ${2:None}
+    - action_double_click_titlebar: ${3:None}
+    - action_middle_click_titlebar: ${4:None}
+    - action_right_click_titlebar: ${5:None}
+    - application_based: ${6:None}
+    - audible_bell: ${7:None}
+    - auto_raise: ${8:None}
+    - auto_raise_delay: ${9:None}
+    - button_layout: ${10:None}
+    - disable_workarounds: ${11:None}
+    - focus_mode: ${12:None}
+    - focus_new_windows: ${13:None}
+    - mouse_button_modifier: ${14:None}
+    - num_workspaces: ${15:None}
+    - raise_on_click: ${16:None}
+    - resize_with_right_button: ${17:None}
+    - theme: ${18:None}
+    - titlebar_font: ${19:None}
+    - titlebar_uses_system_font: ${20:None}
+    - visual_bell: ${21:None}
+    - visual_bell_type: ${22:None}
+endsnippet
+
+snippet marathon_app.absent
+  marathon_app.absent:
+endsnippet
+
+snippet marathon_app.config
+  marathon_app.config:
+endsnippet
+
+snippet marathon_app.running
+  marathon_app.running:
+    - name: ${1:False}
+    - restart: ${2:True}
+endsnippet
+
+snippet grains.absent
+  grains.absent:
+    - name: ${1:False}
+    - destructive: ${2::}
+    - delimiter: ${3:False}
+endsnippet
+
+snippet grains.append
+  grains.append:
+    - name: ${1:False}
+    - value: ${2::}
+endsnippet
+
+snippet grains.exists
+  grains.exists:
+    - name: ${1::}
+endsnippet
+
+snippet grains.list_absent
+  grains.list_absent:
+    - name: ${1::}
+endsnippet
+
+snippet grains.list_present
+  grains.list_present:
+    - name: ${1::}
+endsnippet
+
+snippet grains.present
+  grains.present:
+    - name: ${1::}
+    - value: ${2:False}
+endsnippet
+
+snippet module.mod_watch
+  module.mod_watch:
+endsnippet
+
+snippet module.run
+  module.run:
+endsnippet
+
+snippet module.wait
+  module.wait:
+endsnippet
+
+snippet module.watch
+  module.watch:
+endsnippet
+
+snippet neutron_secgroup_rule.absent
+  neutron_secgroup_rule.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet neutron_secgroup_rule.present
+  neutron_secgroup_rule.present:
+    - name: ${1:None}
+endsnippet
+
+snippet sqlite3.row_absent
+  sqlite3.row_absent:
+    - name: ${1:None}
+endsnippet
+
+snippet sqlite3.row_present
+  sqlite3.row_present:
+    - name: ${1:None}
+    - db: ${2:False}
+endsnippet
+
+snippet sqlite3.table_absent
+  sqlite3.table_absent:
+endsnippet
+
+snippet sqlite3.table_present
+  sqlite3.table_present:
+    - name: ${1:False}
+endsnippet
+
+snippet git.cloned
+  git.cloned:
+    - name: ${1:None}
+    - target: ${2:None}
+    - branch: ${3:None}
+    - user: ${4:None}
+    - password: ${5:None}
+    - identity: ${6:None}
+    - https_user: ${7:None}
+    - https_pass: ${8:None}
+endsnippet
+
+snippet git.config_set
+  git.config_set:
+    - name: ${1:None}
+    - value: ${2:None}
+    - multivar: ${3:None}
+    - repo: ${4:None}
+    - user: ${5:None}
+    - password: ${6:None}
+endsnippet
+
+snippet git.config_unset
+  git.config_unset:
+    - name: ${1:None}
+    - value_regex: ${2:None}
+    - repo: ${3:None}
+    - user: ${4:None}
+    - password: ${5:None}
+endsnippet
+
+snippet git.detached
+  git.detached:
+    - name: ${1:None}
+    - rev: ${2:origin}
+    - target: ${3:None}
+    - remote: ${4:None}
+    - user: ${5:False}
+    - password: ${6:False}
+    - force_clone: ${7:True}
+    - force_checkout: ${8:False}
+    - fetch_remote: ${9:False}
+    - hard_reset: ${10:None}
+    - submodules: ${11:None}
+    - identity: ${12:None}
+    - https_user: ${13:False}
+    - https_pass: ${14:False}
+    - onlyif: ${15:None}
+endsnippet
+
+snippet git.latest
+  git.latest:
+    - name: ${1:HEAD}
+    - rev: ${2:None}
+    - target: ${3:None}
+    - branch: ${4:None}
+    - user: ${5:None}
+    - password: ${6:True}
+    - update_head: ${7:False}
+    - force_checkout: ${8:False}
+    - force_clone: ${9:False}
+    - force_fetch: ${10:False}
+    - force_reset: ${11:False}
+    - submodules: ${12:False}
+    - bare: ${13:False}
+    - mirror: ${14:origin}
+    - remote: ${15:True}
+    - fetch_tags: ${16:None}
+    - depth: ${17:None}
+    - identity: ${18:None}
+    - https_user: ${19:None}
+    - https_pass: ${20:False}
+    - onlyif: ${21:False}
+    - unless: ${22:*}
+    - refspec_branch: ${23:*}
+    - refspec_tag: ${24:None}
+endsnippet
+
+snippet git.mod_run_check
+  git.mod_run_check:
+endsnippet
+
+snippet git.present
+  git.present:
+    - name: ${1:False}
+    - force: ${2:True}
+    - bare: ${3:None}
+    - template: ${4:None}
+    - separate_git_dir: ${5:None}
+    - shared: ${6:None}
+    - user: ${7:None}
+    - password: ${8:None}
+endsnippet
+
+snippet group.absent
+  group.absent:
+endsnippet
+
+snippet group.present
+  group.present:
+    - name: ${1:None}
+    - gid: ${2:False}
+    - system: ${3:None}
+    - addusers: ${4:None}
+    - delusers: ${5:None}
+endsnippet
+
+snippet infoblox_cname.absent
+  infoblox_cname.absent:
+    - name: ${1:None}
+    - canonical: ${2:None}
+endsnippet
+
+snippet infoblox_cname.present
+  infoblox_cname.present:
+    - name: ${1:None}
+    - data: ${2:None}
+    - ensure_data: ${3:True}
+endsnippet
+
+snippet hg.latest
+  hg.latest:
+    - name: ${1:None}
+    - rev: ${2:None}
+    - target: ${3:False}
+    - clean: ${4:None}
+    - user: ${5:None}
+    - identity: ${6:False}
+    - force: ${7:False}
+    - opts: ${8:True}
+endsnippet
+
+snippet pagerduty_escalation_policy.absent
+  pagerduty_escalation_policy.absent:
+    - profile: ${1:pagerduty}
+    - subdomain: ${2:None}
+    - api_key: ${3:None}
+endsnippet
+
+snippet pagerduty_escalation_policy.present
+  pagerduty_escalation_policy.present:
+    - profile: ${1:pagerduty}
+    - subdomain: ${2:None}
+    - api_key: ${3:None}
+endsnippet
+
+snippet ifttt.trigger_event
+  ifttt.trigger_event:
+    - name: ${1:None}
+    - event: ${2:None}
+    - value1: ${3:None}
+endsnippet
+
+snippet rabbitmq_vhost.absent
+  rabbitmq_vhost.absent:
+endsnippet
+
+snippet rabbitmq_vhost.present
+  rabbitmq_vhost.present:
+endsnippet
+
+snippet ntp.managed
+  ntp.managed:
+    - name: ${1:None}
+endsnippet
+
+snippet netacl.filter
+  netacl.filter:
+    - name: ${1:None}
+    - filter_name: ${2:None}
+    - filter_options: ${3:True}
+    - terms: ${4:acl}
+    - prepend: ${5:None}
+    - pillar_key: ${6:None}
+    - pillarenv: ${7:False}
+    - saltenv: ${8:False}
+    - merge_pillar: ${9:None}
+    - only_lower_merge: ${10:None}
+    - revision_id: ${11:True}
+    - revision_no: ${12:%Y/%m/%d}
+    - revision_date: ${13:False}
+    - revision_date_format: ${14:True}
+    - test: ${15:False}
+endsnippet
+
+snippet netacl.managed
+  netacl.managed:
+    - name: ${1:None}
+    - filters: ${2:True}
+    - prepend: ${3:acl}
+    - pillar_key: ${4:None}
+    - pillarenv: ${5:None}
+    - saltenv: ${6:False}
+    - merge_pillar: ${7:False}
+    - only_lower_merge: ${8:None}
+    - revision_id: ${9:None}
+    - revision_no: ${10:True}
+    - revision_date: ${11:%Y/%m/%d}
+    - revision_date_format: ${12:False}
+    - test: ${13:True}
+    - commit: ${14:False}
+endsnippet
+
+snippet netacl.term
+  netacl.term:
+    - name: ${1:None}
+    - filter_name: ${2:acl}
+    - term_name: ${3:None}
+    - filter_options: ${4:None}
+    - pillar_key: ${5:False}
+    - pillarenv: ${6:None}
+    - saltenv: ${7:None}
+    - merge_pillar: ${8:True}
+    - revision_id: ${9:%Y/%m/%d}
+    - revision_no: ${10:False}
+    - revision_date: ${11:True}
+    - revision_date_format: ${12:False}
+    - test: ${13:None}
+    - commit: ${14:None}
+endsnippet
+
+snippet cimc.ntp
+  cimc.ntp:
+endsnippet
+
+snippet cimc.syslog
+  cimc.syslog:
+    - name: ${1:None}
+    - primary: ${2:None}
+endsnippet
+
+snippet mssql_login.absent
+  mssql_login.absent:
+endsnippet
+
+snippet mssql_login.present
+  mssql_login.present:
+    - name: ${1:None}
+    - password: ${2:None}
+    - domain: ${3:None}
+    - server_roles: ${4:None}
+endsnippet
+
+snippet esxi.coredump_configured
+  esxi.coredump_configured:
+    - name: ${1:vmk0}
+    - enabled: ${2:6500}
+endsnippet
+
+snippet esxi.diskgroups_configured
+  esxi.diskgroups_configured:
+    - name: ${1:False}
+endsnippet
+
+snippet esxi.host_cache_configured
+  esxi.host_cache_configured:
+    - name: ${1:100%}
+    - enabled: ${2:False}
+    - datastore: ${3:False}
+endsnippet
+
+snippet esxi.ntp_configured
+  esxi.ntp_configured:
+    - name: ${1:None}
+    - service_running: ${2:None}
+    - ntp_servers: ${3:False}
+    - service_policy: ${4:False}
+endsnippet
+
+snippet esxi.password_present
+  esxi.password_present:
+endsnippet
+
+snippet esxi.ssh_configured
+  esxi.ssh_configured:
+    - name: ${1:None}
+    - service_running: ${2:None}
+    - ssh_key: ${3:None}
+    - ssh_key_file: ${4:False}
+    - service_policy: ${5:False}
+endsnippet
+
+snippet esxi.syslog_configured
+  esxi.syslog_configured:
+    - name: ${1:True}
+    - syslog_configs: ${2:True}
+    - firewall: ${3:False}
+    - reset_service: ${4:None}
+endsnippet
+
+snippet esxi.vmotion_configured
+  esxi.vmotion_configured:
+    - name: ${1:vmk0}
+endsnippet
+
+snippet esxi.vsan_configured
+  esxi.vsan_configured:
+    - name: ${1:False}
+endsnippet
+
+snippet boto_cloudwatch_event.absent
+  boto_cloudwatch_event.absent:
+    - name: ${1:None}
+    - Name: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet boto_cloudwatch_event.present
+  boto_cloudwatch_event.present:
+    - name: ${1:None}
+    - Name: ${2:None}
+    - ScheduleExpression: ${3:None}
+    - EventPattern: ${4:None}
+    - Description: ${5:None}
+    - RoleArn: ${6:None}
+    - State: ${7:None}
+    - Targets: ${8:None}
+    - region: ${9:None}
+    - key: ${10:None}
+    - keyid: ${11:None}
+endsnippet
+
+snippet keystone_domain.absent
+  keystone_domain.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone_domain.present
+  keystone_domain.present:
+    - name: ${1:None}
+endsnippet
+
+snippet pushover.post_message
+  pushover.post_message:
+    - name: ${1:None}
+    - user: ${2:None}
+    - device: ${3:None}
+    - message: ${4:None}
+    - title: ${5:None}
+    - priority: ${6:None}
+    - expire: ${7:None}
+    - retry: ${8:None}
+    - sound: ${9:1}
+    - api_version: ${10:None}
+endsnippet
+
+snippet boto_rds.absent
+  boto_rds.absent:
+    - name: ${1:None}
+    - skip_final_snapshot: ${2:None}
+    - final_db_snapshot_identifier: ${3:None}
+    - tags: ${4:True}
+    - wait_for_deletion: ${5:180}
+    - timeout: ${6:None}
+    - region: ${7:None}
+    - key: ${8:None}
+    - keyid: ${9:None}
+endsnippet
+
+snippet boto_rds.parameter_present
+  boto_rds.parameter_present:
+    - name: ${1:None}
+    - db_parameter_group_family: ${2:pending-reboot}
+    - description: ${3:None}
+    - parameters: ${4:None}
+    - apply_method: ${5:None}
+    - tags: ${6:None}
+    - region: ${7:None}
+endsnippet
+
+snippet boto_rds.present
+  boto_rds.present:
+    - name: ${1:None}
+    - allocated_storage: ${2:None}
+    - db_instance_class: ${3:None}
+    - engine: ${4:None}
+    - master_username: ${5:None}
+    - master_user_password: ${6:None}
+    - db_name: ${7:None}
+    - storage_type: ${8:None}
+    - db_security_groups: ${9:None}
+    - vpc_security_group_ids: ${10:None}
+    - vpc_security_groups: ${11:None}
+    - availability_zone: ${12:None}
+    - db_subnet_group_name: ${13:None}
+    - preferred_maintenance_window: ${14:None}
+    - db_parameter_group_name: ${15:None}
+    - db_cluster_identifier: ${16:None}
+    - tde_credential_arn: ${17:None}
+    - tde_credential_password: ${18:None}
+    - storage_encrypted: ${19:None}
+    - kms_keyid: ${20:None}
+    - backup_retention_period: ${21:None}
+    - preferred_backup_window: ${22:None}
+    - port: ${23:None}
+    - multi_az: ${24:None}
+    - engine_version: ${25:None}
+    - auto_minor_version_upgrade: ${26:None}
+    - license_model: ${27:None}
+    - iops: ${28:None}
+    - option_group_name: ${29:None}
+    - character_set_name: ${30:None}
+    - publicly_accessible: ${31:None}
+    - wait_status: ${32:None}
+    - tags: ${33:None}
+    - copy_tags_to_snapshot: ${34:None}
+    - region: ${35:None}
+    - domain: ${36:None}
+    - key: ${37:None}
+endsnippet
+
+snippet boto_rds.replica_present
+  boto_rds.replica_present:
+    - name: ${1:None}
+    - source: ${2:None}
+    - db_instance_class: ${3:None}
+    - availability_zone: ${4:None}
+    - port: ${5:None}
+    - auto_minor_version_upgrade: ${6:None}
+    - iops: ${7:None}
+    - option_group_name: ${8:None}
+    - publicly_accessible: ${9:None}
+    - tags: ${10:None}
+    - region: ${11:None}
+    - key: ${12:None}
+    - keyid: ${13:None}
+endsnippet
+
+snippet boto_rds.subnet_group_absent
+  boto_rds.subnet_group_absent:
+    - name: ${1:None}
+    - tags: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet boto_rds.subnet_group_present
+  boto_rds.subnet_group_present:
+    - name: ${1:None}
+    - description: ${2:None}
+    - subnet_ids: ${3:None}
+    - subnet_names: ${4:None}
+    - tags: ${5:None}
+    - region: ${6:None}
+    - key: ${7:None}
+endsnippet
+
+snippet zabbix_usermacro.absent
+  zabbix_usermacro.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet zabbix_usermacro.present
+  zabbix_usermacro.present:
+    - name: ${1:None}
+endsnippet
+
+snippet cmd.call
+  cmd.call:
+    - name: ${1:()}
+    - func: ${2:None}
+    - args: ${3:None}
+    - kws: ${4:None}
+    - onlyif: ${5:None}
+    - unless: ${6:debug}
+    - creates: ${7:False}
+    - output_loglevel: ${8:False}
+endsnippet
+
+snippet cmd.mod_run_check
+  cmd.mod_run_check:
+endsnippet
+
+snippet cmd.mod_watch
+  cmd.mod_watch:
+endsnippet
+
+snippet cmd.run
+  cmd.run:
+    - name: ${1:None}
+    - onlyif: ${2:None}
+    - unless: ${3:None}
+    - creates: ${4:None}
+    - cwd: ${5:None}
+    - runas: ${6:None}
+    - shell: ${7:None}
+    - env: ${8:None}
+    - prepend_path: ${9:False}
+    - stateful: ${10:None}
+    - umask: ${11:debug}
+    - output_loglevel: ${12:False}
+    - hide_output: ${13:None}
+    - timeout: ${14:False}
+    - ignore_timeout: ${15:False}
+endsnippet
+
+snippet cmd.script
+  cmd.script:
+    - name: ${1:None}
+    - source: ${2:None}
+    - template: ${3:None}
+    - onlyif: ${4:None}
+    - unless: ${5:None}
+    - creates: ${6:None}
+    - cwd: ${7:None}
+    - runas: ${8:None}
+    - shell: ${9:None}
+    - env: ${10:False}
+    - stateful: ${11:None}
+    - umask: ${12:None}
+    - timeout: ${13:False}
+    - use_vt: ${14:debug}
+    - output_loglevel: ${15:False}
+    - hide_output: ${16:None}
+    - defaults: ${17:None}
+endsnippet
+
+snippet cmd.wait
+  cmd.wait:
+    - name: ${1:None}
+    - onlyif: ${2:None}
+    - unless: ${3:None}
+    - creates: ${4:None}
+    - cwd: ${5:None}
+    - runas: ${6:None}
+    - shell: ${7:()}
+    - env: ${8:False}
+    - stateful: ${9:None}
+    - umask: ${10:debug}
+    - output_loglevel: ${11:False}
+    - hide_output: ${12:False}
+endsnippet
+
+snippet cmd.wait_call
+  cmd.wait_call:
+    - name: ${1:()}
+    - func: ${2:None}
+    - args: ${3:None}
+    - kws: ${4:None}
+    - onlyif: ${5:None}
+    - unless: ${6:False}
+    - creates: ${7:False}
+    - stateful: ${8:debug}
+    - use_vt: ${9:False}
+endsnippet
+
+snippet cmd.wait_script
+  cmd.wait_script:
+    - name: ${1:None}
+    - source: ${2:None}
+    - template: ${3:None}
+    - onlyif: ${4:None}
+    - unless: ${5:None}
+    - cwd: ${6:None}
+    - runas: ${7:None}
+    - shell: ${8:None}
+    - env: ${9:False}
+    - stateful: ${10:None}
+    - umask: ${11:False}
+    - use_vt: ${12:debug}
+    - output_loglevel: ${13:False}
+endsnippet
+
+snippet cmd.watch
+  cmd.watch:
+    - name: ${1:None}
+    - onlyif: ${2:None}
+    - unless: ${3:None}
+    - creates: ${4:None}
+    - cwd: ${5:None}
+    - runas: ${6:None}
+    - shell: ${7:()}
+    - env: ${8:False}
+    - stateful: ${9:None}
+    - umask: ${10:debug}
+    - output_loglevel: ${11:False}
+    - hide_output: ${12:False}
+endsnippet
+
+snippet etcd_mod.directory
+  etcd_mod.directory:
+    - name: ${1:None}
+endsnippet
+
+snippet etcd_mod.mod_watch
+  etcd_mod.mod_watch:
+endsnippet
+
+snippet etcd_mod.rm_
+  etcd_mod.rm_:
+    - name: ${1:False}
+    - recurse: ${2:None}
+endsnippet
+
+snippet etcd_mod.set_
+  etcd_mod.set_:
+    - name: ${1:None}
+endsnippet
+
+snippet etcd_mod.wait_rm
+  etcd_mod.wait_rm:
+    - name: ${1:False}
+    - recurse: ${2:None}
+endsnippet
+
+snippet etcd_mod.wait_set
+  etcd_mod.wait_set:
+    - name: ${1:None}
+endsnippet
+
+snippet splunk.absent
+  splunk.absent:
+    - email: ${1:splunk}
+endsnippet
+
+snippet splunk.present
+  splunk.present:
+    - email: ${1:splunk}
+endsnippet
+
+snippet mysql_user.absent
+  mysql_user.absent:
+    - name: ${1:localhost}
+endsnippet
+
+snippet mysql_user.present
+  mysql_user.present:
+    - name: ${1:localhost}
+    - host: ${2:None}
+    - password: ${3:None}
+    - password_hash: ${4:False}
+    - allow_passwordless: ${5:False}
+    - unix_socket: ${6:None}
+endsnippet
+
+snippet bower.bootstrap
+  bower.bootstrap:
+    - name: ${1:None}
+endsnippet
+
+snippet bower.installed
+  bower.installed:
+    - name: ${1:None}
+    - dir: ${2:None}
+    - pkgs: ${3:None}
+endsnippet
+
+snippet bower.pruned
+  bower.pruned:
+    - name: ${1:None}
+    - user: ${2:None}
+endsnippet
+
+snippet bower.removed
+  bower.removed:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone.endpoint_absent
+  keystone.endpoint_absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - profile: ${3:None}
+endsnippet
+
+snippet keystone.endpoint_present
+  keystone.endpoint_present:
+    - name: ${1:None}
+    - publicurl: ${2:None}
+    - internalurl: ${3:None}
+    - adminurl: ${4:None}
+    - region: ${5:None}
+    - profile: ${6:None}
+    - url: ${7:None}
+endsnippet
+
+snippet keystone.project_absent
+  keystone.project_absent:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone.project_present
+  keystone.project_present:
+    - name: ${1:None}
+    - description: ${2:True}
+    - enabled: ${3:None}
+endsnippet
+
+snippet keystone.role_absent
+  keystone.role_absent:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone.role_present
+  keystone.role_present:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone.service_absent
+  keystone.service_absent:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone.service_present
+  keystone.service_present:
+    - name: ${1:None}
+    - service_type: ${2:None}
+endsnippet
+
+snippet keystone.tenant_absent
+  keystone.tenant_absent:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone.tenant_present
+  keystone.tenant_present:
+    - name: ${1:None}
+    - description: ${2:True}
+    - enabled: ${3:None}
+endsnippet
+
+snippet keystone.user_absent
+  keystone.user_absent:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone.user_present
+  keystone.user_present:
+    - name: ${1:None}
+    - password: ${2:True}
+    - email: ${3:None}
+    - tenant: ${4:None}
+    - enabled: ${5:True}
+    - roles: ${6:None}
+endsnippet
+
+snippet apache_site.disabled
+  apache_site.disabled:
+endsnippet
+
+snippet apache_site.enabled
+  apache_site.enabled:
+endsnippet
+
+snippet xmpp.send_msg
+  xmpp.send_msg:
+endsnippet
+
+snippet xmpp.send_msg_multi
+  xmpp.send_msg_multi:
+    - name: ${1:None}
+    - profile: ${2:None}
+endsnippet
+
+snippet modjk_worker.activate
+  modjk_worker.activate:
+    - name: ${1:default}
+    - lbn: ${2:glob}
+    - target: ${3:None}
+endsnippet
+
+snippet modjk_worker.disable
+  modjk_worker.disable:
+    - name: ${1:default}
+    - lbn: ${2:glob}
+    - target: ${3:None}
+endsnippet
+
+snippet modjk_worker.stop
+  modjk_worker.stop:
+    - name: ${1:default}
+    - lbn: ${2:glob}
+    - target: ${3:None}
+endsnippet
+
+snippet boto_asg.absent
+  boto_asg.absent:
+    - name: ${1:False}
+    - force: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+    - profile: ${6:False}
+endsnippet
+
+snippet boto_asg.present
+  boto_asg.present:
+    - name: ${1:None}
+    - launch_config_name: ${2:None}
+    - availability_zones: ${3:None}
+    - min_size: ${4:None}
+    - max_size: ${5:None}
+    - launch_config: ${6:None}
+    - desired_capacity: ${7:None}
+    - load_balancers: ${8:None}
+    - default_cooldown: ${9:None}
+    - health_check_type: ${10:None}
+    - health_check_period: ${11:None}
+    - placement_group: ${12:boto_asg_termination_policies}
+    - vpc_zone_identifier: ${13:None}
+    - subnet_names: ${14:None}
+    - tags: ${15:boto_asg_scaling_policies}
+    - termination_policies: ${16:None}
+    - termination_policies_from_pillar: ${17:boto_asg_scheduled_actions}
+    - suspended_processes: ${18:None}
+    - scaling_policies: ${19:boto_asg_alarms}
+    - scaling_policies_from_pillar: ${20:None}
+    - scheduled_actions: ${21:None}
+    - scheduled_actions_from_pillar: ${22:None}
+    - alarms: ${23:None}
+    - alarms_from_pillar: ${24:None}
+    - region: ${25:boto_asg_notification_arn}
+    - key: ${26:None}
+    - keyid: ${27:boto_asg_notification_types}
+endsnippet
+
+snippet win_smtp_server.active_log_format
+  win_smtp_server.active_log_format:
+    - name: ${1:SmtpSvc/1}
+endsnippet
+
+snippet win_smtp_server.connection_ip_list
+  win_smtp_server.connection_ip_list:
+    - name: ${1:None}
+    - addresses: ${2:False}
+    - grant_by_default: ${3:SmtpSvc/1}
+endsnippet
+
+snippet win_smtp_server.relay_ip_list
+  win_smtp_server.relay_ip_list:
+    - name: ${1:None}
+    - addresses: ${2:SmtpSvc/1}
+endsnippet
+
+snippet win_smtp_server.server_setting
+  win_smtp_server.server_setting:
+    - name: ${1:None}
+    - settings: ${2:SmtpSvc/1}
+endsnippet
+
+snippet zabbix_usergroup.absent
+  zabbix_usergroup.absent:
+endsnippet
+
+snippet zabbix_usergroup.present
+  zabbix_usergroup.present:
+endsnippet
+
+snippet boto3_elasticache.cache_cluster_absent
+  boto3_elasticache.cache_cluster_absent:
+    - name: ${1:600}
+    - wait: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet boto3_elasticache.cache_cluster_present
+  boto3_elasticache.cache_cluster_present:
+    - name: ${1:900}
+    - wait: ${2:None}
+    - security_groups: ${3:None}
+    - region: ${4:None}
+    - key: ${5:None}
+    - keyid: ${6:None}
+endsnippet
+
+snippet boto3_elasticache.cache_subnet_group_absent
+  boto3_elasticache.cache_subnet_group_absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto3_elasticache.cache_subnet_group_present
+  boto3_elasticache.cache_subnet_group_present:
+    - name: ${1:None}
+    - subnets: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet boto3_elasticache.replication_group_absent
+  boto3_elasticache.replication_group_absent:
+    - name: ${1:600}
+    - wait: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet boto3_elasticache.replication_group_present
+  boto3_elasticache.replication_group_present:
+    - name: ${1:900}
+    - wait: ${2:None}
+    - security_groups: ${3:None}
+    - region: ${4:None}
+    - key: ${5:None}
+    - keyid: ${6:None}
+endsnippet
+
+snippet win_dism.capability_installed
+  win_dism.capability_installed:
+    - name: ${1:None}
+    - source: ${2:False}
+    - limit_access: ${3:None}
+    - image: ${4:False}
+endsnippet
+
+snippet win_dism.capability_removed
+  win_dism.capability_removed:
+    - name: ${1:None}
+    - image: ${2:False}
+endsnippet
+
+snippet win_dism.feature_installed
+  win_dism.feature_installed:
+    - name: ${1:None}
+    - package: ${2:None}
+    - source: ${3:False}
+    - limit_access: ${4:False}
+    - enable_parent: ${5:None}
+    - image: ${6:False}
+endsnippet
+
+snippet win_dism.feature_removed
+  win_dism.feature_removed:
+    - name: ${1:False}
+    - remove_payload: ${2:None}
+    - image: ${3:False}
+endsnippet
+
+snippet win_dism.package_installed
+  win_dism.package_installed:
+    - name: ${1:False}
+    - ignore_check: ${2:False}
+    - prevent_pending: ${3:None}
+    - image: ${4:False}
+endsnippet
+
+snippet win_dism.package_removed
+  win_dism.package_removed:
+    - name: ${1:None}
+    - image: ${2:False}
+endsnippet
+
+snippet zookeeper.absent
+  zookeeper.absent:
+    - name: ${1:-1}
+    - version: ${2:False}
+    - recursive: ${3:None}
+    - profile: ${4:None}
+    - hosts: ${5:None}
+    - scheme: ${6:None}
+    - username: ${7:None}
+    - password: ${8:None}
+endsnippet
+
+snippet zookeeper.acls
+  zookeeper.acls:
+    - name: ${1:-1}
+    - acls: ${2:None}
+    - version: ${3:None}
+    - profile: ${4:None}
+    - hosts: ${5:None}
+    - scheme: ${6:None}
+    - username: ${7:None}
+endsnippet
+
+snippet zookeeper.present
+  zookeeper.present:
+    - name: ${1:None}
+    - value: ${2:False}
+    - acls: ${3:False}
+    - ephemeral: ${4:False}
+    - sequence: ${5:-1}
+    - makepath: ${6:None}
+    - version: ${7:None}
+    - profile: ${8:None}
+    - hosts: ${9:None}
+    - scheme: ${10:None}
+    - username: ${11:None}
+endsnippet
+
+snippet boto_vpc.absent
+  boto_vpc.absent:
+    - name: ${1:None}
+    - tags: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet boto_vpc.accept_vpc_peering_connection
+  boto_vpc.accept_vpc_peering_connection:
+    - name: ${1:None}
+    - conn_id: ${2:None}
+    - conn_name: ${3:None}
+    - region: ${4:None}
+    - key: ${5:None}
+    - keyid: ${6:None}
+    - profile: ${7:None}
+endsnippet
+
+snippet boto_vpc.delete_vpc_peering_connection
+  boto_vpc.delete_vpc_peering_connection:
+    - name: ${1:None}
+    - conn_id: ${2:None}
+    - conn_name: ${3:None}
+    - region: ${4:None}
+    - key: ${5:None}
+    - keyid: ${6:None}
+endsnippet
+
+snippet boto_vpc.dhcp_options_absent
+  boto_vpc.dhcp_options_absent:
+    - name: ${1:None}
+    - dhcp_options_id: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+    - profile: ${6:None}
+endsnippet
+
+snippet boto_vpc.dhcp_options_present
+  boto_vpc.dhcp_options_present:
+    - name: ${1:None}
+    - dhcp_options_id: ${2:None}
+    - vpc_name: ${3:None}
+    - vpc_id: ${4:None}
+    - domain_name: ${5:None}
+    - domain_name_servers: ${6:None}
+    - ntp_servers: ${7:None}
+    - netbios_name_servers: ${8:None}
+    - netbios_node_type: ${9:None}
+    - tags: ${10:None}
+    - region: ${11:None}
+    - key: ${12:None}
+    - keyid: ${13:None}
+endsnippet
+
+snippet boto_vpc.internet_gateway_absent
+  boto_vpc.internet_gateway_absent:
+    - name: ${1:False}
+    - detach: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet boto_vpc.internet_gateway_present
+  boto_vpc.internet_gateway_present:
+    - name: ${1:None}
+    - vpc_name: ${2:None}
+    - vpc_id: ${3:None}
+    - tags: ${4:None}
+    - region: ${5:None}
+    - key: ${6:None}
+    - keyid: ${7:None}
+endsnippet
+
+snippet boto_vpc.nat_gateway_absent
+  boto_vpc.nat_gateway_absent:
+    - name: ${1:None}
+    - subnet_name: ${2:None}
+    - subnet_id: ${3:None}
+    - region: ${4:None}
+    - key: ${5:None}
+    - keyid: ${6:None}
+    - profile: ${7:None}
+    - wait_for_delete_retries: ${8:0}
+endsnippet
+
+snippet boto_vpc.nat_gateway_present
+  boto_vpc.nat_gateway_present:
+    - name: ${1:None}
+    - subnet_name: ${2:None}
+    - subnet_id: ${3:None}
+    - region: ${4:None}
+    - key: ${5:None}
+    - keyid: ${6:None}
+    - profile: ${7:None}
+endsnippet
+
+snippet boto_vpc.present
+  boto_vpc.present:
+    - name: ${1:None}
+    - cidr_block: ${2:None}
+    - instance_tenancy: ${3:None}
+    - dns_support: ${4:None}
+    - dns_hostnames: ${5:None}
+    - tags: ${6:None}
+    - region: ${7:None}
+    - key: ${8:None}
+endsnippet
+
+snippet boto_vpc.request_vpc_peering_connection
+  boto_vpc.request_vpc_peering_connection:
+    - name: ${1:None}
+    - requester_vpc_id: ${2:None}
+    - requester_vpc_name: ${3:None}
+    - peer_vpc_id: ${4:None}
+    - peer_vpc_name: ${5:None}
+    - conn_name: ${6:None}
+    - peer_owner_id: ${7:None}
+    - region: ${8:None}
+    - key: ${9:None}
+    - keyid: ${10:None}
+endsnippet
+
+snippet boto_vpc.route_table_absent
+  boto_vpc.route_table_absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_vpc.route_table_present
+  boto_vpc.route_table_present:
+    - name: ${1:None}
+    - vpc_name: ${2:None}
+    - vpc_id: ${3:None}
+    - routes: ${4:None}
+    - subnet_ids: ${5:None}
+    - subnet_names: ${6:None}
+    - tags: ${7:None}
+    - region: ${8:None}
+    - key: ${9:None}
+    - keyid: ${10:None}
+endsnippet
+
+snippet boto_vpc.subnet_absent
+  boto_vpc.subnet_absent:
+    - name: ${1:None}
+    - subnet_id: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+    - profile: ${6:None}
+endsnippet
+
+snippet boto_vpc.subnet_present
+  boto_vpc.subnet_present:
+    - name: ${1:None}
+    - cidr_block: ${2:None}
+    - vpc_name: ${3:None}
+    - vpc_id: ${4:None}
+    - availability_zone: ${5:None}
+    - tags: ${6:None}
+    - region: ${7:None}
+    - key: ${8:None}
+    - keyid: ${9:None}
+    - profile: ${10:None}
+endsnippet
+
+snippet boto_vpc.vpc_peering_connection_absent
+  boto_vpc.vpc_peering_connection_absent:
+    - name: ${1:None}
+    - conn_id: ${2:None}
+    - conn_name: ${3:None}
+    - region: ${4:None}
+    - key: ${5:None}
+    - keyid: ${6:None}
+endsnippet
+
+snippet boto_vpc.vpc_peering_connection_present
+  boto_vpc.vpc_peering_connection_present:
+    - name: ${1:None}
+    - requester_vpc_id: ${2:None}
+    - requester_vpc_name: ${3:None}
+    - peer_vpc_id: ${4:None}
+    - peer_vpc_name: ${5:None}
+    - conn_name: ${6:None}
+    - peer_owner_id: ${7:None}
+    - region: ${8:None}
+    - key: ${9:None}
+    - keyid: ${10:None}
+endsnippet
+
+snippet http.query
+  http.query:
+    - name: ${1:None}
+    - match: ${2:string}
+    - match_type: ${3:None}
+    - status: ${4:None}
+endsnippet
+
+snippet http.wait_for_successful_query
+  http.wait_for_successful_query:
+    - name: ${1:300}
+endsnippet
+
+snippet statuspage.create
+  statuspage.create:
+    - name: ${1:incidents}
+    - endpoint: ${2:None}
+    - api_url: ${3:None}
+    - page_id: ${4:None}
+    - api_key: ${5:None}
+endsnippet
+
+snippet statuspage.delete
+  statuspage.delete:
+    - name: ${1:incidents}
+    - endpoint: ${2:None}
+    - id: ${3:None}
+    - api_url: ${4:None}
+    - page_id: ${5:None}
+    - api_key: ${6:None}
+endsnippet
+
+snippet statuspage.managed
+  statuspage.managed:
+    - name: ${1:None}
+    - config: ${2:None}
+    - api_url: ${3:None}
+    - page_id: ${4:None}
+    - api_key: ${5:1}
+    - api_version: ${6:False}
+endsnippet
+
+snippet statuspage.update
+  statuspage.update:
+    - name: ${1:incidents}
+    - endpoint: ${2:None}
+    - id: ${3:None}
+    - api_url: ${4:None}
+    - page_id: ${5:None}
+    - api_key: ${6:None}
+endsnippet
+
+snippet schedule.absent
+  schedule.absent:
+endsnippet
+
+snippet schedule.disabled
+  schedule.disabled:
+endsnippet
+
+snippet schedule.enabled
+  schedule.enabled:
+endsnippet
+
+snippet schedule.present
+  schedule.present:
+endsnippet
+
+snippet rsync.synchronized
+  rsync.synchronized:
+    - name: ${1:False}
+    - source: ${2:False}
+    - delete: ${3:False}
+    - force: ${4:None}
+    - update: ${5:None}
+    - passwordfile: ${6:None}
+    - exclude: ${7:False}
+    - excludefrom: ${8:False}
+    - prepare: ${9:None}
+endsnippet
+
+snippet pbm.default_storage_policy_assigned
+  pbm.default_storage_policy_assigned:
+endsnippet
+
+snippet pbm.default_vsan_policy_configured
+  pbm.default_vsan_policy_configured:
+endsnippet
+
+snippet pbm.list_diff
+  pbm.list_diff:
+endsnippet
+
+snippet pbm.mod_init
+  pbm.mod_init:
+endsnippet
+
+snippet pbm.recursive_diff
+  pbm.recursive_diff:
+    - past_dict: ${1:True}
+endsnippet
+
+snippet pbm.storage_policies_configured
+  pbm.storage_policies_configured:
+endsnippet
+
+snippet keystone_project.absent
+  keystone_project.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone_project.present
+  keystone_project.present:
+    - name: ${1:None}
+endsnippet
+
+snippet user.absent
+  user.absent:
+    - name: ${1:False}
+    - purge: ${2:False}
+endsnippet
+
+snippet user.iteritems
+  user.iteritems:
+endsnippet
+
+snippet user.present
+  user.present:
+    - name: ${1:None}
+    - uid: ${2:None}
+    - gid: ${3:False}
+    - gid_from_name: ${4:None}
+    - groups: ${5:None}
+    - optional_groups: ${6:True}
+    - remove_groups: ${7:None}
+    - home: ${8:True}
+    - createhome: ${9:None}
+    - password: ${10:False}
+    - hash_password: ${11:True}
+    - enforce_password: ${12:False}
+    - empty_password: ${13:None}
+    - shell: ${14:True}
+    - unique: ${15:False}
+    - system: ${16:None}
+    - fullname: ${17:None}
+    - roomnumber: ${18:None}
+    - workphone: ${19:None}
+    - homephone: ${20:None}
+    - other: ${21:None}
+    - loginclass: ${22:None}
+    - date: ${23:None}
+    - mindays: ${24:None}
+    - maxdays: ${25:None}
+    - inactdays: ${26:None}
+    - warndays: ${27:None}
+    - expire: ${28:None}
+    - win_homedrive: ${29:None}
+    - win_profile: ${30:None}
+    - win_logonscript: ${31:None}
+    - win_description: ${32:False}
+    - nologinit: ${33:False}
+    - allow_uid_change: ${34:False}
+endsnippet
+
+snippet user.sdecode
+  user.sdecode:
+endsnippet
+
+snippet user.sdecode_if_string
+  user.sdecode_if_string:
+endsnippet
+
+snippet apache_conf.disabled
+  apache_conf.disabled:
+endsnippet
+
+snippet apache_conf.enabled
+  apache_conf.enabled:
+endsnippet
+
+snippet cabal.installed
+  cabal.installed:
+    - name: ${1:None}
+    - pkgs: ${2:None}
+    - user: ${3:False}
+    - install_global: ${4:None}
+endsnippet
+
+snippet cabal.removed
+  cabal.removed:
+    - name: ${1:None}
+    - user: ${2:None}
+endsnippet
+
+snippet junos.cli
+  junos.cli:
+    - name: ${1:text}
+endsnippet
+
+snippet junos.commit
+  junos.commit:
+endsnippet
+
+snippet junos.commit_check
+  junos.commit_check:
+endsnippet
+
+snippet junos.diff
+  junos.diff:
+endsnippet
+
+snippet junos.file_copy
+  junos.file_copy:
+    - name: ${1:None}
+endsnippet
+
+snippet junos.install_config
+  junos.install_config:
+endsnippet
+
+snippet junos.install_os
+  junos.install_os:
+endsnippet
+
+snippet junos.load
+  junos.load:
+endsnippet
+
+snippet junos.lock
+  junos.lock:
+endsnippet
+
+snippet junos.rollback
+  junos.rollback:
+endsnippet
+
+snippet junos.rpc
+  junos.rpc:
+    - name: ${1:None}
+    - dest: ${2:xml}
+    - format: ${3:None}
+endsnippet
+
+snippet junos.set_hostname
+  junos.set_hostname:
+endsnippet
+
+snippet junos.shutdown
+  junos.shutdown:
+endsnippet
+
+snippet junos.unlock
+  junos.unlock:
+endsnippet
+
+snippet junos.zeroize
+  junos.zeroize:
+endsnippet
+
+snippet postgres_extension.absent
+  postgres_extension.absent:
+    - name: ${1:None}
+    - if_exists: ${2:None}
+    - restrict: ${3:None}
+    - cascade: ${4:None}
+    - user: ${5:None}
+    - maintenance_db: ${6:None}
+    - db_user: ${7:None}
+    - db_password: ${8:None}
+    - db_host: ${9:None}
+endsnippet
+
+snippet postgres_extension.present
+  postgres_extension.present:
+    - name: ${1:None}
+    - if_not_exists: ${2:None}
+    - schema: ${3:None}
+    - ext_version: ${4:None}
+    - from_version: ${5:None}
+    - user: ${6:None}
+    - maintenance_db: ${7:None}
+    - db_user: ${8:None}
+    - db_password: ${9:None}
+    - db_host: ${10:None}
+endsnippet
+
+snippet host.absent
+  host.absent:
+endsnippet
+
+snippet host.only
+  host.only:
+endsnippet
+
+snippet host.present
+  host.present:
+endsnippet
+
+snippet win_servermanager.installed
+  win_servermanager.installed:
+    - name: ${1:None}
+    - features: ${2:False}
+    - recurse: ${3:False}
+    - restart: ${4:None}
+    - source: ${5:None}
+endsnippet
+
+snippet win_servermanager.removed
+  win_servermanager.removed:
+    - name: ${1:None}
+    - features: ${2:False}
+    - remove_payload: ${3:False}
+endsnippet
+
+snippet rvm.gemset_present
+  rvm.gemset_present:
+    - name: ${1:default}
+    - ruby: ${2:None}
+endsnippet
+
+snippet rvm.installed
+  rvm.installed:
+    - name: ${1:False}
+    - default: ${2:None}
+    - user: ${3:None}
+    - opts: ${4:None}
+endsnippet
+
+snippet alias.absent
+  alias.absent:
+endsnippet
+
+snippet alias.present
+  alias.present:
+endsnippet
+
+snippet chef.client
+  chef.client:
+endsnippet
+
+snippet chef.solo
+  chef.solo:
+endsnippet
+
+snippet grafana.dashboard_absent
+  grafana.dashboard_absent:
+    - name: ${1:None}
+    - hosts: ${2:grafana}
+endsnippet
+
+snippet grafana.dashboard_present
+  grafana.dashboard_present:
+    - name: ${1:None}
+    - dashboard: ${2:None}
+    - dashboard_from_pillar: ${3:None}
+    - rows: ${4:None}
+    - rows_from_pillar: ${5:grafana}
+endsnippet
+
+snippet incron.absent
+  incron.absent:
+    - name: ${1:root}
+endsnippet
+
+snippet incron.present
+  incron.present:
+    - name: ${1:root}
+endsnippet
+
+snippet dvs.dvs_configured
+  dvs.dvs_configured:
+endsnippet
+
+snippet dvs.mod_init
+  dvs.mod_init:
+endsnippet
+
+snippet dvs.portgroups_configured
+  dvs.portgroups_configured:
+endsnippet
+
+snippet dvs.uplink_portgroup_configured
+  dvs.uplink_portgroup_configured:
+endsnippet
+
+snippet bigip.add_pool_member
+  bigip.add_pool_member:
+endsnippet
+
+snippet bigip.create_monitor
+  bigip.create_monitor:
+endsnippet
+
+snippet bigip.create_node
+  bigip.create_node:
+endsnippet
+
+snippet bigip.create_pool
+  bigip.create_pool:
+    - hostname: ${1:None}
+    - username: ${2:None}
+    - password: ${3:None}
+    - name: ${4:None}
+    - members: ${5:None}
+    - allow_nat: ${6:None}
+    - allow_snat: ${7:None}
+    - description: ${8:None}
+    - gateway_failsafe_device: ${9:None}
+    - ignore_persisted_weight: ${10:None}
+    - ip_tos_to_client: ${11:None}
+    - ip_tos_to_server: ${12:None}
+    - link_qos_to_client: ${13:None}
+    - link_qos_to_server: ${14:None}
+    - load_balancing_mode: ${15:None}
+    - min_active_members: ${16:None}
+    - min_up_members: ${17:None}
+    - min_up_members_action: ${18:None}
+    - min_up_members_checking: ${19:None}
+    - monitor: ${20:None}
+    - profiles: ${21:None}
+    - queue_depth_limit: ${22:None}
+    - queue_on_connection_limit: ${23:None}
+endsnippet
+
+snippet bigip.create_profile
+  bigip.create_profile:
+endsnippet
+
+snippet bigip.create_virtual
+  bigip.create_virtual:
+    - hostname: ${1:None}
+    - username: ${2:None}
+    - password: ${3:None}
+    - name: ${4:None}
+    - destination: ${5:None}
+    - pool: ${6:None}
+    - address_status: ${7:None}
+    - auto_lasthop: ${8:None}
+    - bwc_policy: ${9:None}
+    - cmp_enabled: ${10:None}
+    - connection_limit: ${11:None}
+    - dhcp_relay: ${12:None}
+    - description: ${13:None}
+    - fallback_persistence: ${14:None}
+    - flow_eviction_policy: ${15:None}
+    - gtm_score: ${16:None}
+    - ip_forward: ${17:None}
+    - ip_protocol: ${18:None}
+    - internal: ${19:None}
+    - twelve_forward: ${20:None}
+    - last_hop_pool: ${21:None}
+    - mask: ${22:None}
+    - mirror: ${23:None}
+    - nat64: ${24:None}
+    - persist: ${25:None}
+    - profiles: ${26:None}
+    - policies: ${27:None}
+    - rate_class: ${28:None}
+    - rate_limit: ${29:None}
+    - rate_limit_mode: ${30:None}
+    - rate_limit_dst: ${31:None}
+    - rate_limit_src: ${32:None}
+    - rules: ${33:None}
+    - related_rules: ${34:None}
+    - reject: ${35:None}
+    - source: ${36:None}
+    - source_address_translation: ${37:None}
+    - source_port: ${38:None}
+endsnippet
+
+snippet bigip.delete_monitor
+  bigip.delete_monitor:
+endsnippet
+
+snippet bigip.delete_node
+  bigip.delete_node:
+endsnippet
+
+snippet bigip.delete_pool
+  bigip.delete_pool:
+endsnippet
+
+snippet bigip.delete_pool_member
+  bigip.delete_pool_member:
+endsnippet
+
+snippet bigip.delete_profile
+  bigip.delete_profile:
+endsnippet
+
+snippet bigip.delete_virtual
+  bigip.delete_virtual:
+endsnippet
+
+snippet bigip.list_monitor
+  bigip.list_monitor:
+endsnippet
+
+snippet bigip.list_node
+  bigip.list_node:
+endsnippet
+
+snippet bigip.list_pool
+  bigip.list_pool:
+endsnippet
+
+snippet bigip.list_profile
+  bigip.list_profile:
+endsnippet
+
+snippet bigip.list_virtual
+  bigip.list_virtual:
+endsnippet
+
+snippet bigip.manage_monitor
+  bigip.manage_monitor:
+endsnippet
+
+snippet bigip.manage_node
+  bigip.manage_node:
+    - hostname: ${1:None}
+    - username: ${2:None}
+    - password: ${3:None}
+    - name: ${4:None}
+    - address: ${5:None}
+    - connection_limit: ${6:None}
+    - description: ${7:None}
+    - dynamic_ratio: ${8:None}
+    - logging: ${9:None}
+endsnippet
+
+snippet bigip.manage_pool
+  bigip.manage_pool:
+    - hostname: ${1:None}
+    - username: ${2:None}
+    - password: ${3:None}
+    - name: ${4:None}
+    - allow_nat: ${5:None}
+    - allow_snat: ${6:None}
+    - description: ${7:None}
+    - gateway_failsafe_device: ${8:None}
+    - ignore_persisted_weight: ${9:None}
+    - ip_tos_to_client: ${10:None}
+    - ip_tos_to_server: ${11:None}
+    - link_qos_to_client: ${12:None}
+    - link_qos_to_server: ${13:None}
+    - load_balancing_mode: ${14:None}
+    - min_active_members: ${15:None}
+    - min_up_members: ${16:None}
+    - min_up_members_action: ${17:None}
+    - min_up_members_checking: ${18:None}
+    - monitor: ${19:None}
+    - profiles: ${20:None}
+    - queue_depth_limit: ${21:None}
+    - queue_on_connection_limit: ${22:None}
+endsnippet
+
+snippet bigip.manage_pool_members
+  bigip.manage_pool_members:
+endsnippet
+
+snippet bigip.manage_profile
+  bigip.manage_profile:
+endsnippet
+
+snippet bigip.manage_virtual
+  bigip.manage_virtual:
+    - hostname: ${1:None}
+    - username: ${2:None}
+    - password: ${3:None}
+    - name: ${4:None}
+    - destination: ${5:None}
+    - pool: ${6:None}
+    - address_status: ${7:None}
+    - auto_lasthop: ${8:None}
+    - bwc_policy: ${9:None}
+    - cmp_enabled: ${10:None}
+    - connection_limit: ${11:None}
+    - dhcp_relay: ${12:None}
+    - description: ${13:None}
+    - fallback_persistence: ${14:None}
+    - flow_eviction_policy: ${15:None}
+    - gtm_score: ${16:None}
+    - ip_forward: ${17:None}
+    - ip_protocol: ${18:None}
+    - internal: ${19:None}
+    - twelve_forward: ${20:None}
+    - last_hop_pool: ${21:None}
+    - mask: ${22:None}
+    - mirror: ${23:None}
+    - nat64: ${24:None}
+    - persist: ${25:None}
+    - profiles: ${26:None}
+    - policies: ${27:None}
+    - rate_class: ${28:None}
+    - rate_limit: ${29:None}
+    - rate_limit_mode: ${30:None}
+    - rate_limit_dst: ${31:None}
+    - rate_limit_src: ${32:None}
+    - rules: ${33:None}
+    - related_rules: ${34:None}
+    - reject: ${35:None}
+    - source: ${36:None}
+    - source_address_translation: ${37:None}
+    - source_port: ${38:None}
+endsnippet
+
+snippet bigip.modify_monitor
+  bigip.modify_monitor:
+endsnippet
+
+snippet bigip.modify_node
+  bigip.modify_node:
+    - hostname: ${1:None}
+    - username: ${2:None}
+    - password: ${3:None}
+    - name: ${4:None}
+    - connection_limit: ${5:None}
+    - description: ${6:None}
+    - dynamic_ratio: ${7:None}
+    - logging: ${8:None}
+    - monitor: ${9:None}
+endsnippet
+
+snippet bigip.modify_pool
+  bigip.modify_pool:
+    - hostname: ${1:None}
+    - username: ${2:None}
+    - password: ${3:None}
+    - name: ${4:None}
+    - allow_nat: ${5:None}
+    - allow_snat: ${6:None}
+    - description: ${7:None}
+    - gateway_failsafe_device: ${8:None}
+    - ignore_persisted_weight: ${9:None}
+    - ip_tos_to_client: ${10:None}
+    - ip_tos_to_server: ${11:None}
+    - link_qos_to_client: ${12:None}
+    - link_qos_to_server: ${13:None}
+    - load_balancing_mode: ${14:None}
+    - min_active_members: ${15:None}
+    - min_up_members: ${16:None}
+    - min_up_members_action: ${17:None}
+    - min_up_members_checking: ${18:None}
+    - monitor: ${19:None}
+    - profiles: ${20:None}
+    - queue_depth_limit: ${21:None}
+    - queue_on_connection_limit: ${22:None}
+endsnippet
+
+snippet bigip.modify_pool_member
+  bigip.modify_pool_member:
+    - hostname: ${1:None}
+    - username: ${2:None}
+    - password: ${3:None}
+    - name: ${4:None}
+    - member: ${5:None}
+    - connection_limit: ${6:None}
+    - description: ${7:None}
+    - dynamic_ratio: ${8:None}
+    - inherit_profile: ${9:None}
+    - logging: ${10:None}
+    - monitor: ${11:None}
+    - priority_group: ${12:None}
+endsnippet
+
+snippet bigip.modify_profile
+  bigip.modify_profile:
+endsnippet
+
+snippet bigip.modify_virtual
+  bigip.modify_virtual:
+    - hostname: ${1:None}
+    - username: ${2:None}
+    - password: ${3:None}
+    - name: ${4:None}
+    - destination: ${5:None}
+    - pool: ${6:None}
+    - address_status: ${7:None}
+    - auto_lasthop: ${8:None}
+    - bwc_policy: ${9:None}
+    - cmp_enabled: ${10:None}
+    - connection_limit: ${11:None}
+    - dhcp_relay: ${12:None}
+    - description: ${13:None}
+    - fallback_persistence: ${14:None}
+    - flow_eviction_policy: ${15:None}
+    - gtm_score: ${16:None}
+    - ip_forward: ${17:None}
+    - ip_protocol: ${18:None}
+    - internal: ${19:None}
+    - twelve_forward: ${20:None}
+    - last_hop_pool: ${21:None}
+    - mask: ${22:None}
+    - mirror: ${23:None}
+    - nat64: ${24:None}
+    - persist: ${25:None}
+    - profiles: ${26:None}
+    - policies: ${27:None}
+    - rate_class: ${28:None}
+    - rate_limit: ${29:None}
+    - rate_limit_mode: ${30:None}
+    - rate_limit_dst: ${31:None}
+    - rate_limit_src: ${32:None}
+    - rules: ${33:None}
+    - related_rules: ${34:None}
+    - reject: ${35:None}
+    - source: ${36:None}
+    - source_address_translation: ${37:None}
+    - source_port: ${38:None}
+endsnippet
+
+snippet pkgrepo.absent
+  pkgrepo.absent:
+endsnippet
+
+snippet pkgrepo.managed
+  pkgrepo.managed:
+    - name: ${1:None}
+endsnippet
+
+snippet ethtool.coalesce
+  ethtool.coalesce:
+endsnippet
+
+snippet ethtool.offload
+  ethtool.offload:
+endsnippet
+
+snippet ethtool.ring
+  ethtool.ring:
+endsnippet
+
+snippet boto_iam.account_policy
+  boto_iam.account_policy:
+    - name: ${1:None}
+    - allow_users_to_change_password: ${2:None}
+    - hard_expiry: ${3:None}
+    - max_password_age: ${4:None}
+    - minimum_password_length: ${5:None}
+    - password_reuse_prevention: ${6:None}
+    - require_lowercase_characters: ${7:None}
+    - require_numbers: ${8:None}
+    - require_symbols: ${9:None}
+    - require_uppercase_characters: ${10:None}
+    - region: ${11:None}
+    - key: ${12:None}
+    - keyid: ${13:None}
+    - profile: ${14:None}
+endsnippet
+
+snippet boto_iam.group_absent
+  boto_iam.group_absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_iam.group_present
+  boto_iam.group_present:
+    - name: ${1:None}
+    - policies: ${2:None}
+    - policies_from_pillars: ${3:None}
+    - managed_policies: ${4:None}
+    - users: ${5:/}
+    - path: ${6:None}
+    - region: ${7:None}
+    - key: ${8:None}
+    - keyid: ${9:None}
+    - profile: ${10:True}
+endsnippet
+
+snippet boto_iam.keys_absent
+  boto_iam.keys_absent:
+    - access_keys: ${1:None}
+    - user_name: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+endsnippet
+
+snippet boto_iam.keys_present
+  boto_iam.keys_present:
+    - name: ${1:None}
+    - number: ${2:None}
+    - save_dir: ${3:None}
+    - region: ${4:None}
+    - key: ${5:{2}
+{0}
+{3}
+{1}
+}
+endsnippet
+
+snippet boto_iam.policy_absent
+  boto_iam.policy_absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_iam.policy_present
+  boto_iam.policy_present:
+    - name: ${1:None}
+    - policy_document: ${2:None}
+    - path: ${3:None}
+    - description: ${4:None}
+    - region: ${5:None}
+    - key: ${6:None}
+endsnippet
+
+snippet boto_iam.saml_provider_absent
+  boto_iam.saml_provider_absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_iam.saml_provider_present
+  boto_iam.saml_provider_present:
+    - name: ${1:None}
+    - saml_metadata_document: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+endsnippet
+
+snippet boto_iam.server_cert_absent
+  boto_iam.server_cert_absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_iam.server_cert_present
+  boto_iam.server_cert_present:
+    - name: ${1:None}
+    - public_key: ${2:None}
+    - private_key: ${3:None}
+    - cert_chain: ${4:None}
+    - path: ${5:None}
+    - region: ${6:None}
+endsnippet
+
+snippet boto_iam.user_absent
+  boto_iam.user_absent:
+    - name: ${1:True}
+    - delete_keys: ${2:True}
+    - delete_mfa_devices: ${3:True}
+    - delete_profile: ${4:None}
+    - region: ${5:None}
+    - key: ${6:None}
+    - keyid: ${7:None}
+endsnippet
+
+snippet boto_iam.user_present
+  boto_iam.user_present:
+    - name: ${1:None}
+    - policies: ${2:None}
+    - policies_from_pillars: ${3:None}
+    - managed_policies: ${4:None}
+    - password: ${5:None}
+    - path: ${6:None}
+    - region: ${7:None}
+    - key: ${8:None}
+    - keyid: ${9:None}
+endsnippet
+
+snippet aws_sqs.absent
+  aws_sqs.absent:
+    - name: ${1:None}
+    - region: ${2:False}
+endsnippet
+
+snippet aws_sqs.exists
+  aws_sqs.exists:
+    - name: ${1:None}
+    - region: ${2:False}
+endsnippet
+
+snippet saltmod.function
+  saltmod.function:
+    - name: ${1:False}
+    - tgt: ${2:glob}
+    - ssh: ${3:None}
+    - tgt_type: ${4:''}
+    - expr_form: ${5:None}
+    - ret: ${6:None}
+    - ret_config: ${7:False}
+    - ret_kwargs: ${8:None}
+    - expect_minions: ${9:None}
+    - fail_minions: ${10:None}
+    - fail_function: ${11:None}
+    - arg: ${12:None}
+    - kwarg: ${13:None}
+    - timeout: ${14:None}
+endsnippet
+
+snippet saltmod.parallel_runners
+  saltmod.parallel_runners:
+endsnippet
+
+snippet saltmod.runner
+  saltmod.runner:
+endsnippet
+
+snippet saltmod.state
+  saltmod.state:
+    - name: ${1:False}
+    - tgt: ${2:glob}
+    - ssh: ${3:None}
+    - tgt_type: ${4:''}
+    - expr_form: ${5:None}
+    - ret: ${6:None}
+    - ret_config: ${7:None}
+    - ret_kwargs: ${8:None}
+    - highstate: ${9:None}
+    - sls: ${10:None}
+    - top: ${11:False}
+    - saltenv: ${12:None}
+    - test: ${13:None}
+    - pillar: ${14:True}
+    - pillarenv: ${15:None}
+    - expect_minions: ${16:0}
+    - fail_minions: ${17:False}
+    - allow_fail: ${18:None}
+    - concurrent: ${19:None}
+    - timeout: ${20:False}
+    - batch: ${21:None}
+    - queue: ${22:None}
+endsnippet
+
+snippet saltmod.wait_for_event
+  saltmod.wait_for_event:
+    - name: ${1:id}
+    - id_list: ${2:300}
+    - event_id: ${3:master}
+endsnippet
+
+snippet saltmod.wheel
+  saltmod.wheel:
+endsnippet
+
+snippet process.absent
+  process.absent:
+    - name: ${1:None}
+    - user: ${2:None}
+endsnippet
+
+snippet quota.mode
+  quota.mode:
+endsnippet
+
+snippet pdbedit.absent
+  pdbedit.absent:
+endsnippet
+
+snippet pdbedit.managed
+  pdbedit.managed:
+endsnippet
+
+snippet pdbedit.present
+  pdbedit.present:
+endsnippet
+
+snippet vagrant.destroyed
+  vagrant.destroyed:
+endsnippet
+
+snippet vagrant.initialized
+  vagrant.initialized:
+endsnippet
+
+snippet vagrant.paused
+  vagrant.paused:
+endsnippet
+
+snippet vagrant.powered_off
+  vagrant.powered_off:
+endsnippet
+
+snippet vagrant.rebooted
+  vagrant.rebooted:
+endsnippet
+
+snippet vagrant.running
+  vagrant.running:
+endsnippet
+
+snippet vagrant.stopped
+  vagrant.stopped:
+endsnippet
+
+snippet postgres_initdb.present
+  postgres_initdb.present:
+    - name: ${1:None}
+    - user: ${2:None}
+    - password: ${3:password}
+    - auth: ${4:UTF8}
+    - encoding: ${5:None}
+    - locale: ${6:None}
+endsnippet
+
+snippet docker_image.absent
+  docker_image.absent:
+    - name: ${1:None}
+    - images: ${2:None}
+    - force: ${3:False}
+endsnippet
+
+snippet docker_image.mod_watch
+  docker_image.mod_watch:
+    - name: ${1:None}
+endsnippet
+
+snippet docker_image.present
+  docker_image.present:
+    - name: ${1:None}
+    - tag: ${2:None}
+    - build: ${3:None}
+    - load: ${4:False}
+    - force: ${5:False}
+    - insecure_registry: ${6:60}
+    - client_timeout: ${7:None}
+    - dockerfile: ${8:None}
+    - sls: ${9:opensuse/python}
+    - base: ${10:base}
+    - saltenv: ${11:None}
+    - pillarenv: ${12:None}
+endsnippet
+
+snippet tls.valid_certificate
+  tls.valid_certificate:
+    - name: ${1:0}
+    - weeks: ${2:0}
+    - days: ${3:0}
+    - hours: ${4:0}
+    - minutes: ${5:0}
+endsnippet
+
+snippet boto_cfn.absent
+  boto_cfn.absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_cfn.present
+  boto_cfn.present:
+    - name: ${1:None}
+    - template_body: ${2:None}
+    - template_url: ${3:None}
+    - parameters: ${4:None}
+    - notification_arns: ${5:None}
+    - disable_rollback: ${6:None}
+    - timeout_in_minutes: ${7:None}
+    - capabilities: ${8:None}
+    - tags: ${9:None}
+    - on_failure: ${10:None}
+    - stack_policy_body: ${11:None}
+    - stack_policy_url: ${12:None}
+    - use_previous_template: ${13:None}
+    - stack_policy_during_update_body: ${14:None}
+    - stack_policy_during_update_url: ${15:None}
+    - region: ${16:None}
+    - key: ${17:None}
+    - keyid: ${18:None}
+endsnippet
+
+snippet rabbitmq_user.absent
+  rabbitmq_user.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet rabbitmq_user.present
+  rabbitmq_user.present:
+    - name: ${1:None}
+    - password: ${2:False}
+    - force: ${3:None}
+    - tags: ${4:()}
+    - perms: ${5:None}
+endsnippet
+
+snippet netntp.managed
+  netntp.managed:
+    - name: ${1:None}
+    - peers: ${2:None}
+endsnippet
+
+snippet keystone_role_grant.absent
+  keystone_role_grant.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone_role_grant.present
+  keystone_role_grant.present:
+    - name: ${1:None}
+endsnippet
+
+snippet zfs.bookmark_absent
+  zfs.bookmark_absent:
+    - name: ${1:False}
+    - force: ${2:False}
+endsnippet
+
+snippet zfs.bookmark_present
+  zfs.bookmark_present:
+endsnippet
+
+snippet zfs.filesystem_absent
+  zfs.filesystem_absent:
+    - name: ${1:False}
+    - force: ${2:False}
+endsnippet
+
+snippet zfs.filesystem_present
+  zfs.filesystem_present:
+    - name: ${1:False}
+    - create_parent: ${2:None}
+    - properties: ${3:None}
+endsnippet
+
+snippet zfs.hold_absent
+  zfs.hold_absent:
+    - name: ${1:False}
+endsnippet
+
+snippet zfs.hold_present
+  zfs.hold_present:
+    - name: ${1:False}
+endsnippet
+
+snippet zfs.promoted
+  zfs.promoted:
+endsnippet
+
+snippet zfs.scheduled_snapshot
+  zfs.scheduled_snapshot:
+    - name: ${1:True}
+    - prefix: ${2:None}
+endsnippet
+
+snippet zfs.snapshot_absent
+  zfs.snapshot_absent:
+    - name: ${1:False}
+    - force: ${2:False}
+endsnippet
+
+snippet zfs.snapshot_present
+  zfs.snapshot_present:
+    - name: ${1:False}
+    - recursive: ${2:None}
+endsnippet
+
+snippet zfs.volume_absent
+  zfs.volume_absent:
+    - name: ${1:False}
+    - force: ${2:False}
+endsnippet
+
+snippet zfs.volume_present
+  zfs.volume_present:
+    - name: ${1:False}
+    - volume_size: ${2:False}
+    - sparse: ${3:None}
+    - create_parent: ${4:None}
+endsnippet
+
+snippet zabbix_hostgroup.absent
+  zabbix_hostgroup.absent:
+endsnippet
+
+snippet zabbix_hostgroup.present
+  zabbix_hostgroup.present:
+endsnippet
+
+snippet event.fire_master
+  event.fire_master:
+    - name: ${1:None}
+    - data: ${2:None}
+    - preload: ${3:False}
+    - with_env: ${4:False}
+    - with_grains: ${5:False}
+endsnippet
+
+snippet event.mod_watch
+  event.mod_watch:
+    - name: ${1:None}
+    - data: ${2:None}
+    - preload: ${3:False}
+    - with_env: ${4:False}
+    - with_grains: ${5:False}
+endsnippet
+
+snippet event.send
+  event.send:
+    - name: ${1:None}
+    - data: ${2:None}
+    - preload: ${3:False}
+    - with_env: ${4:False}
+    - with_grains: ${5:False}
+endsnippet
+
+snippet event.wait
+  event.wait:
+    - name: ${1:None}
+endsnippet
+
+snippet boto_datapipeline.absent
+  boto_datapipeline.absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_datapipeline.present
+  boto_datapipeline.present:
+    - name: ${1:None}
+    - pipeline_objects: ${2:boto_datapipeline_pipeline_objects}
+    - pipeline_objects_from_pillars: ${3:None}
+    - parameter_objects: ${4:boto_datapipeline_parameter_objects}
+    - parameter_objects_from_pillars: ${5:None}
+    - parameter_values: ${6:boto_datapipeline_parameter_values}
+    - parameter_values_from_pillars: ${7:None}
+    - region: ${8:None}
+    - key: ${9:None}
+    - keyid: ${10:None}
+endsnippet
+
+snippet pecl.installed
+  pecl.installed:
+    - name: ${1:None}
+    - version: ${2:False}
+    - defaults: ${3:False}
+    - force: ${4:stable}
+endsnippet
+
+snippet pecl.removed
+  pecl.removed:
+endsnippet
+
+snippet keyboard.system
+  keyboard.system:
+endsnippet
+
+snippet keyboard.xorg
+  keyboard.xorg:
+endsnippet
+
+snippet test.check_pillar
+  test.check_pillar:
+    - name: ${1:None}
+    - present: ${2:None}
+    - boolean: ${3:None}
+    - integer: ${4:None}
+    - string: ${5:None}
+    - listing: ${6:None}
+    - dictionary: ${7:False}
+endsnippet
+
+snippet test.configurable_test_state
+  test.configurable_test_state:
+    - name: ${1:True}
+    - changes: ${2:True}
+    - result: ${3:''}
+endsnippet
+
+snippet test.fail_with_changes
+  test.fail_with_changes:
+endsnippet
+
+snippet test.fail_without_changes
+  test.fail_without_changes:
+endsnippet
+
+snippet test.mod_watch
+  test.mod_watch:
+    - name: ${1:None}
+endsnippet
+
+snippet test.nop
+  test.nop:
+endsnippet
+
+snippet test.show_notification
+  test.show_notification:
+    - name: ${1:None}
+endsnippet
+
+snippet test.succeed_with_changes
+  test.succeed_with_changes:
+endsnippet
+
+snippet test.succeed_without_changes
+  test.succeed_without_changes:
+endsnippet
+
+snippet svn.dirty
+  svn.dirty:
+    - name: ${1:None}
+    - target: ${2:None}
+    - user: ${3:None}
+    - username: ${4:False}
+endsnippet
+
+snippet svn.export
+  svn.export:
+    - name: ${1:None}
+    - target: ${2:None}
+    - rev: ${3:None}
+    - user: ${4:None}
+    - username: ${5:None}
+    - password: ${6:False}
+    - force: ${7:False}
+    - overwrite: ${8:True}
+    - externals: ${9:False}
+endsnippet
+
+snippet svn.latest
+  svn.latest:
+    - name: ${1:None}
+    - target: ${2:None}
+    - rev: ${3:None}
+    - user: ${4:None}
+    - username: ${5:None}
+    - password: ${6:False}
+    - force: ${7:True}
+    - externals: ${8:False}
+endsnippet
+
+snippet zenoss.monitored
+  zenoss.monitored:
+    - name: ${1:None}
+    - device_class: ${2:localhost}
+    - collector: ${3:None}
+endsnippet
+
+snippet keystone_user.absent
+  keystone_user.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone_user.present
+  keystone_user.present:
+    - name: ${1:None}
+endsnippet
+
+snippet neutron_subnet.absent
+  neutron_subnet.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet neutron_subnet.present
+  neutron_subnet.present:
+    - name: ${1:None}
+endsnippet
+
+snippet panos.add_config_lock
+  panos.add_config_lock:
+endsnippet
+
+snippet panos.address_exists
+  panos.address_exists:
+    - name: ${1:None}
+    - addressname: ${2:1}
+    - vsys: ${3:None}
+    - ipnetmask: ${4:None}
+    - iprange: ${5:None}
+    - fqdn: ${6:None}
+    - description: ${7:False}
+endsnippet
+
+snippet panos.address_group_exists
+  panos.address_group_exists:
+    - name: ${1:None}
+    - groupname: ${2:1}
+    - vsys: ${3:None}
+    - members: ${4:None}
+    - description: ${5:False}
+endsnippet
+
+snippet panos.clone_config
+  panos.clone_config:
+    - name: ${1:None}
+    - xpath: ${2:None}
+    - newname: ${3:False}
+endsnippet
+
+snippet panos.commit_config
+  panos.commit_config:
+endsnippet
+
+snippet panos.delete_config
+  panos.delete_config:
+    - name: ${1:None}
+    - xpath: ${2:False}
+endsnippet
+
+snippet panos.download_software
+  panos.download_software:
+    - name: ${1:None}
+    - version: ${2:False}
+    - synch: ${3:False}
+endsnippet
+
+snippet panos.edit_config
+  panos.edit_config:
+    - name: ${1:None}
+    - xpath: ${2:None}
+    - value: ${3:False}
+endsnippet
+
+snippet panos.move_config
+  panos.move_config:
+    - name: ${1:None}
+    - xpath: ${2:None}
+    - where: ${3:None}
+    - dst: ${4:False}
+endsnippet
+
+snippet panos.remove_config_lock
+  panos.remove_config_lock:
+endsnippet
+
+snippet panos.rename_config
+  panos.rename_config:
+    - name: ${1:None}
+    - xpath: ${2:None}
+    - newname: ${3:False}
+endsnippet
+
+snippet panos.security_rule_exists
+  panos.security_rule_exists:
+    - name: ${1:None}
+    - rulename: ${2:1}
+    - vsys: ${3:None}
+    - action: ${4:None}
+    - disabled: ${5:None}
+    - sourcezone: ${6:None}
+    - destinationzone: ${7:None}
+    - source: ${8:None}
+    - destination: ${9:None}
+    - application: ${10:None}
+    - service: ${11:None}
+    - description: ${12:None}
+    - logsetting: ${13:None}
+    - logstart: ${14:None}
+    - logend: ${15:None}
+    - negatesource: ${16:None}
+    - negatedestination: ${17:None}
+    - profilegroup: ${18:None}
+    - datafilter: ${19:None}
+    - fileblock: ${20:None}
+    - spyware: ${21:None}
+    - urlfilter: ${22:None}
+    - virus: ${23:None}
+    - vulnerability: ${24:None}
+    - wildfire: ${25:None}
+    - move: ${26:None}
+    - movetarget: ${27:False}
+endsnippet
+
+snippet panos.service_exists
+  panos.service_exists:
+    - name: ${1:None}
+    - servicename: ${2:1}
+    - vsys: ${3:None}
+    - protocol: ${4:None}
+    - port: ${5:None}
+    - description: ${6:False}
+endsnippet
+
+snippet panos.service_group_exists
+  panos.service_group_exists:
+    - name: ${1:None}
+    - groupname: ${2:1}
+    - vsys: ${3:None}
+    - members: ${4:None}
+    - description: ${5:False}
+endsnippet
+
+snippet panos.set_config
+  panos.set_config:
+    - name: ${1:None}
+    - xpath: ${2:None}
+    - value: ${3:False}
+endsnippet
+
+snippet ssh_known_hosts.absent
+  ssh_known_hosts.absent:
+    - name: ${1:None}
+    - user: ${2:None}
+endsnippet
+
+snippet ssh_known_hosts.present
+  ssh_known_hosts.present:
+    - name: ${1:None}
+    - user: ${2:None}
+    - fingerprint: ${3:None}
+    - key: ${4:None}
+    - port: ${5:None}
+    - enc: ${6:None}
+    - config: ${7:True}
+    - hash_known_hosts: ${8:5}
+    - timeout: ${9:None}
+endsnippet
+
+snippet firewall.check
+  firewall.check:
+    - name: ${1:None}
+endsnippet
+
+snippet pyenv.absent
+  pyenv.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet pyenv.install_pyenv
+  pyenv.install_pyenv:
+    - name: ${1:None}
+endsnippet
+
+snippet pyenv.installed
+  pyenv.installed:
+    - name: ${1:False}
+    - default: ${2:None}
+endsnippet
+
+snippet boto_sqs.absent
+  boto_sqs.absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_sqs.present
+  boto_sqs.present:
+    - name: ${1:None}
+    - attributes: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet lvs_service.absent
+  lvs_service.absent:
+    - name: ${1:None}
+    - protocol: ${2:None}
+endsnippet
+
+snippet lvs_service.present
+  lvs_service.present:
+    - name: ${1:None}
+    - protocol: ${2:None}
+    - service_address: ${3:wlc}
+endsnippet
+
+snippet boto_cloudfront.present
+  boto_cloudfront.present:
+    - name: ${1:None}
+    - config: ${2:None}
+    - tags: ${3:None}
+    - region: ${4:None}
+endsnippet
+
+snippet glance_image.absent
+  glance_image.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet glance_image.present
+  glance_image.present:
+    - name: ${1:None}
+endsnippet
+
+snippet mysql_database.absent
+  mysql_database.absent:
+endsnippet
+
+snippet mysql_database.present
+  mysql_database.present:
+    - name: ${1:None}
+    - character_set: ${2:None}
+endsnippet
+
+snippet disk.status
+  disk.status:
+    - name: ${1:None}
+    - maximum: ${2:None}
+    - minimum: ${3:False}
+endsnippet
+
+snippet linux_acl.absent
+  linux_acl.absent:
+    - name: ${1:''}
+    - acl_type: ${2:''}
+    - acl_name: ${3:False}
+endsnippet
+
+snippet linux_acl.present
+  linux_acl.present:
+    - name: ${1:''}
+    - acl_type: ${2:''}
+    - acl_name: ${3:False}
+endsnippet
+
+snippet layman.absent
+  layman.absent:
+endsnippet
+
+snippet layman.present
+  layman.present:
+endsnippet
+
+snippet kernelpkg.latest_active
+  kernelpkg.latest_active:
+    - name: ${1:None}
+endsnippet
+
+snippet kernelpkg.latest_installed
+  kernelpkg.latest_installed:
+endsnippet
+
+snippet kernelpkg.latest_wait
+  kernelpkg.latest_wait:
+    - name: ${1:None}
+endsnippet
+
+snippet kernelpkg.mod_watch
+  kernelpkg.mod_watch:
+endsnippet
+
+snippet ssh_auth.absent
+  ssh_auth.absent:
+    - name: ${1:ssh-rsa}
+    - user: ${2:''}
+    - enc: ${3:''}
+    - comment: ${4:None}
+    - source: ${5:.ssh/authorized_keys}
+    - options: ${6:None}
+endsnippet
+
+snippet ssh_auth.present
+  ssh_auth.present:
+    - name: ${1:ssh-rsa}
+    - user: ${2:''}
+    - enc: ${3:''}
+    - comment: ${4:None}
+    - source: ${5:.ssh/authorized_keys}
+    - options: ${6:None}
+endsnippet
+
+snippet boto_elasticache.absent
+  boto_elasticache.absent:
+    - name: ${1:True}
+    - wait: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet boto_elasticache.cache_cluster_absent
+  boto_elasticache.cache_cluster_absent:
+endsnippet
+
+snippet boto_elasticache.cache_cluster_present
+  boto_elasticache.cache_cluster_present:
+endsnippet
+
+snippet boto_elasticache.creategroup
+  boto_elasticache.creategroup:
+    - name: ${1:None}
+    - primary_cluster_id: ${2:None}
+    - replication_group_description: ${3:None}
+    - wait: ${4:None}
+    - region: ${5:None}
+endsnippet
+
+snippet boto_elasticache.present
+  boto_elasticache.present:
+    - name: ${1:None}
+    - engine: ${2:None}
+    - cache_node_type: ${3:None}
+    - num_cache_nodes: ${4:None}
+    - preferred_availability_zone: ${5:None}
+    - port: ${6:None}
+    - cache_parameter_group_name: ${7:None}
+    - cache_security_group_names: ${8:None}
+    - replication_group_id: ${9:True}
+    - auto_minor_version_upgrade: ${10:None}
+    - security_group_ids: ${11:None}
+    - cache_subnet_group_name: ${12:None}
+    - engine_version: ${13:None}
+    - notification_topic_arn: ${14:None}
+    - preferred_maintenance_window: ${15:None}
+    - wait: ${16:None}
+    - region: ${17:None}
+    - key: ${18:None}
+    - keyid: ${19:None}
+endsnippet
+
+snippet boto_elasticache.replication_group_absent
+  boto_elasticache.replication_group_absent:
+    - name: ${1:None}
+    - tags: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet boto_elasticache.replication_group_present
+  boto_elasticache.replication_group_present:
+endsnippet
+
+snippet boto_elasticache.subnet_group_absent
+  boto_elasticache.subnet_group_absent:
+    - name: ${1:None}
+    - tags: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet boto_elasticache.subnet_group_present
+  boto_elasticache.subnet_group_present:
+    - name: ${1:None}
+    - subnet_ids: ${2:None}
+    - subnet_names: ${3:None}
+    - description: ${4:None}
+    - tags: ${5:None}
+    - region: ${6:None}
+    - key: ${7:None}
+    - keyid: ${8:None}
+endsnippet
+
+snippet ipmi.boot_device
+  ipmi.boot_device:
+    - name: ${1:default}
+endsnippet
+
+snippet ipmi.power
+  ipmi.power:
+    - name: ${1:power_on}
+    - wait: ${2:300}
+endsnippet
+
+snippet ipmi.user_absent
+  ipmi.user_absent:
+    - name: ${1:14}
+endsnippet
+
+snippet ipmi.user_present
+  ipmi.user_present:
+    - name: ${1:14}
+    - uid: ${2:False}
+    - password: ${3:True}
+    - channel: ${4:True}
+    - callback: ${5:administrator}
+endsnippet
+
+snippet mdadm.absent
+  mdadm.absent:
+endsnippet
+
+snippet mdadm.present
+  mdadm.present:
+endsnippet
+
+snippet boto_lambda.alias_absent
+  boto_lambda.alias_absent:
+    - name: ${1:None}
+    - FunctionName: ${2:None}
+    - Name: ${3:None}
+    - region: ${4:None}
+endsnippet
+
+snippet boto_lambda.alias_present
+  boto_lambda.alias_present:
+    - name: ${1:''}
+    - FunctionName: ${2:None}
+    - Name: ${3:None}
+    - FunctionVersion: ${4:None}
+    - Description: ${5:None}
+endsnippet
+
+snippet boto_lambda.event_source_mapping_absent
+  boto_lambda.event_source_mapping_absent:
+    - name: ${1:None}
+    - EventSourceArn: ${2:None}
+    - FunctionName: ${3:None}
+    - region: ${4:None}
+endsnippet
+
+snippet boto_lambda.event_source_mapping_present
+  boto_lambda.event_source_mapping_present:
+    - name: ${1:True}
+    - EventSourceArn: ${2:100}
+    - FunctionName: ${3:None}
+    - StartingPosition: ${4:None}
+    - Enabled: ${5:None}
+    - BatchSize: ${6:None}
+endsnippet
+
+snippet boto_lambda.function_absent
+  boto_lambda.function_absent:
+    - name: ${1:None}
+    - FunctionName: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+endsnippet
+
+snippet boto_lambda.function_present
+  boto_lambda.function_present:
+    - name: ${1:None}
+    - FunctionName: ${2:None}
+    - Runtime: ${3:None}
+    - Role: ${4:None}
+    - Handler: ${5:''}
+    - ZipFile: ${6:3}
+    - S3Bucket: ${7:128}
+    - S3Key: ${8:None}
+    - S3ObjectVersion: ${9:5}
+    - Description: ${10:None}
+    - Timeout: ${11:None}
+    - MemorySize: ${12:None}
+    - Permissions: ${13:None}
+    - RoleRetries: ${14:None}
+    - region: ${15:None}
+endsnippet
+
+snippet mac_xattr.delete
+  mac_xattr.delete:
+endsnippet
+
+snippet mac_xattr.exists
+  mac_xattr.exists:
+endsnippet
+
+snippet dellchassis.blade_idrac
+  dellchassis.blade_idrac:
+    - name: ${1:None}
+    - idrac_password: ${2:None}
+    - idrac_ipmi: ${3:None}
+    - idrac_ip: ${4:None}
+    - idrac_netmask: ${5:None}
+    - idrac_gateway: ${6:None}
+    - idrac_dnsname: ${7:None}
+endsnippet
+
+snippet dellchassis.chassis
+  dellchassis.chassis:
+    - name: ${1:None}
+    - chassis_name: ${2:None}
+    - password: ${3:None}
+    - datacenter: ${4:None}
+    - location: ${5:None}
+    - mode: ${6:None}
+    - idrac_launch: ${7:None}
+    - slot_names: ${8:None}
+endsnippet
+
+snippet dellchassis.firmware_update
+  dellchassis.firmware_update:
+    - hosts: ${1:None}
+    - directory: ${2:''}
+endsnippet
+
+snippet dellchassis.switch
+  dellchassis.switch:
+    - name: ${1:None}
+    - ip: ${2:None}
+    - netmask: ${3:None}
+    - gateway: ${4:None}
+    - dhcp: ${5:None}
+    - password: ${6:None}
+endsnippet
+
+snippet ldap.managed
+  ldap.managed:
+    - name: ${1:None}
+endsnippet
+
+snippet aptpkg.held
+  aptpkg.held:
+endsnippet
+
+snippet snapper.baseline_snapshot
+  snapper.baseline_snapshot:
+    - name: ${1:None}
+    - number: ${2:None}
+    - tag: ${3:True}
+    - include_diff: ${4:root}
+    - config: ${5:None}
+endsnippet
+
+snippet ports.installed
+  ports.installed:
+    - name: ${1:None}
+endsnippet
+
+snippet pyrax_queues.absent
+  pyrax_queues.absent:
+endsnippet
+
+snippet pyrax_queues.present
+  pyrax_queues.present:
+endsnippet
+
+snippet boto_cognitoidentity.pool_absent
+  boto_cognitoidentity.pool_absent:
+    - name: ${1:False}
+    - IdentityPoolName: ${2:None}
+    - RemoveAllMatched: ${3:None}
+    - region: ${4:None}
+    - key: ${5:None}
+endsnippet
+
+snippet boto_cognitoidentity.pool_present
+  boto_cognitoidentity.pool_present:
+    - name: ${1:False}
+    - IdentityPoolName: ${2:None}
+    - AuthenticatedRole: ${3:None}
+    - AllowUnauthenticatedIdentities: ${4:None}
+    - UnauthenticatedRole: ${5:None}
+    - SupportedLoginProviders: ${6:None}
+    - DeveloperProviderName: ${7:None}
+    - OpenIdConnectProviderARNs: ${8:None}
+    - region: ${9:None}
+endsnippet
+
+snippet grafana_dashboard.absent
+  grafana_dashboard.absent:
+    - name: ${1:grafana}
+endsnippet
+
+snippet grafana_dashboard.present
+  grafana_dashboard.present:
+    - name: ${1:None}
+    - base_dashboards_from_pillar: ${2:None}
+    - base_panels_from_pillar: ${3:None}
+    - base_rows_from_pillar: ${4:None}
+    - dashboard: ${5:grafana}
+endsnippet
+
+snippet boto_cloudwatch_alarm.absent
+  boto_cloudwatch_alarm.absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_cloudwatch_alarm.present
+  boto_cloudwatch_alarm.present:
+    - name: ${1:None}
+    - attributes: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+endsnippet
+
+snippet boto_elb.absent
+  boto_elb.absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_elb.present
+  boto_elb.present:
+    - name: ${1:None}
+    - listeners: ${2:None}
+    - availability_zones: ${3:None}
+    - subnets: ${4:None}
+    - subnet_names: ${5:internet-facing}
+    - security_groups: ${6:None}
+    - scheme: ${7:None}
+    - health_check: ${8:boto_elb_attributes}
+    - attributes: ${9:None}
+    - attributes_from_pillar: ${10:None}
+    - cnames: ${11:boto_elb_alarms}
+    - alarms: ${12:None}
+    - alarms_from_pillar: ${13:boto_elb_policies}
+    - policies: ${14:None}
+    - policies_from_pillar: ${15:None}
+    - backends: ${16:None}
+    - region: ${17:None}
+    - key: ${18:None}
+    - keyid: ${19:True}
+    - profile: ${20:None}
+    - wait_for_sync: ${21:None}
+    - tags: ${22:None}
+endsnippet
+
+snippet boto_elb.register_instances
+  boto_elb.register_instances:
+    - name: ${1:None}
+    - instances: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+endsnippet
+
+snippet vault.policy_present
+  vault.policy_present:
+endsnippet
+
+snippet icinga2.generate_cert
+  icinga2.generate_cert:
+endsnippet
+
+snippet icinga2.generate_ticket
+  icinga2.generate_ticket:
+    - name: ${1:None}
+    - output: ${2:None}
+    - grain: ${3:None}
+    - key: ${4:True}
+endsnippet
+
+snippet icinga2.node_setup
+  icinga2.node_setup:
+endsnippet
+
+snippet icinga2.request_cert
+  icinga2.request_cert:
+    - name: ${1:5665}
+endsnippet
+
+snippet icinga2.save_cert
+  icinga2.save_cert:
+endsnippet
+
+snippet tomcat.mod_watch
+  tomcat.mod_watch:
+    - name: ${1:http://localhost:8080/manager}
+    - url: ${2:180}
+endsnippet
+
+snippet tomcat.undeployed
+  tomcat.undeployed:
+    - name: ${1:http://localhost:8080/manager}
+    - url: ${2:180}
+endsnippet
+
+snippet tomcat.wait
+  tomcat.wait:
+    - name: ${1:http://localhost:8080/manager}
+    - url: ${2:180}
+endsnippet
+
+snippet tomcat.war_deployed
+  tomcat.war_deployed:
+    - name: ${1:False}
+    - war: ${2:http://localhost:8080/manager}
+    - force: ${3:180}
+    - url: ${4:None}
+    - timeout: ${5:True}
+endsnippet
+
+snippet zabbix_mediatype.absent
+  zabbix_mediatype.absent:
+endsnippet
+
+snippet zabbix_mediatype.present
+  zabbix_mediatype.present:
+endsnippet
+
+snippet memcached.absent
+  memcached.absent:
+    - name: ${1:None}
+    - value: ${2:127.0.0.1}
+    - host: ${3:11211}
+    - port: ${4:0}
+endsnippet
+
+snippet memcached.managed
+  memcached.managed:
+    - name: ${1:None}
+    - value: ${2:127.0.0.1}
+    - host: ${3:11211}
+    - port: ${4:0}
+    - time: ${5:0}
+endsnippet
+
+snippet modjk.worker_activated
+  modjk.worker_activated:
+    - name: ${1:None}
+    - workers: ${2:default}
+endsnippet
+
+snippet modjk.worker_disabled
+  modjk.worker_disabled:
+    - name: ${1:None}
+    - workers: ${2:default}
+endsnippet
+
+snippet modjk.worker_recover
+  modjk.worker_recover:
+    - name: ${1:None}
+    - workers: ${2:default}
+endsnippet
+
+snippet modjk.worker_stopped
+  modjk.worker_stopped:
+    - name: ${1:None}
+    - workers: ${2:default}
+endsnippet
+
+snippet pkg.downloaded
+  pkg.downloaded:
+    - name: ${1:None}
+    - version: ${2:None}
+    - pkgs: ${3:None}
+    - fromrepo: ${4:None}
+endsnippet
+
+snippet pkg.group_installed
+  pkg.group_installed:
+    - name: ${1:None}
+    - skip: ${2:None}
+endsnippet
+
+snippet pkg.installed
+  pkg.installed:
+    - name: ${1:None}
+    - version: ${2:None}
+    - refresh: ${3:None}
+    - fromrepo: ${4:False}
+    - skip_verify: ${5:False}
+    - skip_suggestions: ${6:None}
+    - pkgs: ${7:None}
+    - sources: ${8:False}
+    - allow_updates: ${9:False}
+    - pkg_verify: ${10:True}
+    - normalize: ${11:False}
+    - ignore_epoch: ${12:False}
+    - reinstall: ${13:False}
+endsnippet
+
+snippet pkg.latest
+  pkg.latest:
+    - name: ${1:None}
+    - refresh: ${2:None}
+    - fromrepo: ${3:False}
+    - skip_verify: ${4:None}
+    - pkgs: ${5:True}
+endsnippet
+
+snippet pkg.mod_aggregate
+  pkg.mod_aggregate:
+endsnippet
+
+snippet pkg.mod_init
+  pkg.mod_init:
+endsnippet
+
+snippet pkg.mod_watch
+  pkg.mod_watch:
+endsnippet
+
+snippet pkg.patch_downloaded
+  pkg.patch_downloaded:
+    - name: ${1:None}
+endsnippet
+
+snippet pkg.patch_installed
+  pkg.patch_installed:
+    - name: ${1:None}
+    - advisory_ids: ${2:None}
+endsnippet
+
+snippet pkg.purged
+  pkg.purged:
+    - name: ${1:None}
+    - version: ${2:None}
+    - pkgs: ${3:True}
+    - normalize: ${4:False}
+endsnippet
+
+snippet pkg.removed
+  pkg.removed:
+    - name: ${1:None}
+    - version: ${2:None}
+    - pkgs: ${3:True}
+    - normalize: ${4:False}
+endsnippet
+
+snippet pkg.uptodate
+  pkg.uptodate:
+    - name: ${1:False}
+    - refresh: ${2:None}
+endsnippet
+
+snippet logadm.remove
+  logadm.remove:
+    - name: ${1:None}
+endsnippet
+
+snippet logadm.rotate
+  logadm.rotate:
+endsnippet
+
+snippet heat.absent
+  heat.absent:
+    - name: ${1:5}
+    - poll: ${2:60}
+    - timeout: ${3:None}
+endsnippet
+
+snippet heat.deployed
+  heat.deployed:
+    - name: ${1:None}
+    - template: ${2:None}
+    - environment: ${3:None}
+    - params: ${4:5}
+    - poll: ${5:False}
+    - rollback: ${6:60}
+    - timeout: ${7:False}
+    - update: ${8:None}
+endsnippet
+
+snippet nfs_export.absent
+  nfs_export.absent:
+    - name: ${1:/etc/exports}
+endsnippet
+
+snippet nfs_export.present
+  nfs_export.present:
+    - name: ${1:None}
+    - clients: ${2:None}
+    - hosts: ${3:None}
+    - options: ${4:/etc/exports}
+endsnippet
+
+snippet virt.keys
+  virt.keys:
+    - name: ${1:/etc/pki}
+endsnippet
+
+snippet virt.powered_off
+  virt.powered_off:
+endsnippet
+
+snippet virt.rebooted
+  virt.rebooted:
+endsnippet
+
+snippet virt.reverted
+  virt.reverted:
+    - name: ${1:None}
+    - snapshot: ${2:False}
+endsnippet
+
+snippet virt.running
+  virt.running:
+endsnippet
+
+snippet virt.saved
+  virt.saved:
+    - name: ${1:None}
+endsnippet
+
+snippet virt.snapshot
+  virt.snapshot:
+    - name: ${1:None}
+endsnippet
+
+snippet virt.stopped
+  virt.stopped:
+endsnippet
+
+snippet virt.unpowered
+  virt.unpowered:
+endsnippet
+
+snippet opsgenie.close_alert
+  opsgenie.close_alert:
+    - name: ${1:None}
+    - api_key: ${2:None}
+    - reason: ${3:Conditions are met.}
+    - action_type: ${4:Close}
+endsnippet
+
+snippet opsgenie.create_alert
+  opsgenie.create_alert:
+    - name: ${1:None}
+    - api_key: ${2:None}
+    - reason: ${3:None}
+    - action_type: ${4:Create}
+endsnippet
+
+snippet zk_concurrency.lock
+  zk_concurrency.lock:
+    - name: ${1:None}
+    - zk_hosts: ${2:None}
+    - identifier: ${3:1}
+    - max_concurrency: ${4:None}
+    - timeout: ${5:False}
+    - ephemeral_lease: ${6:None}
+    - profile: ${7:None}
+    - scheme: ${8:None}
+    - username: ${9:None}
+    - password: ${10:None}
+endsnippet
+
+snippet zk_concurrency.min_party
+  zk_concurrency.min_party:
+    - name: ${1:False}
+    - zk_hosts: ${2:None}
+    - min_nodes: ${3:None}
+    - blocking: ${4:None}
+    - profile: ${5:None}
+    - scheme: ${6:None}
+endsnippet
+
+snippet zk_concurrency.unlock
+  zk_concurrency.unlock:
+    - name: ${1:None}
+    - zk_hosts: ${2:None}
+    - identifier: ${3:1}
+    - max_concurrency: ${4:False}
+    - ephemeral_lease: ${5:None}
+    - profile: ${6:None}
+    - scheme: ${7:None}
+    - username: ${8:None}
+    - password: ${9:None}
+endsnippet
+
+snippet gem.installed
+  gem.installed:
+    - name: ${1:None}
+    - ruby: ${2:None}
+    - gem_bin: ${3:None}
+    - user: ${4:None}
+    - version: ${5:False}
+    - rdoc: ${6:False}
+    - ri: ${7:False}
+    - pre_releases: ${8:None}
+    - proxy: ${9:None}
+endsnippet
+
+snippet gem.removed
+  gem.removed:
+    - name: ${1:None}
+    - ruby: ${2:None}
+    - user: ${3:None}
+endsnippet
+
+snippet gem.sources_add
+  gem.sources_add:
+    - name: ${1:None}
+    - ruby: ${2:None}
+endsnippet
+
+snippet gem.sources_remove
+  gem.sources_remove:
+    - name: ${1:None}
+    - ruby: ${2:None}
+endsnippet
+
+snippet boto_elasticsearch_domain.absent
+  boto_elasticsearch_domain.absent:
+    - name: ${1:None}
+    - DomainName: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+endsnippet
+
+snippet boto_elasticsearch_domain.present
+  boto_elasticsearch_domain.present:
+    - name: ${1:None}
+    - DomainName: ${2:None}
+    - ElasticsearchClusterConfig: ${3:None}
+    - EBSOptions: ${4:None}
+    - AccessPolicies: ${5:None}
+    - SnapshotOptions: ${6:None}
+    - AdvancedOptions: ${7:None}
+    - Tags: ${8:None}
+    - region: ${9:None}
+    - key: ${10:None}
+    - keyid: ${11:1.5}
+endsnippet
+
+snippet win_dacl.absent
+  win_dacl.absent:
+endsnippet
+
+snippet win_dacl.disinherit
+  win_dacl.disinherit:
+    - name: ${1:True}
+endsnippet
+
+snippet win_dacl.inherit
+  win_dacl.inherit:
+    - name: ${1:False}
+endsnippet
+
+snippet win_dacl.present
+  win_dacl.present:
+endsnippet
+
+snippet elasticsearch_index.absent
+  elasticsearch_index.absent:
+endsnippet
+
+snippet elasticsearch_index.present
+  elasticsearch_index.present:
+    - name: ${1:None}
+endsnippet
+
+snippet boto_lc.absent
+  boto_lc.absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_lc.present
+  boto_lc.present:
+    - name: ${1:None}
+    - image_id: ${2:None}
+    - key_name: ${3:None}
+    - vpc_id: ${4:None}
+    - vpc_name: ${5:None}
+    - security_groups: ${6:None}
+    - user_data: ${7:m1.small}
+    - cloud_init: ${8:None}
+    - instance_type: ${9:None}
+    - kernel_id: ${10:None}
+    - ramdisk_id: ${11:None}
+    - block_device_mappings: ${12:False}
+    - delete_on_termination: ${13:None}
+    - instance_monitoring: ${14:None}
+    - spot_price: ${15:False}
+    - instance_profile_name: ${16:None}
+    - ebs_optimized: ${17:None}
+    - associate_public_ip_address: ${18:None}
+    - region: ${19:None}
+    - key: ${20:None}
+endsnippet
+
+snippet npm.bootstrap
+  npm.bootstrap:
+    - name: ${1:None}
+    - user: ${2:True}
+endsnippet
+
+snippet npm.cache_cleaned
+  npm.cache_cleaned:
+    - name: ${1:None}
+    - user: ${2:None}
+    - force: ${3:False}
+endsnippet
+
+snippet npm.installed
+  npm.installed:
+    - name: ${1:None}
+    - pkgs: ${2:None}
+    - dir: ${3:None}
+    - user: ${4:False}
+    - force_reinstall: ${5:None}
+    - registry: ${6:None}
+endsnippet
+
+snippet npm.removed
+  npm.removed:
+    - name: ${1:None}
+    - dir: ${2:None}
+endsnippet
+
+snippet netusers.deepcopy
+  netusers.deepcopy:
+    - x: ${1:None}
+    - memo: ${2:[]}
+endsnippet
+
+snippet netusers.dumps
+  netusers.dumps:
+    - obj: ${1:False}
+    - skipkeys: ${2:True}
+    - ensure_ascii: ${3:True}
+    - check_circular: ${4:True}
+    - allow_nan: ${5:None}
+    - cls: ${6:None}
+    - indent: ${7:None}
+    - separators: ${8:utf-8}
+    - encoding: ${9:None}
+    - default: ${10:False}
+endsnippet
+
+snippet netusers.loads
+  netusers.loads:
+    - s: ${1:None}
+    - encoding: ${2:None}
+    - cls: ${3:None}
+    - object_hook: ${4:None}
+    - parse_float: ${5:None}
+    - parse_int: ${6:None}
+    - parse_constant: ${7:None}
+endsnippet
+
+snippet netusers.managed
+  netusers.managed:
+    - name: ${1:None}
+    - users: ${2:None}
+endsnippet
+
+snippet csf.nics_skip
+  csf.nics_skip:
+endsnippet
+
+snippet csf.nics_skipped
+  csf.nics_skipped:
+    - name: ${1:False}
+endsnippet
+
+snippet csf.option_present
+  csf.option_present:
+    - name: ${1:False}
+endsnippet
+
+snippet csf.ports_open
+  csf.ports_open:
+    - name: ${1:tcp}
+    - ports: ${2:in}
+endsnippet
+
+snippet csf.rule_absent
+  csf.rule_absent:
+    - name: ${1:None}
+    - method: ${2:tcp}
+    - port: ${3:in}
+    - proto: ${4:d}
+    - direction: ${5:s}
+    - port_origin: ${6:None}
+    - ip_origin: ${7:False}
+endsnippet
+
+snippet csf.rule_present
+  csf.rule_present:
+    - name: ${1:None}
+    - method: ${2:tcp}
+    - port: ${3:in}
+    - proto: ${4:d}
+    - direction: ${5:s}
+    - port_origin: ${6:None}
+    - ip_origin: ${7:''}
+    - ttl: ${8:False}
+endsnippet
+
+snippet csf.testing_off
+  csf.testing_off:
+    - name: ${1:False}
+endsnippet
+
+snippet csf.testing_on
+  csf.testing_on:
+    - name: ${1:False}
+endsnippet
+
+snippet cron.absent
+  cron.absent:
+    - name: ${1:root}
+    - user: ${2:False}
+    - identifier: ${3:None}
+endsnippet
+
+snippet cron.env_absent
+  cron.env_absent:
+    - name: ${1:root}
+endsnippet
+
+snippet cron.env_present
+  cron.env_present:
+    - name: ${1:None}
+    - value: ${2:root}
+endsnippet
+
+snippet cron.file
+  cron.file:
+    - name: ${1:''}
+    - source_hash: ${2:None}
+    - source_hash_name: ${3:root}
+    - user: ${4:None}
+    - template: ${5:None}
+    - context: ${6:True}
+    - replace: ${7:None}
+    - defaults: ${8:''}
+endsnippet
+
+snippet cron.present
+  cron.present:
+    - name: ${1:root}
+    - user: ${2:*}
+    - minute: ${3:*}
+    - hour: ${4:*}
+    - daymonth: ${5:*}
+    - month: ${6:*}
+    - dayweek: ${7:None}
+    - comment: ${8:False}
+    - commented: ${9:False}
+    - identifier: ${10:None}
+endsnippet
+
+snippet postgres_privileges.absent
+  postgres_privileges.absent:
+    - name: ${1:None}
+    - object_name: ${2:public}
+    - object_type: ${3:None}
+    - privileges: ${4:None}
+    - prepend: ${5:None}
+    - maintenance_db: ${6:None}
+    - user: ${7:None}
+    - db_password: ${8:None}
+endsnippet
+
+snippet postgres_privileges.present
+  postgres_privileges.present:
+    - name: ${1:None}
+    - object_name: ${2:None}
+    - object_type: ${3:public}
+    - privileges: ${4:None}
+    - grant_option: ${5:None}
+    - prepend: ${6:None}
+    - maintenance_db: ${7:None}
+    - user: ${8:None}
+    - db_password: ${9:None}
+endsnippet
+
+snippet chronos_job.absent
+  chronos_job.absent:
+endsnippet
+
+snippet chronos_job.config
+  chronos_job.config:
+endsnippet
+
+snippet makeconf.absent
+  makeconf.absent:
+endsnippet
+
+snippet makeconf.present
+  makeconf.present:
+    - name: ${1:None}
+    - value: ${2:None}
+    - contains: ${3:None}
+endsnippet
+
+snippet cyg.installed
+  cyg.installed:
+    - name: ${1:x86_64}
+    - cyg_arch: ${2:None}
+endsnippet
+
+snippet cyg.removed
+  cyg.removed:
+    - name: ${1:x86_64}
+    - cyg_arch: ${2:None}
+endsnippet
+
+snippet cyg.updated
+  cyg.updated:
+    - name: ${1:None}
+    - cyg_arch: ${2:x86_64}
+    - mirrors: ${3:None}
+endsnippet
+
+snippet mysql_query.run
+  mysql_query.run:
+    - name: ${1:None}
+    - database: ${2:None}
+    - query: ${3:None}
+    - output: ${4:True}
+endsnippet
+
+snippet mysql_query.run_file
+  mysql_query.run_file:
+    - name: ${1:None}
+    - database: ${2:None}
+    - query_file: ${3:None}
+    - output: ${4:None}
+    - grain: ${5:True}
+    - key: ${6:None}
+endsnippet
+
+snippet boto3_sns.topic_absent
+  boto3_sns.topic_absent:
+    - name: ${1:False}
+    - unsubscribe: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet boto3_sns.topic_present
+  boto3_sns.topic_present:
+    - name: ${1:None}
+    - subscriptions: ${2:None}
+    - attributes: ${3:None}
+    - region: ${4:None}
+    - key: ${5:None}
+    - keyid: ${6:None}
+endsnippet
+
+snippet lvm.lv_absent
+  lvm.lv_absent:
+    - name: ${1:None}
+endsnippet
+
+snippet lvm.lv_present
+  lvm.lv_present:
+    - name: ${1:None}
+    - vgname: ${2:None}
+    - size: ${3:None}
+    - extents: ${4:None}
+    - snapshot: ${5:''}
+    - pv: ${6:False}
+    - thinvolume: ${7:False}
+    - thinpool: ${8:False}
+endsnippet
+
+snippet lvm.pv_absent
+  lvm.pv_absent:
+endsnippet
+
+snippet lvm.pv_present
+  lvm.pv_present:
+endsnippet
+
+snippet lvm.vg_absent
+  lvm.vg_absent:
+endsnippet
+
+snippet lvm.vg_present
+  lvm.vg_present:
+    - name: ${1:None}
+endsnippet
+
+snippet win_lgpo.set_
+  win_lgpo.set_:
+    - name: ${1:None}
+    - setting: ${2:None}
+    - policy_class: ${3:None}
+    - computer_policy: ${4:None}
+    - user_policy: ${5:True}
+    - cumulative_rights_assignments: ${6:en-US}
+endsnippet
+
+snippet kapacitor.task_absent
+  kapacitor.task_absent:
+endsnippet
+
+snippet kapacitor.task_present
+  kapacitor.task_present:
+    - name: ${1:stream}
+    - tick_script: ${2:None}
+    - task_type: ${3:default}
+    - database: ${4:True}
+endsnippet
+
+snippet netyang.configured
+  netyang.configured:
+endsnippet
+
+snippet netyang.managed
+  netyang.managed:
+endsnippet
+
+snippet mac_assistive.installed
+  mac_assistive.installed:
+    - name: ${1:True}
+endsnippet
+
+snippet win_wua.installed
+  win_wua.installed:
+    - name: ${1:None}
+endsnippet
+
+snippet win_wua.removed
+  win_wua.removed:
+    - name: ${1:None}
+endsnippet
+
+snippet win_wua.uptodate
+  win_wua.uptodate:
+    - name: ${1:True}
+    - software: ${2:False}
+    - drivers: ${3:False}
+    - skip_hidden: ${4:False}
+    - skip_mandatory: ${5:True}
+    - skip_reboot: ${6:None}
+    - categories: ${7:None}
+endsnippet
+
+snippet postgres_user.absent
+  postgres_user.absent:
+    - name: ${1:None}
+    - user: ${2:None}
+    - maintenance_db: ${3:None}
+    - db_password: ${4:None}
+    - db_host: ${5:None}
+    - db_port: ${6:None}
+endsnippet
+
+snippet postgres_user.present
+  postgres_user.present:
+    - name: ${1:None}
+    - createdb: ${2:None}
+    - createroles: ${3:None}
+    - createuser: ${4:None}
+    - encrypted: ${5:None}
+    - superuser: ${6:None}
+    - replication: ${7:None}
+    - inherit: ${8:None}
+    - login: ${9:None}
+    - password: ${10:None}
+    - default_password: ${11:None}
+    - refresh_password: ${12:None}
+    - valid_until: ${13:None}
+    - groups: ${14:None}
+    - user: ${15:None}
+    - maintenance_db: ${16:None}
+    - db_password: ${17:None}
+    - db_host: ${18:None}
+    - db_port: ${19:None}
+endsnippet
+
+snippet openvswitch_bridge.absent
+  openvswitch_bridge.absent:
+endsnippet
+
+snippet openvswitch_bridge.present
+  openvswitch_bridge.present:
+endsnippet
+
+snippet boto_elbv2.create_target_group
+  boto_elbv2.create_target_group:
+    - name: ${1:None}
+    - protocol: ${2:None}
+    - port: ${3:None}
+    - vpc_id: ${4:None}
+    - region: ${5:HTTP}
+    - key: ${6:traffic-port}
+    - keyid: ${7:/}
+    - profile: ${8:30}
+    - health_check_protocol: ${9:5}
+    - health_check_port: ${10:5}
+    - health_check_path: ${11:2}
+endsnippet
+
+snippet boto_elbv2.delete_target_group
+  boto_elbv2.delete_target_group:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_elbv2.targets_deregistered
+  boto_elbv2.targets_deregistered:
+    - name: ${1:None}
+    - targets: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+endsnippet
+
+snippet boto_elbv2.targets_registered
+  boto_elbv2.targets_registered:
+    - name: ${1:None}
+    - targets: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+endsnippet
+
+snippet smtp.send_msg
+  smtp.send_msg:
+    - name: ${1:None}
+    - recipient: ${2:None}
+    - subject: ${3:True}
+endsnippet
+
+snippet postgres_language.absent
+  postgres_language.absent:
+    - name: ${1:None}
+    - maintenance_db: ${2:None}
+    - user: ${3:None}
+    - db_password: ${4:None}
+    - db_host: ${5:None}
+endsnippet
+
+snippet postgres_language.present
+  postgres_language.present:
+    - name: ${1:None}
+    - maintenance_db: ${2:None}
+    - user: ${3:None}
+    - db_password: ${4:None}
+    - db_host: ${5:None}
+endsnippet
+
+snippet openvswitch_port.absent
+  openvswitch_port.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet openvswitch_port.present
+  openvswitch_port.present:
+    - name: ${1:None}
+    - bridge: ${2:None}
+    - tunnel_type: ${3:None}
+    - id: ${4:None}
+    - remote: ${5:False}
+endsnippet
+
+snippet cisconso.value_present
+  cisconso.value_present:
+endsnippet
+
+snippet github.absent
+  github.absent:
+    - name: ${1:github}
+endsnippet
+
+snippet github.present
+  github.present:
+    - name: ${1:github}
+endsnippet
+
+snippet github.repo_absent
+  github.repo_absent:
+    - name: ${1:github}
+endsnippet
+
+snippet github.repo_present
+  github.repo_present:
+    - name: ${1:None}
+    - description: ${2:None}
+    - homepage: ${3:None}
+    - private: ${4:None}
+    - has_issues: ${5:None}
+    - has_wiki: ${6:None}
+    - has_downloads: ${7:False}
+    - auto_init: ${8:None}
+    - gitignore_template: ${9:None}
+    - license_template: ${10:None}
+    - teams: ${11:github}
+endsnippet
+
+snippet github.team_absent
+  github.team_absent:
+    - name: ${1:github}
+endsnippet
+
+snippet github.team_present
+  github.team_present:
+    - name: ${1:None}
+    - description: ${2:None}
+    - repo_names: ${3:secret}
+    - privacy: ${4:pull}
+    - permission: ${5:None}
+    - members: ${6:False}
+    - enforce_mfa: ${7:0}
+    - no_mfa_grace_seconds: ${8:github}
+endsnippet
+
+snippet cryptdev.mapped
+  cryptdev.mapped:
+    - name: ${1:None}
+    - device: ${2:None}
+    - keyfile: ${3:/etc/crypttab}
+    - opts: ${4:True}
+    - config: ${5:False}
+    - persist: ${6:name}
+endsnippet
+
+snippet cryptdev.unmapped
+  cryptdev.unmapped:
+    - name: ${1:/etc/crypttab}
+    - config: ${2:True}
+    - persist: ${3:False}
+endsnippet
+
+snippet infoblox_host_record.absent
+  infoblox_host_record.absent:
+    - name: ${1:None}
+    - ipv4addr: ${2:None}
+    - mac: ${3:None}
+endsnippet
+
+snippet infoblox_host_record.present
+  infoblox_host_record.present:
+    - name: ${1:None}
+    - data: ${2:None}
+    - ensure_data: ${3:True}
+endsnippet
+
+snippet influxdb_continuous_query.absent
+  influxdb_continuous_query.absent:
+endsnippet
+
+snippet influxdb_continuous_query.present
+  influxdb_continuous_query.present:
+    - name: ${1:None}
+    - database: ${2:None}
+endsnippet
+
+snippet boto_apigateway.absent
+  boto_apigateway.absent:
+    - name: ${1:False}
+    - api_name: ${2:None}
+    - stage_name: ${3:None}
+    - nuke_api: ${4:None}
+    - region: ${5:None}
+endsnippet
+
+snippet boto_apigateway.present
+  boto_apigateway.present:
+    - name: ${1:None}
+    - api_name: ${2:None}
+    - swagger_file: ${3:None}
+    - stage_name: ${4:None}
+    - api_key_required: ${5:None}
+    - lambda_integration_role: ${6:None}
+    - lambda_region: ${7:{stage}_{api}_{resource}_{method}}
+    - stage_variables: ${8:NONE}
+    - region: ${9:None}
+    - key: ${10:None}
+endsnippet
+
+snippet boto_apigateway.usage_plan_absent
+  boto_apigateway.usage_plan_absent:
+    - name: ${1:None}
+    - plan_name: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+endsnippet
+
+snippet boto_apigateway.usage_plan_association_absent
+  boto_apigateway.usage_plan_association_absent:
+    - name: ${1:None}
+    - plan_name: ${2:None}
+    - api_stages: ${3:None}
+    - region: ${4:None}
+endsnippet
+
+snippet boto_apigateway.usage_plan_association_present
+  boto_apigateway.usage_plan_association_present:
+    - name: ${1:None}
+    - plan_name: ${2:None}
+    - api_stages: ${3:None}
+    - region: ${4:None}
+endsnippet
+
+snippet boto_apigateway.usage_plan_present
+  boto_apigateway.usage_plan_present:
+    - name: ${1:None}
+    - plan_name: ${2:None}
+    - description: ${3:None}
+    - throttle: ${4:None}
+    - quota: ${5:None}
+    - region: ${6:None}
+    - key: ${7:None}
+endsnippet
+
+snippet pagerduty_user.absent
+  pagerduty_user.absent:
+    - profile: ${1:pagerduty}
+    - subdomain: ${2:None}
+    - api_key: ${3:None}
+endsnippet
+
+snippet pagerduty_user.present
+  pagerduty_user.present:
+    - profile: ${1:pagerduty}
+    - subdomain: ${2:None}
+    - api_key: ${3:None}
+endsnippet
+
+snippet docker_volume.absent
+  docker_volume.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet docker_volume.present
+  docker_volume.present:
+    - name: ${1:None}
+    - driver: ${2:None}
+    - driver_opts: ${3:False}
+endsnippet
+
+snippet boto_s3.object_present
+  boto_s3.object_present:
+    - name: ${1:None}
+    - source: ${2:None}
+    - hash_type: ${3:None}
+    - extra_args: ${4:boto_s3_object_extra_args}
+    - extra_args_from_pillar: ${5:None}
+    - region: ${6:None}
+    - key: ${7:None}
+    - keyid: ${8:None}
+endsnippet
+
+snippet supervisord.dead
+  supervisord.dead:
+    - name: ${1:None}
+    - user: ${2:None}
+    - conf_file: ${3:None}
+endsnippet
+
+snippet supervisord.mod_watch
+  supervisord.mod_watch:
+    - name: ${1:True}
+    - restart: ${2:False}
+    - update: ${3:None}
+    - user: ${4:None}
+    - conf_file: ${5:None}
+endsnippet
+
+snippet supervisord.running
+  supervisord.running:
+    - name: ${1:False}
+    - restart: ${2:False}
+    - update: ${3:None}
+    - user: ${4:None}
+    - conf_file: ${5:None}
+endsnippet
+
+snippet win_path.absent
+  win_path.absent:
+endsnippet
+
+snippet win_path.exists
+  win_path.exists:
+    - name: ${1:None}
+endsnippet
+
+snippet grafana4_org.absent
+  grafana4_org.absent:
+    - name: ${1:grafana}
+endsnippet
+
+snippet grafana4_org.deep_diff
+  grafana4_org.deep_diff:
+    - old: ${1:None}
+endsnippet
+
+snippet grafana4_org.present
+  grafana4_org.present:
+    - name: ${1:None}
+    - users: ${2:None}
+    - theme: ${3:None}
+    - home_dashboard_id: ${4:None}
+    - timezone: ${5:None}
+    - address1: ${6:None}
+    - address2: ${7:None}
+    - city: ${8:None}
+    - zip_code: ${9:None}
+    - address_state: ${10:None}
+    - country: ${11:grafana}
+endsnippet
+
+snippet mongodb_database.absent
+  mongodb_database.absent:
+    - name: ${1:None}
+    - user: ${2:None}
+    - password: ${3:None}
+    - host: ${4:None}
+    - port: ${5:None}
+endsnippet
+
+snippet keystone_role.absent
+  keystone_role.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone_role.present
+  keystone_role.present:
+    - name: ${1:None}
+endsnippet
+
+snippet elasticsearch_index_template.absent
+  elasticsearch_index_template.absent:
+endsnippet
+
+snippet elasticsearch_index_template.present
+  elasticsearch_index_template.present:
+endsnippet
+
+snippet gpg.absent
+  gpg.absent:
+    - name: ${1:None}
+    - keys: ${2:None}
+    - user: ${3:None}
+endsnippet
+
+snippet gpg.present
+  gpg.present:
+    - name: ${1:None}
+    - keys: ${2:None}
+    - user: ${3:None}
+    - keyserver: ${4:None}
+    - gnupghome: ${5:None}
+endsnippet
+
+snippet boto_dynamodb.absent
+  boto_dynamodb.absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_dynamodb.present
+  boto_dynamodb.present:
+    - name: ${1:None}
+    - table_name: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+    - profile: ${6:None}
+    - read_capacity_units: ${7:None}
+    - write_capacity_units: ${8:None}
+    - alarms: ${9:None}
+    - alarms_from_pillar: ${10:boto_dynamodb_alarms}
+    - hash_key: ${11:None}
+    - hash_key_data_type: ${12:None}
+    - range_key: ${13:None}
+    - range_key_data_type: ${14:None}
+    - local_indexes: ${15:None}
+    - global_indexes: ${16:None}
+    - backup_configs_from_pillars: ${17:boto_dynamodb_backup_configs}
+endsnippet
+
+snippet mac_defaults.absent
+  mac_defaults.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet mac_defaults.write
+  mac_defaults.write:
+    - name: ${1:string}
+    - domain: ${2:None}
+endsnippet
+
+snippet ini_manage.options_absent
+  ini_manage.options_absent:
+    - name: ${1:None}
+    - sections: ${2:=}
+endsnippet
+
+snippet ini_manage.options_present
+  ini_manage.options_present:
+    - name: ${1:None}
+    - sections: ${2:=}
+    - separator: ${3:False}
+endsnippet
+
+snippet ini_manage.sections_absent
+  ini_manage.sections_absent:
+    - name: ${1:None}
+    - sections: ${2:=}
+endsnippet
+
+snippet ini_manage.sections_present
+  ini_manage.sections_present:
+    - name: ${1:None}
+    - sections: ${2:=}
+endsnippet
+
+snippet mount.mod_watch
+  mount.mod_watch:
+    - name: ${1:None}
+endsnippet
+
+snippet mount.mounted
+  mount.mounted:
+    - name: ${1:False}
+    - device: ${2:defaults}
+    - fstype: ${3:0}
+    - mkmnt: ${4:0}
+    - opts: ${5:/etc/fstab}
+    - dump: ${6:True}
+    - pass_num: ${7:True}
+    - config: ${8:None}
+    - persist: ${9:auto}
+    - mount: ${10:None}
+    - user: ${11:None}
+    - match_on: ${12:None}
+    - device_name_regex: ${13:None}
+    - extra_mount_invisible_options: ${14:None}
+    - extra_mount_invisible_keys: ${15:None}
+endsnippet
+
+snippet mount.swap
+  mount.swap:
+    - name: ${1:True}
+    - persist: ${2:/etc/fstab}
+endsnippet
+
+snippet mount.unmounted
+  mount.unmounted:
+    - name: ${1:None}
+    - device: ${2:/etc/fstab}
+    - config: ${3:False}
+    - persist: ${4:None}
+endsnippet
+
+snippet victorops.create_event
+  victorops.create_event:
+    - name: ${1:everyone}
+endsnippet
+
+snippet openstack_config.absent
+  openstack_config.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet openstack_config.present
+  openstack_config.present:
+    - name: ${1:None}
+endsnippet
+
+snippet debconfmod.set
+  debconfmod.set:
+endsnippet
+
+snippet debconfmod.set_file
+  debconfmod.set_file:
+    - name: ${1:None}
+    - source: ${2:None}
+    - template: ${3:None}
+endsnippet
+
+snippet boto_s3_bucket.absent
+  boto_s3_bucket.absent:
+    - name: ${1:False}
+    - Bucket: ${2:None}
+    - Force: ${3:None}
+    - region: ${4:None}
+    - key: ${5:None}
+endsnippet
+
+snippet boto_s3_bucket.present
+  boto_s3_bucket.present:
+    - name: ${1:None}
+    - Bucket: ${2:None}
+    - LocationConstraint: ${3:None}
+    - ACL: ${4:None}
+    - CORSRules: ${5:None}
+    - LifecycleConfiguration: ${6:None}
+    - Logging: ${7:None}
+    - NotificationConfiguration: ${8:None}
+    - Policy: ${9:None}
+    - Replication: ${10:None}
+    - RequestPayment: ${11:None}
+    - Tagging: ${12:None}
+    - Versioning: ${13:None}
+    - Website: ${14:None}
+    - region: ${15:None}
+    - key: ${16:None}
+endsnippet
+
+snippet acme.cert
+  acme.cert:
+    - name: ${1:None}
+    - aliases: ${2:None}
+    - email: ${3:None}
+    - webroot: ${4:False}
+    - test_cert: ${5:None}
+    - renew: ${6:None}
+    - keysize: ${7:None}
+    - server: ${8:root}
+    - owner: ${9:root}
+    - group: ${10:0640}
+    - mode: ${11:None}
+endsnippet
+
+snippet redismod.absent
+  redismod.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet redismod.slaveof
+  redismod.slaveof:
+    - name: ${1:None}
+    - sentinel_host: ${2:None}
+    - sentinel_port: ${3:None}
+endsnippet
+
+snippet redismod.string
+  redismod.string:
+    - name: ${1:None}
+    - value: ${2:None}
+endsnippet
+
+snippet grafana_datasource.absent
+  grafana_datasource.absent:
+    - name: ${1:grafana}
+endsnippet
+
+snippet grafana_datasource.present
+  grafana_datasource.present:
+    - name: ${1:proxy}
+    - type: ${2:''}
+    - url: ${3:''}
+    - access: ${4:''}
+    - user: ${5:False}
+    - password: ${6:''}
+    - database: ${7:''}
+    - basic_auth: ${8:False}
+    - basic_auth_user: ${9:None}
+    - basic_auth_password: ${10:grafana}
+endsnippet
+
+snippet alternatives.auto
+  alternatives.auto:
+endsnippet
+
+snippet alternatives.install
+  alternatives.install:
+endsnippet
+
+snippet alternatives.remove
+  alternatives.remove:
+endsnippet
+
+snippet alternatives.set_
+  alternatives.set_:
+endsnippet
+
+snippet ceph.quorum
+  ceph.quorum:
+endsnippet
+
+snippet nexus.downloaded
+  nexus.downloaded:
+    - name: ${1:/tmp}
+    - artifact: ${2:None}
+endsnippet
+
+snippet win_snmp.agent_settings
+  win_snmp.agent_settings:
+    - name: ${1:None}
+endsnippet
+
+snippet win_snmp.auth_traps_enabled
+  win_snmp.auth_traps_enabled:
+    - name: ${1:True}
+endsnippet
+
+snippet win_snmp.community_names
+  win_snmp.community_names:
+    - name: ${1:None}
+endsnippet
+
+snippet composer.installed
+  composer.installed:
+    - name: ${1:None}
+    - composer: ${2:None}
+    - php: ${3:None}
+    - user: ${4:None}
+    - prefer_source: ${5:None}
+    - prefer_dist: ${6:None}
+    - no_scripts: ${7:None}
+    - no_plugins: ${8:None}
+    - optimize: ${9:None}
+    - no_dev: ${10:False}
+    - quiet: ${11:/root}
+    - composer_home: ${12:True}
+endsnippet
+
+snippet composer.update
+  composer.update:
+    - name: ${1:None}
+    - composer: ${2:None}
+    - php: ${3:None}
+    - user: ${4:None}
+    - prefer_source: ${5:None}
+    - prefer_dist: ${6:None}
+    - no_scripts: ${7:None}
+    - no_plugins: ${8:None}
+    - optimize: ${9:None}
+    - no_dev: ${10:False}
+    - quiet: ${11:/root}
+endsnippet
+
+snippet splunk_search.absent
+  splunk_search.absent:
+    - name: ${1:splunk}
+endsnippet
+
+snippet splunk_search.present
+  splunk_search.present:
+    - name: ${1:splunk}
+endsnippet
+
+snippet postgres_tablespace.absent
+  postgres_tablespace.absent:
+    - name: ${1:None}
+    - user: ${2:None}
+    - maintenance_db: ${3:None}
+    - db_user: ${4:None}
+    - db_password: ${5:None}
+    - db_host: ${6:None}
+endsnippet
+
+snippet postgres_tablespace.iteritems
+  postgres_tablespace.iteritems:
+endsnippet
+
+snippet postgres_tablespace.present
+  postgres_tablespace.present:
+    - name: ${1:None}
+    - directory: ${2:None}
+    - options: ${3:None}
+    - owner: ${4:None}
+    - user: ${5:None}
+    - maintenance_db: ${6:None}
+    - db_password: ${7:None}
+    - db_host: ${8:None}
+endsnippet
+
+snippet pip_state.installed
+  pip_state.installed:
+    - name: ${1:None}
+    - pkgs: ${2:None}
+    - pip_bin: ${3:None}
+    - requirements: ${4:None}
+    - bin_env: ${5:False}
+    - use_wheel: ${6:False}
+    - no_use_wheel: ${7:None}
+    - log: ${8:None}
+    - proxy: ${9:None}
+    - timeout: ${10:None}
+    - repo: ${11:None}
+    - editable: ${12:None}
+    - find_links: ${13:None}
+    - index_url: ${14:None}
+    - extra_index_url: ${15:False}
+    - no_index: ${16:None}
+    - mirrors: ${17:None}
+    - build: ${18:None}
+    - target: ${19:None}
+    - download: ${20:None}
+    - download_cache: ${21:None}
+    - source: ${22:False}
+    - upgrade: ${23:False}
+    - force_reinstall: ${24:False}
+    - ignore_installed: ${25:None}
+    - exists_action: ${26:False}
+    - no_deps: ${27:False}
+    - no_install: ${28:False}
+    - no_download: ${29:None}
+    - install_options: ${30:None}
+    - global_options: ${31:None}
+    - user: ${32:None}
+    - cwd: ${33:False}
+    - pre_releases: ${34:None}
+    - cert: ${35:False}
+    - allow_all_external: ${36:None}
+    - allow_external: ${37:None}
+    - allow_unverified: ${38:False}
+    - process_dependency_links: ${39:None}
+    - env_vars: ${40:False}
+    - use_vt: ${41:None}
+    - trusted_host: ${42:False}
+    - no_cache_dir: ${43:None}
+    - cache_dir: ${44:None}
+endsnippet
+
+snippet pip_state.removed
+  pip_state.removed:
+    - name: ${1:None}
+    - requirements: ${2:None}
+    - bin_env: ${3:None}
+    - log: ${4:None}
+    - proxy: ${5:None}
+    - timeout: ${6:None}
+    - user: ${7:None}
+    - cwd: ${8:False}
+endsnippet
+
+snippet pip_state.uptodate
+  pip_state.uptodate:
+    - name: ${1:None}
+    - bin_env: ${2:None}
+    - user: ${3:None}
+    - cwd: ${4:False}
+endsnippet
+
+snippet telemetry_alert.absent
+  telemetry_alert.absent:
+    - name: ${1:None}
+    - deployment_id: ${2:telemetry}
+endsnippet
+
+snippet telemetry_alert.present
+  telemetry_alert.present:
+    - name: ${1:None}
+    - deployment_id: ${2:telemetry}
+endsnippet
+
+snippet docker_container.absent
+  docker_container.absent:
+    - name: ${1:False}
+endsnippet
+
+snippet docker_container.mod_run_check
+  docker_container.mod_run_check:
+endsnippet
+
+snippet docker_container.mod_watch
+  docker_container.mod_watch:
+    - name: ${1:None}
+endsnippet
+
+snippet docker_container.run
+  docker_container.run:
+    - name: ${1:None}
+    - image: ${2:None}
+    - onlyif: ${3:None}
+    - unless: ${4:None}
+    - creates: ${5:False}
+    - bg: ${6:True}
+    - failhard: ${7:False}
+    - replace: ${8:False}
+    - force: ${9:None}
+    - skip_translate: ${10:False}
+    - ignore_collisions: ${11:True}
+    - validate_ip_addrs: ${12:60}
+endsnippet
+
+snippet docker_container.running
+  docker_container.running:
+    - name: ${1:None}
+    - image: ${2:None}
+    - skip_translate: ${3:False}
+    - ignore_collisions: ${4:True}
+    - validate_ip_addrs: ${5:False}
+    - force: ${6:force}
+    - watch_action: ${7:True}
+    - start: ${8:None}
+    - shutdown_timeout: ${9:60}
+    - client_timeout: ${10:None}
+endsnippet
+
+snippet docker_container.stopped
+  docker_container.stopped:
+    - name: ${1:None}
+    - containers: ${2:None}
+    - shutdown_timeout: ${3:None}
+    - unpause: ${4:False}
+    - error_on_absent: ${5:True}
+endsnippet
+
+snippet rabbitmq_cluster.join
+  rabbitmq_cluster.join:
+    - name: ${1:rabbit}
+    - host: ${2:None}
+    - user: ${3:root}
+endsnippet
+
+snippet rabbitmq_cluster.joined
+  rabbitmq_cluster.joined:
+    - name: ${1:rabbit}
+    - host: ${2:None}
+    - user: ${3:root}
+endsnippet
+
+snippet solrcloud.alias
+  solrcloud.alias:
+endsnippet
+
+snippet solrcloud.collection
+  solrcloud.collection:
+    - name: ${1:None}
+endsnippet
+
+snippet boto_secgroup.absent
+  boto_secgroup.absent:
+    - name: ${1:None}
+    - vpc_id: ${2:None}
+    - vpc_name: ${3:None}
+    - region: ${4:None}
+    - key: ${5:None}
+    - keyid: ${6:None}
+endsnippet
+
+snippet boto_secgroup.present
+  boto_secgroup.present:
+    - name: ${1:None}
+    - description: ${2:None}
+    - vpc_id: ${3:None}
+    - vpc_name: ${4:None}
+    - rules: ${5:True}
+    - rules_egress: ${6:True}
+    - delete_ingress_rules: ${7:None}
+    - delete_egress_rules: ${8:None}
+    - region: ${9:None}
+    - key: ${10:None}
+    - keyid: ${11:None}
+endsnippet
+
+snippet file.absent
+  file.absent:
+endsnippet
+
+snippet file.accumulated
+  file.accumulated:
+endsnippet
+
+snippet file.append
+  file.append:
+    - name: ${1:None}
+    - text: ${2:False}
+    - makedirs: ${3:None}
+    - source: ${4:None}
+    - source_hash: ${5:jinja}
+    - template: ${6:None}
+    - sources: ${7:None}
+    - source_hashes: ${8:None}
+    - defaults: ${9:None}
+    - context: ${10:True}
+endsnippet
+
+snippet file.blockreplace
+  file.blockreplace:
+    - name: ${1:#-- start managed zone --}
+    - marker_start: ${2:#-- end managed zone --}
+    - marker_end: ${3:None}
+    - source: ${4:None}
+    - source_hash: ${5:jinja}
+    - template: ${6:None}
+    - sources: ${7:None}
+    - source_hashes: ${8:None}
+    - defaults: ${9:None}
+    - context: ${10:''}
+    - content: ${11:False}
+    - append_if_not_found: ${12:False}
+    - prepend_if_not_found: ${13:.bak}
+    - backup: ${14:True}
+    - show_changes: ${15:None}
+endsnippet
+
+snippet file.cached
+  file.cached:
+    - name: ${1:''}
+    - source_hash: ${2:None}
+    - source_hash_name: ${3:False}
+    - skip_verify: ${4:base}
+endsnippet
+
+snippet file.comment
+  file.comment:
+    - name: ${1:#}
+    - regex: ${2:.bak}
+endsnippet
+
+snippet file.copy
+  file.copy:
+    - name: ${1:False}
+    - source: ${2:False}
+    - force: ${3:False}
+    - makedirs: ${4:None}
+    - preserve: ${5:None}
+    - user: ${6:None}
+    - group: ${7:False}
+endsnippet
+
+snippet file.decode
+  file.decode:
+    - name: ${1:None}
+    - encoded_data: ${2:None}
+    - contents_pillar: ${3:base64}
+    - encoding_type: ${4:md5}
+endsnippet
+
+snippet file.directory
+  file.directory:
+    - name: ${1:None}
+    - user: ${2:None}
+    - group: ${3:None}
+    - recurse: ${4:None}
+    - max_depth: ${5:None}
+    - dir_mode: ${6:None}
+    - file_mode: ${7:False}
+    - makedirs: ${8:False}
+    - clean: ${9:None}
+    - require: ${10:None}
+    - exclude_pat: ${11:False}
+    - follow_symlinks: ${12:False}
+    - force: ${13:None}
+    - backupname: ${14:True}
+    - allow_symlink: ${15:False}
+    - children_only: ${16:None}
+    - win_owner: ${17:None}
+    - win_perms: ${18:None}
+    - win_deny_perms: ${19:True}
+    - win_inheritance: ${20:False}
+endsnippet
+
+snippet file.exists
+  file.exists:
+endsnippet
+
+snippet file.line
+  file.line:
+    - name: ${1:None}
+    - content: ${2:None}
+    - match: ${3:None}
+    - mode: ${4:None}
+    - location: ${5:None}
+    - before: ${6:None}
+    - after: ${7:True}
+    - show_changes: ${8:False}
+    - backup: ${9:False}
+    - quiet: ${10:True}
+    - indent: ${11:False}
+    - create: ${12:None}
+    - user: ${13:None}
+    - group: ${14:None}
+endsnippet
+
+snippet file.managed
+  file.managed:
+    - name: ${1:None}
+    - source: ${2:''}
+    - source_hash: ${3:None}
+    - source_hash_name: ${4:True}
+    - keep_source: ${5:None}
+    - user: ${6:None}
+    - group: ${7:None}
+    - mode: ${8:None}
+    - attrs: ${9:None}
+    - template: ${10:False}
+    - makedirs: ${11:None}
+    - dir_mode: ${12:None}
+    - context: ${13:True}
+    - replace: ${14:None}
+    - defaults: ${15:''}
+    - backup: ${16:True}
+    - show_changes: ${17:True}
+    - create: ${18:None}
+    - contents: ${19:''}
+    - tmp_ext: ${20:None}
+    - contents_pillar: ${21:None}
+    - contents_grains: ${22:True}
+    - contents_newline: ${23::}
+    - contents_delimiter: ${24:None}
+    - encoding: ${25:strict}
+    - encoding_errors: ${26:True}
+    - allow_empty: ${27:True}
+    - follow_symlinks: ${28:None}
+    - check_cmd: ${29:False}
+    - skip_verify: ${30:None}
+    - win_owner: ${31:None}
+    - win_perms: ${32:None}
+    - win_deny_perms: ${33:True}
+    - win_inheritance: ${34:False}
+endsnippet
+
+snippet file.missing
+  file.missing:
+endsnippet
+
+snippet file.mknod
+  file.mknod:
+    - name: ${1:0}
+    - ntype: ${2:0}
+    - major: ${3:None}
+    - minor: ${4:None}
+    - user: ${5:0600}
+endsnippet
+
+snippet file.mod_run_check_cmd
+  file.mod_run_check_cmd:
+endsnippet
+
+snippet file.not_cached
+  file.not_cached:
+    - name: ${1:base}
+endsnippet
+
+snippet file.patch
+  file.patch:
+    - name: ${1:None}
+    - source: ${2:''}
+    - options: ${3:True}
+endsnippet
+
+snippet file.prepend
+  file.prepend:
+    - name: ${1:None}
+    - text: ${2:False}
+    - makedirs: ${3:None}
+    - source: ${4:None}
+    - source_hash: ${5:jinja}
+    - template: ${6:None}
+    - sources: ${7:None}
+    - source_hashes: ${8:None}
+    - defaults: ${9:None}
+    - context: ${10:None}
+endsnippet
+
+snippet file.recurse
+  file.recurse:
+    - name: ${1:True}
+    - source: ${2:False}
+    - keep_source: ${3:None}
+    - clean: ${4:None}
+    - require: ${5:None}
+    - user: ${6:None}
+    - group: ${7:None}
+    - dir_mode: ${8:None}
+    - file_mode: ${9:None}
+    - sym_mode: ${10:None}
+    - template: ${11:True}
+    - context: ${12:None}
+    - replace: ${13:False}
+    - defaults: ${14:''}
+    - include_empty: ${15:None}
+    - backup: ${16:None}
+    - include_pat: ${17:None}
+    - exclude_pat: ${18:False}
+    - maxdepth: ${19:False}
+    - keep_symlinks: ${20:None}
+    - force_symlinks: ${21:None}
+    - win_owner: ${22:None}
+    - win_perms: ${23:True}
+endsnippet
+
+snippet file.rename
+  file.rename:
+    - name: ${1:False}
+    - source: ${2:False}
+endsnippet
+
+snippet file.replace
+  file.replace:
+    - name: ${1:0}
+    - pattern: ${2:8}
+    - repl: ${3:1}
+    - count: ${4:False}
+    - flags: ${5:False}
+    - bufsize: ${6:None}
+    - append_if_not_found: ${7:.bak}
+    - prepend_if_not_found: ${8:True}
+    - not_found_content: ${9:False}
+    - backup: ${10:False}
+endsnippet
+
+snippet file.retention_schedule
+  file.retention_schedule:
+    - name: ${1:None}
+    - retain: ${2:None}
+endsnippet
+
+snippet file.sdecode
+  file.sdecode:
+endsnippet
+
+snippet file.serialize
+  file.serialize:
+    - name: ${1:None}
+    - dataset: ${2:None}
+    - dataset_pillar: ${3:None}
+    - user: ${4:None}
+    - group: ${5:None}
+    - mode: ${6:''}
+    - backup: ${7:False}
+    - makedirs: ${8:True}
+    - show_changes: ${9:True}
+    - create: ${10:False}
+    - merge_if_exists: ${11:None}
+    - encoding: ${12:strict}
+endsnippet
+
+snippet file.shortcut
+  file.shortcut:
+    - name: ${1:None}
+    - target: ${2:None}
+    - arguments: ${3:None}
+    - working_dir: ${4:None}
+    - description: ${5:False}
+    - icon_location: ${6:None}
+    - force: ${7:False}
+    - backupname: ${8:None}
+endsnippet
+
+snippet file.symlink
+  file.symlink:
+    - name: ${1:False}
+    - target: ${2:None}
+    - force: ${3:False}
+    - backupname: ${4:None}
+    - makedirs: ${5:None}
+    - user: ${6:None}
+    - group: ${7:None}
+    - mode: ${8:None}
+    - win_owner: ${9:None}
+    - win_perms: ${10:None}
+endsnippet
+
+snippet file.touch
+  file.touch:
+    - name: ${1:None}
+    - atime: ${2:None}
+    - mtime: ${3:False}
+endsnippet
+
+snippet file.uncomment
+  file.uncomment:
+    - name: ${1:#}
+    - regex: ${2:.bak}
+endsnippet
+
+snippet libcloud_dns.record_absent
+  libcloud_dns.record_absent:
+endsnippet
+
+snippet libcloud_dns.record_present
+  libcloud_dns.record_present:
+endsnippet
+
+snippet libcloud_dns.state_result
+  libcloud_dns.state_result:
+    - result: ${1:None}
+endsnippet
+
+snippet libcloud_dns.zone_absent
+  libcloud_dns.zone_absent:
+endsnippet
+
+snippet libcloud_dns.zone_present
+  libcloud_dns.zone_present:
+endsnippet
+
+snippet proxy.managed
+  proxy.managed:
+    - name: ${1:None}
+    - port: ${2:None}
+    - services: ${3:None}
+    - user: ${4:None}
+    - password: ${5:Ethernet}
+endsnippet
+
+snippet elasticsearch.alias_absent
+  elasticsearch.alias_absent:
+endsnippet
+
+snippet elasticsearch.alias_present
+  elasticsearch.alias_present:
+    - name: ${1:None}
+endsnippet
+
+snippet elasticsearch.index_absent
+  elasticsearch.index_absent:
+endsnippet
+
+snippet elasticsearch.index_present
+  elasticsearch.index_present:
+    - name: ${1:None}
+endsnippet
+
+snippet elasticsearch.index_template_absent
+  elasticsearch.index_template_absent:
+endsnippet
+
+snippet elasticsearch.index_template_present
+  elasticsearch.index_template_present:
+    - name: ${1:False}
+endsnippet
+
+snippet elasticsearch.pipeline_absent
+  elasticsearch.pipeline_absent:
+endsnippet
+
+snippet elasticsearch.pipeline_present
+  elasticsearch.pipeline_present:
+endsnippet
+
+snippet elasticsearch.search_template_absent
+  elasticsearch.search_template_absent:
+endsnippet
+
+snippet elasticsearch.search_template_present
+  elasticsearch.search_template_present:
+endsnippet
+
+snippet nxos.config_absent
+  nxos.config_absent:
+endsnippet
+
+snippet nxos.config_present
+  nxos.config_present:
+endsnippet
+
+snippet nxos.replace
+  nxos.replace:
+    - name: ${1:False}
+endsnippet
+
+snippet nxos.user_absent
+  nxos.user_absent:
+endsnippet
+
+snippet nxos.user_present
+  nxos.user_present:
+    - name: ${1:None}
+    - password: ${2:None}
+    - roles: ${3:False}
+    - encrypted: ${4:None}
+    - crypt_salt: ${5:sha256}
+endsnippet
+
+snippet win_network.managed
+  win_network.managed:
+    - name: ${1:None}
+    - dns_proto: ${2:None}
+    - dns_servers: ${3:None}
+    - ip_proto: ${4:None}
+    - ip_addrs: ${5:None}
+    - gateway: ${6:True}
+endsnippet
+
+snippet drac.absent
+  drac.absent:
+endsnippet
+
+snippet drac.network
+  drac.network:
+endsnippet
+
+snippet drac.present
+  drac.present:
+endsnippet
+
+snippet zpool.absent
+  zpool.absent:
+    - name: ${1:False}
+    - export: ${2:False}
+endsnippet
+
+snippet zpool.present
+  zpool.present:
+    - name: ${1:None}
+    - properties: ${2:None}
+    - filesystem_properties: ${3:None}
+    - layout: ${4:None}
+endsnippet
+
+snippet esxdatacenter.datacenter_configured
+  esxdatacenter.datacenter_configured:
+endsnippet
+
+snippet esxdatacenter.mod_init
+  esxdatacenter.mod_init:
+endsnippet
+
+snippet firewalld.present
+  firewalld.present:
+    - name: ${1:None}
+    - block_icmp: ${2:False}
+    - prune_block_icmp: ${3:None}
+    - default: ${4:False}
+    - masquerade: ${5:None}
+    - ports: ${6:False}
+    - prune_ports: ${7:None}
+    - port_fwd: ${8:False}
+    - prune_port_fwd: ${9:None}
+    - services: ${10:None}
+    - prune_services: ${11:None}
+    - interfaces: ${12:False}
+    - prune_interfaces: ${13:None}
+    - sources: ${14:False}
+    - prune_sources: ${15:None}
+    - rich_rules: ${16:False}
+endsnippet
+
+snippet firewalld.service
+  firewalld.service:
+    - name: ${1:None}
+    - ports: ${2:None}
+endsnippet
+
+snippet archive.extracted
+  archive.extracted:
+    - name: ${1:None}
+    - source: ${2:None}
+    - source_hash: ${3:False}
+    - source_hash_name: ${4:False}
+    - source_hash_update: ${5:None}
+    - skip_verify: ${6:None}
+    - password: ${7:None}
+    - options: ${8:False}
+    - list_options: ${9:False}
+    - force: ${10:False}
+    - overwrite: ${11:None}
+    - clean: ${12:None}
+    - user: ${13:None}
+    - group: ${14:False}
+    - if_missing: ${15:None}
+    - trim_output: ${16:True}
+    - use_cmd_unzip: ${17:True}
+    - extract_perms: ${18:None}
+    - enforce_toplevel: ${19:None}
+endsnippet
+
+snippet libcloud_storage.container_absent
+  libcloud_storage.container_absent:
+endsnippet
+
+snippet libcloud_storage.container_present
+  libcloud_storage.container_present:
+endsnippet
+
+snippet libcloud_storage.file_present
+  libcloud_storage.file_present:
+    - container: ${1:False}
+endsnippet
+
+snippet libcloud_storage.object_absent
+  libcloud_storage.object_absent:
+endsnippet
+
+snippet libcloud_storage.object_present
+  libcloud_storage.object_present:
+endsnippet
+
+snippet libcloud_storage.state_result
+  libcloud_storage.state_result:
+endsnippet
+
+snippet portage_config.flags
+  portage_config.flags:
+    - name: ${1:None}
+    - use: ${2:None}
+    - accept_keywords: ${3:None}
+    - env: ${4:None}
+    - license: ${5:None}
+    - properties: ${6:False}
+    - unmask: ${7:False}
+endsnippet
+
+snippet portage_config.mod_init
+  portage_config.mod_init:
+endsnippet
+
+snippet win_iis.container_setting
+  win_iis.container_setting:
+    - name: ${1:None}
+endsnippet
+
+snippet win_iis.create_app
+  win_iis.create_app:
+    - name: ${1:None}
+endsnippet
+
+snippet win_iis.create_apppool
+  win_iis.create_apppool:
+endsnippet
+
+snippet win_iis.create_binding
+  win_iis.create_binding:
+    - name: ${1:''}
+    - site: ${2:*}
+    - hostheader: ${3:80}
+    - ipaddress: ${4:http}
+    - port: ${5:0}
+endsnippet
+
+snippet win_iis.create_cert_binding
+  win_iis.create_cert_binding:
+    - name: ${1:''}
+    - site: ${2:*}
+    - hostheader: ${3:443}
+    - ipaddress: ${4:0}
+endsnippet
+
+snippet win_iis.create_vdir
+  win_iis.create_vdir:
+    - name: ${1:/}
+endsnippet
+
+snippet win_iis.deployed
+  win_iis.deployed:
+    - name: ${1:''}
+    - sourcepath: ${2:''}
+    - apppool: ${3:*}
+    - hostheader: ${4:80}
+    - ipaddress: ${5:http}
+endsnippet
+
+snippet win_iis.remove_app
+  win_iis.remove_app:
+endsnippet
+
+snippet win_iis.remove_apppool
+  win_iis.remove_apppool:
+endsnippet
+
+snippet win_iis.remove_binding
+  win_iis.remove_binding:
+    - name: ${1:''}
+    - site: ${2:*}
+    - hostheader: ${3:80}
+endsnippet
+
+snippet win_iis.remove_cert_binding
+  win_iis.remove_cert_binding:
+    - name: ${1:''}
+    - site: ${2:*}
+    - hostheader: ${3:443}
+endsnippet
+
+snippet win_iis.remove_site
+  win_iis.remove_site:
+endsnippet
+
+snippet win_iis.remove_vdir
+  win_iis.remove_vdir:
+    - name: ${1:/}
+endsnippet
+
+snippet win_iis.set_app
+  win_iis.set_app:
+    - name: ${1:None}
+endsnippet
+
+snippet win_pki.import_cert
+  win_pki.import_cert:
+    - name: ${1:cer}
+    - cert_format: ${2:LocalMachine}
+    - context: ${3:My}
+    - store: ${4:True}
+    - exportable: ${5:''}
+    - password: ${6:base}
+endsnippet
+
+snippet win_pki.remove_cert
+  win_pki.remove_cert:
+    - name: ${1:LocalMachine}
+    - thumbprint: ${2:My}
+endsnippet
+
+snippet ipset.absent
+  ipset.absent:
+    - name: ${1:None}
+    - entry: ${2:None}
+    - entries: ${3:ipv4}
+endsnippet
+
+snippet ipset.flush
+  ipset.flush:
+    - name: ${1:ipv4}
+endsnippet
+
+snippet ipset.present
+  ipset.present:
+    - name: ${1:None}
+    - entry: ${2:ipv4}
+endsnippet
+
+snippet ipset.set_absent
+  ipset.set_absent:
+    - name: ${1:ipv4}
+endsnippet
+
+snippet ipset.set_present
+  ipset.set_present:
+    - name: ${1:ipv4}
+endsnippet
+
+snippet pagerduty.create_event
+  pagerduty.create_event:
+endsnippet
+
+snippet win_firewall.add_rule
+  win_firewall.add_rule:
+    - name: ${1:tcp}
+    - localport: ${2:allow}
+    - protocol: ${3:in}
+    - action: ${4:any}
+endsnippet
+
+snippet win_firewall.disabled
+  win_firewall.disabled:
+    - name: ${1:allprofiles}
+endsnippet
+
+snippet win_firewall.enabled
+  win_firewall.enabled:
+    - name: ${1:allprofiles}
+endsnippet
+
+snippet postgres_group.absent
+  postgres_group.absent:
+    - name: ${1:None}
+    - user: ${2:None}
+    - maintenance_db: ${3:None}
+    - db_password: ${4:None}
+    - db_host: ${5:None}
+    - db_port: ${6:None}
+endsnippet
+
+snippet postgres_group.present
+  postgres_group.present:
+    - name: ${1:None}
+    - createdb: ${2:None}
+    - createroles: ${3:None}
+    - createuser: ${4:None}
+    - encrypted: ${5:None}
+    - superuser: ${6:None}
+    - inherit: ${7:None}
+    - login: ${8:None}
+    - replication: ${9:None}
+    - password: ${10:None}
+    - refresh_password: ${11:None}
+    - groups: ${12:None}
+    - user: ${13:None}
+    - maintenance_db: ${14:None}
+    - db_password: ${15:None}
+    - db_host: ${16:None}
+    - db_port: ${17:None}
+endsnippet
+
+snippet netsnmp.dumps
+  netsnmp.dumps:
+    - obj: ${1:False}
+    - skipkeys: ${2:True}
+    - ensure_ascii: ${3:True}
+    - check_circular: ${4:True}
+    - allow_nan: ${5:None}
+    - cls: ${6:None}
+    - indent: ${7:None}
+    - separators: ${8:utf-8}
+    - encoding: ${9:None}
+    - default: ${10:False}
+endsnippet
+
+snippet netsnmp.loads
+  netsnmp.loads:
+    - s: ${1:None}
+    - encoding: ${2:None}
+    - cls: ${3:None}
+    - object_hook: ${4:None}
+    - parse_float: ${5:None}
+    - parse_int: ${6:None}
+    - parse_constant: ${7:None}
+endsnippet
+
+snippet netsnmp.managed
+  netsnmp.managed:
+    - name: ${1:None}
+    - config: ${2:None}
+endsnippet
+
+snippet win_powercfg.set_timeout
+  win_powercfg.set_timeout:
+    - name: ${1:ac}
+    - value: ${2:None}
+endsnippet
+
+snippet influxdb08_database.absent
+  influxdb08_database.absent:
+    - name: ${1:None}
+    - user: ${2:None}
+    - password: ${3:None}
+    - host: ${4:None}
+endsnippet
+
+snippet influxdb08_database.present
+  influxdb08_database.present:
+    - name: ${1:None}
+    - user: ${2:None}
+    - password: ${3:None}
+    - host: ${4:None}
+endsnippet
+
+snippet probes.deepcopy
+  probes.deepcopy:
+    - x: ${1:None}
+    - memo: ${2:[]}
+endsnippet
+
+snippet probes.dumps
+  probes.dumps:
+    - obj: ${1:False}
+    - skipkeys: ${2:True}
+    - ensure_ascii: ${3:True}
+    - check_circular: ${4:True}
+    - allow_nan: ${5:None}
+    - cls: ${6:None}
+    - indent: ${7:None}
+    - separators: ${8:utf-8}
+    - encoding: ${9:None}
+    - default: ${10:False}
+endsnippet
+
+snippet probes.loads
+  probes.loads:
+    - s: ${1:None}
+    - encoding: ${2:None}
+    - cls: ${3:None}
+    - object_hook: ${4:None}
+    - parse_float: ${5:None}
+    - parse_int: ${6:None}
+    - parse_constant: ${7:None}
+endsnippet
+
+snippet probes.managed
+  probes.managed:
+    - name: ${1:None}
+endsnippet
+
+snippet environ.setenv
+  environ.setenv:
+    - name: ${1:False}
+    - value: ${2:False}
+    - false_unsets: ${3:False}
+    - clear_all: ${4:False}
+endsnippet
+
+snippet cloud.absent
+  cloud.absent:
+    - name: ${1:None}
+    - onlyif: ${2:None}
+endsnippet
+
+snippet cloud.present
+  cloud.present:
+    - name: ${1:None}
+    - cloud_provider: ${2:None}
+    - onlyif: ${3:None}
+endsnippet
+
+snippet cloud.profile
+  cloud.profile:
+    - name: ${1:None}
+    - profile: ${2:None}
+    - onlyif: ${3:None}
+endsnippet
+
+snippet cloud.volume_absent
+  cloud.volume_absent:
+    - name: ${1:None}
+endsnippet
+
+snippet cloud.volume_attached
+  cloud.volume_attached:
+    - name: ${1:None}
+endsnippet
+
+snippet cloud.volume_detached
+  cloud.volume_detached:
+    - name: ${1:None}
+    - server_name: ${2:None}
+endsnippet
+
+snippet cloud.volume_present
+  cloud.volume_present:
+    - name: ${1:None}
+endsnippet
+
+snippet jboss7.bindings_exist
+  jboss7.bindings_exist:
+    - name: ${1:None}
+endsnippet
+
+snippet jboss7.datasource_exists
+  jboss7.datasource_exists:
+    - name: ${1:False}
+    - jboss_config: ${2:None}
+endsnippet
+
+snippet jboss7.deployed
+  jboss7.deployed:
+    - name: ${1:None}
+endsnippet
+
+snippet jboss7.reloaded
+  jboss7.reloaded:
+    - name: ${1:60}
+    - jboss_config: ${2:5}
+endsnippet
+
+snippet pkgng.update_packaging_site
+  pkgng.update_packaging_site:
+endsnippet
+
+snippet rabbitmq_plugin.disabled
+  rabbitmq_plugin.disabled:
+    - name: ${1:None}
+endsnippet
+
+snippet rabbitmq_plugin.enabled
+  rabbitmq_plugin.enabled:
+    - name: ${1:None}
+endsnippet
+
+snippet rbac_solaris.managed
+  rbac_solaris.managed:
+    - name: ${1:None}
+    - roles: ${2:None}
+    - profiles: ${3:None}
+endsnippet
+
+snippet syslog_ng.config
+  syslog_ng.config:
+    - name: ${1:True}
+endsnippet
+
+snippet syslog_ng.reloaded
+  syslog_ng.reloaded:
+endsnippet
+
+snippet syslog_ng.started
+  syslog_ng.started:
+    - name: ${1:None}
+    - user: ${2:None}
+    - group: ${3:None}
+    - chroot: ${4:None}
+    - caps: ${5:None}
+    - no_caps: ${6:False}
+    - pidfile: ${7:None}
+    - enable_core: ${8:False}
+    - fd_limit: ${9:None}
+    - verbose: ${10:False}
+    - debug: ${11:False}
+    - trace: ${12:False}
+    - yydebug: ${13:False}
+    - persist_file: ${14:None}
+    - control: ${15:None}
+    - worker_threads: ${16:None}
+endsnippet
+
+snippet syslog_ng.stopped
+  syslog_ng.stopped:
+    - name: ${1:None}
+endsnippet
+
+snippet eselect.set_
+  eselect.set_:
+    - name: ${1:None}
+    - target: ${2:None}
+endsnippet
+
+snippet docker.absent
+  docker.absent:
+endsnippet
+
+snippet docker.image_absent
+  docker.image_absent:
+endsnippet
+
+snippet docker.image_present
+  docker.image_present:
+endsnippet
+
+snippet docker.mod_watch
+  docker.mod_watch:
+    - name: ${1:None}
+endsnippet
+
+snippet docker.network_absent
+  docker.network_absent:
+endsnippet
+
+snippet docker.network_present
+  docker.network_present:
+endsnippet
+
+snippet docker.running
+  docker.running:
+endsnippet
+
+snippet docker.stopped
+  docker.stopped:
+endsnippet
+
+snippet docker.volume_absent
+  docker.volume_absent:
+    - name: ${1:None}
+endsnippet
+
+snippet docker.volume_present
+  docker.volume_present:
+    - name: ${1:None}
+    - driver: ${2:None}
+    - driver_opts: ${3:False}
+endsnippet
+
+snippet highstate_doc.note
+  highstate_doc.note:
+    - name: ${1:None}
+    - source: ${2:None}
+endsnippet
+
+snippet locale.present
+  locale.present:
+endsnippet
+
+snippet locale.system
+  locale.system:
+endsnippet
+
+snippet sysrc.absent
+  sysrc.absent:
+endsnippet
+
+snippet sysrc.managed
+  sysrc.managed:
+endsnippet
+
+snippet postgres_database.absent
+  postgres_database.absent:
+    - name: ${1:None}
+    - user: ${2:None}
+    - maintenance_db: ${3:None}
+    - db_password: ${4:None}
+    - db_host: ${5:None}
+    - db_port: ${6:None}
+endsnippet
+
+snippet postgres_database.present
+  postgres_database.present:
+    - name: ${1:None}
+    - tablespace: ${2:None}
+    - encoding: ${3:None}
+    - lc_collate: ${4:None}
+    - lc_ctype: ${5:None}
+    - owner: ${6:False}
+    - owner_recurse: ${7:None}
+    - template: ${8:None}
+    - user: ${9:None}
+    - maintenance_db: ${10:None}
+    - db_password: ${11:None}
+    - db_host: ${12:None}
+    - db_port: ${13:None}
+endsnippet
+
+snippet hipchat.send_message
+  hipchat.send_message:
+    - name: ${1:None}
+    - room_id: ${2:None}
+    - from_name: ${3:None}
+    - message: ${4:yellow}
+    - api_url: ${5:False}
+endsnippet
+
+snippet pkgbuild.built
+  pkgbuild.built:
+    - name: ${1:None}
+    - runas: ${2:None}
+    - dest_dir: ${3:None}
+    - spec: ${4:None}
+    - sources: ${5:False}
+    - tgt: ${6:base}
+    - template: ${7:/var/log/salt/pkgbuild}
+endsnippet
+
+snippet pkgbuild.repo
+  pkgbuild.repo:
+    - name: ${1:None}
+    - keyid: ${2:None}
+    - env: ${3:False}
+    - use_passphrase: ${4:/etc/salt/gpgkeys}
+    - gnupghome: ${5:builder}
+    - runas: ${6:15.0}
+endsnippet
+
+snippet rdp.disabled
+  rdp.disabled:
+endsnippet
+
+snippet rdp.enabled
+  rdp.enabled:
+endsnippet
+
+snippet grafana4_datasource.absent
+  grafana4_datasource.absent:
+    - name: ${1:None}
+    - orgname: ${2:grafana}
+endsnippet
+
+snippet grafana4_datasource.deep_diff
+  grafana4_datasource.deep_diff:
+    - old: ${1:None}
+endsnippet
+
+snippet grafana4_datasource.present
+  grafana4_datasource.present:
+    - name: ${1:None}
+    - type: ${2:None}
+    - url: ${3:None}
+    - access: ${4:None}
+    - user: ${5:None}
+    - password: ${6:None}
+    - database: ${7:None}
+    - basic_auth: ${8:None}
+    - basic_auth_user: ${9:None}
+    - basic_auth_password: ${10:None}
+    - tls_auth: ${11:None}
+    - json_data: ${12:None}
+    - is_default: ${13:None}
+    - with_credentials: ${14:grafana}
+endsnippet
+
+snippet beacon.absent
+  beacon.absent:
+    - name: ${1:False}
+endsnippet
+
+snippet beacon.disabled
+  beacon.disabled:
+endsnippet
+
+snippet beacon.enabled
+  beacon.enabled:
+endsnippet
+
+snippet beacon.present
+  beacon.present:
+    - name: ${1:False}
+endsnippet
+
+snippet iptables.append
+  iptables.append:
+    - name: ${1:filter}
+    - table: ${2:ipv4}
+endsnippet
+
+snippet iptables.chain_absent
+  iptables.chain_absent:
+    - name: ${1:filter}
+    - table: ${2:ipv4}
+endsnippet
+
+snippet iptables.chain_present
+  iptables.chain_present:
+    - name: ${1:filter}
+    - table: ${2:ipv4}
+endsnippet
+
+snippet iptables.delete
+  iptables.delete:
+    - name: ${1:filter}
+    - table: ${2:ipv4}
+endsnippet
+
+snippet iptables.flush
+  iptables.flush:
+    - name: ${1:filter}
+    - table: ${2:ipv4}
+endsnippet
+
+snippet iptables.insert
+  iptables.insert:
+    - name: ${1:filter}
+    - table: ${2:ipv4}
+endsnippet
+
+snippet iptables.mod_aggregate
+  iptables.mod_aggregate:
+endsnippet
+
+snippet iptables.set_policy
+  iptables.set_policy:
+    - name: ${1:filter}
+    - table: ${2:ipv4}
+endsnippet
+
+snippet tuned.off
+  tuned.off:
+    - name: ${1:None}
+endsnippet
+
+snippet tuned.profile
+  tuned.profile:
+endsnippet
+
+snippet esxcluster.cluster_configured
+  esxcluster.cluster_configured:
+endsnippet
+
+snippet esxcluster.licenses_configured
+  esxcluster.licenses_configured:
+    - name: ${1:None}
+endsnippet
+
+snippet esxcluster.list_diff
+  esxcluster.list_diff:
+endsnippet
+
+snippet esxcluster.mod_init
+  esxcluster.mod_init:
+endsnippet
+
+snippet esxcluster.recursive_diff
+  esxcluster.recursive_diff:
+    - past_dict: ${1:True}
+endsnippet
+
+snippet esxcluster.vsan_datastore_configured
+  esxcluster.vsan_datastore_configured:
+endsnippet
+
+snippet grafana4_dashboard.absent
+  grafana4_dashboard.absent:
+    - name: ${1:None}
+    - orgname: ${2:grafana}
+endsnippet
+
+snippet grafana4_dashboard.present
+  grafana4_dashboard.present:
+    - name: ${1:None}
+    - base_dashboards_from_pillar: ${2:None}
+    - base_panels_from_pillar: ${3:None}
+    - base_rows_from_pillar: ${4:None}
+    - dashboard: ${5:None}
+    - orgname: ${6:grafana}
+endsnippet
+
+snippet service.dead
+  service.dead:
+    - name: ${1:None}
+    - enable: ${2:None}
+    - sig: ${3:None}
+endsnippet
+
+snippet service.disabled
+  service.disabled:
+endsnippet
+
+snippet service.enabled
+  service.enabled:
+endsnippet
+
+snippet service.masked
+  service.masked:
+    - name: ${1:False}
+endsnippet
+
+snippet service.mod_watch
+  service.mod_watch:
+    - name: ${1:None}
+    - sfun: ${2:None}
+    - sig: ${3:False}
+    - reload: ${4:False}
+    - full_restart: ${5:None}
+    - init_delay: ${6:False}
+endsnippet
+
+snippet service.running
+  service.running:
+    - name: ${1:None}
+    - enable: ${2:None}
+    - sig: ${3:None}
+    - init_delay: ${4:False}
+    - no_block: ${5:False}
+    - unmask: ${6:False}
+endsnippet
+
+snippet service.unmasked
+  service.unmasked:
+    - name: ${1:False}
+endsnippet
+
+snippet stateconf.context
+  stateconf.context:
+endsnippet
+
+snippet stateconf.set
+  stateconf.set:
+endsnippet
+
+snippet win_certutil.add_store
+  win_certutil.add_store:
+    - name: ${1:base}
+endsnippet
+
+snippet win_certutil.del_store
+  win_certutil.del_store:
+    - name: ${1:base}
+endsnippet
+
+snippet reg.absent
+  reg.absent:
+    - name: ${1:None}
+    - vname: ${2:False}
+endsnippet
+
+snippet reg.key_absent
+  reg.key_absent:
+    - name: ${1:False}
+endsnippet
+
+snippet reg.present
+  reg.present:
+    - name: ${1:None}
+    - vname: ${2:None}
+    - vdata: ${3:REG_SZ}
+    - vtype: ${4:False}
+endsnippet
+
+snippet network.managed
+  network.managed:
+    - name: ${1:True}
+endsnippet
+
+snippet network.routes
+  network.routes:
+endsnippet
+
+snippet network.system
+  network.system:
+endsnippet
+
+snippet trafficserver.bounce_cluster
+  trafficserver.bounce_cluster:
+endsnippet
+
+snippet trafficserver.bounce_local
+  trafficserver.bounce_local:
+    - name: ${1:False}
+endsnippet
+
+snippet trafficserver.clear_cluster
+  trafficserver.clear_cluster:
+endsnippet
+
+snippet trafficserver.clear_node
+  trafficserver.clear_node:
+endsnippet
+
+snippet trafficserver.config
+  trafficserver.config:
+endsnippet
+
+snippet trafficserver.offline
+  trafficserver.offline:
+endsnippet
+
+snippet trafficserver.refresh
+  trafficserver.refresh:
+endsnippet
+
+snippet trafficserver.restart_cluster
+  trafficserver.restart_cluster:
+endsnippet
+
+snippet trafficserver.restart_local
+  trafficserver.restart_local:
+    - name: ${1:False}
+endsnippet
+
+snippet trafficserver.set_var
+  trafficserver.set_var:
+endsnippet
+
+snippet trafficserver.shutdown
+  trafficserver.shutdown:
+endsnippet
+
+snippet trafficserver.startup
+  trafficserver.startup:
+endsnippet
+
+snippet trafficserver.zero_cluster
+  trafficserver.zero_cluster:
+endsnippet
+
+snippet trafficserver.zero_node
+  trafficserver.zero_node:
+endsnippet
+
+snippet powerpath.license_absent
+  powerpath.license_absent:
+endsnippet
+
+snippet powerpath.license_present
+  powerpath.license_present:
+endsnippet
+
+snippet boto_sns.absent
+  boto_sns.absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+    - profile: ${5:False}
+endsnippet
+
+snippet boto_sns.present
+  boto_sns.present:
+    - name: ${1:None}
+    - subscriptions: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+    - keyid: ${5:None}
+endsnippet
+
+snippet virtualenv_mod.manage
+  virtualenv_mod.manage:
+    - name: ${1:None}
+    - venv_bin: ${2:None}
+    - requirements: ${3:False}
+    - system_site_packages: ${4:False}
+    - distribute: ${5:False}
+    - use_wheel: ${6:False}
+    - clear: ${7:None}
+    - python: ${8:None}
+    - extra_search_dir: ${9:None}
+    - never_download: ${10:None}
+    - prompt: ${11:None}
+    - user: ${12:None}
+    - cwd: ${13:None}
+    - index_url: ${14:None}
+    - extra_index_url: ${15:False}
+    - pre_releases: ${16:False}
+    - no_deps: ${17:None}
+    - pip_download: ${18:None}
+    - pip_download_cache: ${19:None}
+    - pip_exists_action: ${20:False}
+    - pip_ignore_installed: ${21:None}
+    - proxy: ${22:False}
+    - use_vt: ${23:None}
+    - env_vars: ${24:False}
+    - no_use_wheel: ${25:False}
+    - pip_upgrade: ${26:None}
+    - pip_pkgs: ${27:False}
+    - pip_no_cache_dir: ${28:None}
+    - pip_cache_dir: ${29:False}
+    - process_dependency_links: ${30:None}
+endsnippet
+
+snippet virtualenv_mod.managed
+  virtualenv_mod.managed:
+    - name: ${1:None}
+    - venv_bin: ${2:None}
+    - requirements: ${3:False}
+    - system_site_packages: ${4:False}
+    - distribute: ${5:False}
+    - use_wheel: ${6:False}
+    - clear: ${7:None}
+    - python: ${8:None}
+    - extra_search_dir: ${9:None}
+    - never_download: ${10:None}
+    - prompt: ${11:None}
+    - user: ${12:None}
+    - cwd: ${13:None}
+    - index_url: ${14:None}
+    - extra_index_url: ${15:False}
+    - pre_releases: ${16:False}
+    - no_deps: ${17:None}
+    - pip_download: ${18:None}
+    - pip_download_cache: ${19:None}
+    - pip_exists_action: ${20:False}
+    - pip_ignore_installed: ${21:None}
+    - proxy: ${22:False}
+    - use_vt: ${23:None}
+    - env_vars: ${24:False}
+    - no_use_wheel: ${25:False}
+    - pip_upgrade: ${26:None}
+    - pip_pkgs: ${27:False}
+    - pip_no_cache_dir: ${28:None}
+    - pip_cache_dir: ${29:False}
+    - process_dependency_links: ${30:None}
+endsnippet
+
+snippet rbenv.absent
+  rbenv.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet rbenv.install_rbenv
+  rbenv.install_rbenv:
+    - name: ${1:None}
+endsnippet
+
+snippet rbenv.installed
+  rbenv.installed:
+    - name: ${1:False}
+    - default: ${2:None}
+endsnippet
+
+snippet selinux.boolean
+  selinux.boolean:
+    - name: ${1:False}
+endsnippet
+
+snippet selinux.fcontext_policy_absent
+  selinux.fcontext_policy_absent:
+    - name: ${1:a}
+    - filetype: ${2:None}
+    - sel_type: ${3:None}
+    - sel_user: ${4:None}
+endsnippet
+
+snippet selinux.fcontext_policy_applied
+  selinux.fcontext_policy_applied:
+    - name: ${1:False}
+endsnippet
+
+snippet selinux.fcontext_policy_present
+  selinux.fcontext_policy_present:
+    - name: ${1:a}
+    - sel_type: ${2:None}
+    - filetype: ${3:None}
+endsnippet
+
+snippet selinux.mode
+  selinux.mode:
+endsnippet
+
+snippet selinux.module
+  selinux.module:
+    - name: ${1:Enabled}
+    - module_state: ${2:any}
+endsnippet
+
+snippet selinux.module_install
+  selinux.module_install:
+endsnippet
+
+snippet selinux.module_remove
+  selinux.module_remove:
+endsnippet
+
+snippet keystone_group.absent
+  keystone_group.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone_group.present
+  keystone_group.present:
+    - name: ${1:None}
+endsnippet
+
+snippet status.loadavg
+  status.loadavg:
+    - name: ${1:None}
+    - maximum: ${2:None}
+endsnippet
+
+snippet status.process
+  status.process:
+endsnippet
+
+snippet zabbix_user.absent
+  zabbix_user.absent:
+endsnippet
+
+snippet zabbix_user.deepcopy
+  zabbix_user.deepcopy:
+    - x: ${1:None}
+    - memo: ${2:[]}
+endsnippet
+
+snippet zabbix_user.dumps
+  zabbix_user.dumps:
+    - obj: ${1:False}
+    - skipkeys: ${2:True}
+    - ensure_ascii: ${3:True}
+    - check_circular: ${4:True}
+    - allow_nan: ${5:None}
+    - cls: ${6:None}
+    - indent: ${7:None}
+    - separators: ${8:utf-8}
+    - encoding: ${9:None}
+    - default: ${10:False}
+endsnippet
+
+snippet zabbix_user.loads
+  zabbix_user.loads:
+    - s: ${1:None}
+    - encoding: ${2:None}
+    - cls: ${3:None}
+    - object_hook: ${4:None}
+    - parse_float: ${5:None}
+    - parse_int: ${6:None}
+    - parse_constant: ${7:None}
+endsnippet
+
+snippet zabbix_user.present
+  zabbix_user.present:
+    - alias: ${1:False}
+endsnippet
+
+snippet infoblox_range.absent
+  infoblox_range.absent:
+    - name: ${1:None}
+    - start_addr: ${2:None}
+    - end_addr: ${3:None}
+    - data: ${4:None}
+endsnippet
+
+snippet infoblox_range.present
+  infoblox_range.present:
+    - name: ${1:None}
+    - start_addr: ${2:None}
+    - end_addr: ${3:None}
+    - data: ${4:None}
+endsnippet
+
+snippet influxdb_database.absent
+  influxdb_database.absent:
+endsnippet
+
+snippet influxdb_database.present
+  influxdb_database.present:
+endsnippet
+
+snippet grafana4_user.absent
+  grafana4_user.absent:
+    - name: ${1:grafana}
+endsnippet
+
+snippet grafana4_user.deep_diff
+  grafana4_user.deep_diff:
+    - old: ${1:None}
+endsnippet
+
+snippet grafana4_user.present
+  grafana4_user.present:
+    - name: ${1:False}
+    - password: ${2:None}
+    - email: ${3:None}
+    - is_admin: ${4:grafana}
+endsnippet
+
+snippet neutron_secgroup.absent
+  neutron_secgroup.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet neutron_secgroup.present
+  neutron_secgroup.present:
+    - name: ${1:None}
+endsnippet
+
+snippet uptime.monitored
+  uptime.monitored:
+endsnippet
+
+snippet keystone_service.absent
+  keystone_service.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet keystone_service.present
+  keystone_service.present:
+    - name: ${1:None}
+endsnippet
+
+snippet blockdev.formatted
+  blockdev.formatted:
+    - name: ${1:ext4}
+    - fs_type: ${2:False}
+endsnippet
+
+snippet blockdev.tuned
+  blockdev.tuned:
+endsnippet
+
+snippet glance.image_present
+  glance.image_present:
+    - name: ${1:public}
+    - visibility: ${2:None}
+    - protected: ${3:None}
+    - checksum: ${4:None}
+    - location: ${5:raw}
+    - disk_format: ${6:None}
+    - wait_for: ${7:30}
+endsnippet
+
+snippet lvs_server.absent
+  lvs_server.absent:
+    - name: ${1:None}
+    - protocol: ${2:None}
+    - service_address: ${3:None}
+endsnippet
+
+snippet lvs_server.present
+  lvs_server.present:
+    - name: ${1:None}
+    - protocol: ${2:None}
+    - service_address: ${3:None}
+    - server_address: ${4:dr}
+    - packet_forward_method: ${5:1}
+endsnippet
+
+snippet kmod.absent
+  kmod.absent:
+    - name: ${1:False}
+    - persist: ${2:True}
+    - comment: ${3:None}
+endsnippet
+
+snippet kmod.present
+  kmod.present:
+    - name: ${1:False}
+    - persist: ${2:None}
+endsnippet
+
+snippet glusterfs.add_volume_bricks
+  glusterfs.add_volume_bricks:
+endsnippet
+
+snippet glusterfs.peered
+  glusterfs.peered:
+endsnippet
+
+snippet glusterfs.started
+  glusterfs.started:
+endsnippet
+
+snippet glusterfs.volume_present
+  glusterfs.volume_present:
+    - name: ${1:False}
+    - bricks: ${2:False}
+    - stripe: ${3:False}
+    - replica: ${4:tcp}
+    - device_vg: ${5:False}
+    - transport: ${6:False}
+endsnippet
+
+snippet postgres_schema.absent
+  postgres_schema.absent:
+    - dbname: ${1:None}
+    - name: ${2:None}
+    - user: ${3:None}
+    - db_user: ${4:None}
+    - db_password: ${5:None}
+endsnippet
+
+snippet postgres_schema.present
+  postgres_schema.present:
+    - dbname: ${1:None}
+    - name: ${2:None}
+    - owner: ${3:None}
+    - user: ${4:None}
+    - db_user: ${5:None}
+    - db_password: ${6:None}
+endsnippet
+
+snippet mac_package.installed
+  mac_package.installed:
+    - name: ${1:LocalSystem}
+    - target: ${2:False}
+    - dmg: ${3:False}
+    - store: ${4:False}
+    - app: ${5:False}
+    - mpkg: ${6:None}
+    - user: ${7:None}
+    - onlyif: ${8:None}
+    - unless: ${9:False}
+    - force: ${10:False}
+    - allow_untrusted: ${11:None}
+endsnippet
+
+snippet mysql_grants.absent
+  mysql_grants.absent:
+    - name: ${1:None}
+    - grant: ${2:None}
+    - database: ${3:None}
+    - user: ${4:localhost}
+    - host: ${5:False}
+    - grant_option: ${6:True}
+endsnippet
+
+snippet mysql_grants.present
+  mysql_grants.present:
+    - name: ${1:None}
+    - grant: ${2:None}
+    - database: ${3:None}
+    - user: ${4:localhost}
+    - host: ${5:False}
+    - grant_option: ${6:True}
+    - escape: ${7:False}
+    - revoke_first: ${8:False}
+endsnippet
+
+snippet pagerduty_service.absent
+  pagerduty_service.absent:
+    - profile: ${1:pagerduty}
+    - subdomain: ${2:None}
+    - api_key: ${3:None}
+endsnippet
+
+snippet pagerduty_service.present
+  pagerduty_service.present:
+    - profile: ${1:pagerduty}
+    - subdomain: ${2:None}
+    - api_key: ${3:None}
+endsnippet
+
+snippet chocolatey.installed
+  chocolatey.installed:
+    - name: ${1:None}
+    - version: ${2:None}
+    - source: ${3:False}
+    - force: ${4:False}
+    - pre_versions: ${5:None}
+    - install_args: ${6:False}
+    - override_args: ${7:False}
+    - force_x86: ${8:None}
+    - package_args: ${9:False}
+endsnippet
+
+snippet chocolatey.uninstalled
+  chocolatey.uninstalled:
+    - name: ${1:None}
+    - version: ${2:None}
+    - uninstall_args: ${3:False}
+endsnippet
+
+snippet chocolatey.upgraded
+  chocolatey.upgraded:
+    - name: ${1:None}
+    - version: ${2:None}
+    - source: ${3:False}
+    - force: ${4:False}
+    - pre_versions: ${5:None}
+    - install_args: ${6:False}
+    - override_args: ${7:False}
+    - force_x86: ${8:None}
+endsnippet
+
+snippet boto_kinesis.absent
+  boto_kinesis.absent:
+    - name: ${1:None}
+    - region: ${2:None}
+    - key: ${3:None}
+    - keyid: ${4:None}
+endsnippet
+
+snippet boto_kinesis.present
+  boto_kinesis.present:
+    - name: ${1:None}
+    - retention_hours: ${2:None}
+    - enhanced_monitoring: ${3:None}
+    - num_shards: ${4:True}
+    - do_reshard: ${5:None}
+    - region: ${6:None}
+    - key: ${7:None}
+    - keyid: ${8:None}
+endsnippet
+
+snippet logrotate.set_
+  logrotate.set_:
+    - name: ${1:None}
+    - key: ${2:/etc/logrotate.conf}
+endsnippet
+
+snippet boto_iot.policy_absent
+  boto_iot.policy_absent:
+    - name: ${1:None}
+    - policyName: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+endsnippet
+
+snippet boto_iot.policy_attached
+  boto_iot.policy_attached:
+    - name: ${1:None}
+    - policyName: ${2:None}
+    - principal: ${3:None}
+    - region: ${4:None}
+endsnippet
+
+snippet boto_iot.policy_detached
+  boto_iot.policy_detached:
+    - name: ${1:None}
+    - policyName: ${2:None}
+    - principal: ${3:None}
+    - region: ${4:None}
+endsnippet
+
+snippet boto_iot.policy_present
+  boto_iot.policy_present:
+    - name: ${1:None}
+    - policyName: ${2:None}
+    - policyDocument: ${3:None}
+    - region: ${4:None}
+endsnippet
+
+snippet boto_iot.thing_type_absent
+  boto_iot.thing_type_absent:
+    - name: ${1:None}
+    - thingTypeName: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+endsnippet
+
+snippet boto_iot.thing_type_present
+  boto_iot.thing_type_present:
+    - name: ${1:None}
+    - thingTypeName: ${2:None}
+    - thingTypeDescription: ${3:None}
+    - searchableAttributesList: ${4:None}
+endsnippet
+
+snippet boto_iot.topic_rule_absent
+  boto_iot.topic_rule_absent:
+    - name: ${1:None}
+    - ruleName: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+endsnippet
+
+snippet boto_iot.topic_rule_present
+  boto_iot.topic_rule_present:
+    - name: ${1:''}
+    - ruleName: ${2:False}
+    - sql: ${3:None}
+    - actions: ${4:None}
+    - description: ${5:None}
+    - ruleDisabled: ${6:None}
+endsnippet
+
+snippet artifactory.downloaded
+  artifactory.downloaded:
+    - name: ${1:/tmp}
+    - artifact: ${2:None}
+    - target_dir: ${3:False}
+endsnippet
+
+snippet esxvm.vm_cloned
+  esxvm.vm_cloned:
+endsnippet
+
+snippet esxvm.vm_configured
+  esxvm.vm_configured:
+    - name: ${1:None}
+    - vm_name: ${2:None}
+    - cpu: ${3:None}
+    - memory: ${4:None}
+    - image: ${5:True}
+    - version: ${6:False}
+    - interfaces: ${7:False}
+endsnippet
+
+snippet esxvm.vm_created
+  esxvm.vm_created:
+    - name: ${1:None}
+    - vm_name: ${2:None}
+    - cpu: ${3:None}
+    - memory: ${4:None}
+    - image: ${5:False}
+endsnippet
+
+snippet esxvm.vm_registered
+  esxvm.vm_registered:
+    - vm_name: ${1:False}
+endsnippet
+
+snippet esxvm.vm_updated
+  esxvm.vm_updated:
+    - name: ${1:None}
+    - vm_name: ${2:None}
+    - cpu: ${3:None}
+    - memory: ${4:False}
+endsnippet
+
+snippet docker_network.absent
+  docker_network.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet docker_network.present
+  docker_network.present:
+    - name: ${1:None}
+    - skip_translate: ${2:False}
+    - ignore_collisions: ${3:True}
+    - validate_ip_addrs: ${4:None}
+    - containers: ${5:True}
+endsnippet
+
+snippet boto_cloudtrail.absent
+  boto_cloudtrail.absent:
+    - name: ${1:None}
+    - Name: ${2:None}
+    - region: ${3:None}
+    - key: ${4:None}
+endsnippet
+
+snippet boto_cloudtrail.present
+  boto_cloudtrail.present:
+    - name: ${1:None}
+    - Name: ${2:None}
+    - S3BucketName: ${3:True}
+    - S3KeyPrefix: ${4:None}
+    - SnsTopicName: ${5:False}
+    - IncludeGlobalServiceEvents: ${6:None}
+    - IsMultiRegionTrail: ${7:None}
+    - EnableLogFileValidation: ${8:None}
+    - CloudWatchLogsLogGroupArn: ${9:True}
+    - CloudWatchLogsRoleArn: ${10:None}
+    - KmsKeyId: ${11:None}
+    - LoggingEnabled: ${12:None}
+    - Tags: ${13:None}
+    - region: ${14:None}
+endsnippet
+
+snippet mssql_database.absent
+  mssql_database.absent:
+endsnippet
+
+snippet mssql_database.present
+  mssql_database.present:
+    - name: ${1:NONE}
+    - containment: ${2:None}
+endsnippet
+
+snippet boto_kms.key_present
+  boto_kms.key_present:
+    - name: ${1:None}
+    - policy: ${2:None}
+    - description: ${3:None}
+    - key_usage: ${4:False}
+    - grants: ${5:False}
+    - manage_grants: ${6:True}
+    - key_rotation: ${7:None}
+    - enabled: ${8:None}
+    - region: ${9:None}
+    - key: ${10:None}
+endsnippet
+
+snippet pagerduty_schedule.absent
+  pagerduty_schedule.absent:
+    - profile: ${1:pagerduty}
+    - subdomain: ${2:None}
+    - api_key: ${3:None}
+endsnippet
+
+snippet pagerduty_schedule.present
+  pagerduty_schedule.present:
+    - profile: ${1:pagerduty}
+    - subdomain: ${2:None}
+    - api_key: ${3:None}
+endsnippet
+
+snippet libcloud_loadbalancer.balancer_absent
+  libcloud_loadbalancer.balancer_absent:
+endsnippet
+
+snippet libcloud_loadbalancer.balancer_present
+  libcloud_loadbalancer.balancer_present:
+    - name: ${1:None}
+    - port: ${2:None}
+endsnippet
+
+snippet libcloud_loadbalancer.member_absent
+  libcloud_loadbalancer.member_absent:
+endsnippet
+
+snippet libcloud_loadbalancer.member_present
+  libcloud_loadbalancer.member_present:
+endsnippet
+
+snippet libcloud_loadbalancer.state_result
+  libcloud_loadbalancer.state_result:
+    - result: ${1:None}
+endsnippet
+
+snippet apache_module.disabled
+  apache_module.disabled:
+endsnippet
+
+snippet apache_module.enabled
+  apache_module.enabled:
+endsnippet
+
+snippet at.absent
+  at.absent:
+    - name: ${1:None}
+endsnippet
+
+snippet at.mod_watch
+  at.mod_watch:
+endsnippet
+
+snippet at.present
+  at.present:
+    - name: ${1:None}
+    - timespec: ${2:None}
+    - tag: ${3:None}
+    - user: ${4:False}
+endsnippet
+
+snippet at.watch
+  at.watch:
+    - name: ${1:None}
+    - timespec: ${2:None}
+    - tag: ${3:None}
+    - user: ${4:False}
+endsnippet
+
